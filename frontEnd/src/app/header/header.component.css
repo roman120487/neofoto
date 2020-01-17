@@ -1,0 +1,13 @@
+.containerHeader{
+    height: 450px;
+    background-image: url(/assets/img/bg-header.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position-y: 56px;
+}
+.navbar-expand-lg{
+    justify-content: flex-end;
+}
+.nav-link{
+    margin-right: 25px;
+}

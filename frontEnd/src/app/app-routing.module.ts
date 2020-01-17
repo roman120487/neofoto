@@ -1,8 +1,25 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { AdminComponent } from './admin/admin.component';
+import { MainComponent } from './pages/main/main.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
+import { GalaryComponent } from './pages/galary/galary.component';
+import { PoslugiComponent } from './pages/poslugi/poslugi.component';
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  {path: '', redirectTo: '/main', pathMatch: 'full'},
+  {path: 'main', component: MainComponent},
+  {path: 'paslugi', component: PoslugiComponent /*, children: [
+    {path: 'portret', component: PortretComponent},
+    {path: 'comerce', component: ComerceComponent},
+  ]*/},
+  {path: 'galary', component: GalaryComponent},
+  {path: 'contacts', component: ContactsComponent},
+  {path: 'admin', component: AdminComponent},
+
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
