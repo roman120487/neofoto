@@ -5,7 +5,7 @@
 }
 .mainBloks{
     padding: 15px 25px;
-    height: 150px;
+    height: 450px;
 }
 .strip{
     width: 60%;
@@ -15,3 +15,50 @@
     border-radius: 50%;
     margin: 0px auto;
 }
+/* ---------scroll button to top --------------------*/
+
+.goUpBtn{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: fixed;
+    right: 50px;
+    bottom: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: lightgreen;
+}
+.goUpBtn span::before,
+.goUpBtn span::after,
+.goUpBtn span{
+    width: 25px;
+    height: 3px;
+    border: 2px solid white;
+    border-radius: 20%;
+    position: absolute;
+    transition: 0.3s;
+}
+.goUpBtn span::before,
+.goUpBtn span::after{
+    content: '';
+    display: block;
+}
+.goUpBtn span{
+    border: none;
+}
+.goUpBtn span::after{
+    left: 7px;
+    transform: rotate(55deg);
+}
+.goUpBtn span::before{
+    left: -7px;
+    transform: rotate(-55deg);
+}
+.goUpBtn:hover{
+    cursor: pointer;
+}
+
+
+/* ------------------------------ */
