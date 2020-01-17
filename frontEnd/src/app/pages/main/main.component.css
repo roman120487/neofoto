@@ -1,0 +1,17 @@
+.containerMain{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.mainBloks{
+    padding: 15px 25px;
+    height: 150px;
+}
+.strip{
+    width: 60%;
+    height: 3px;
+    border: 2px solid black;
+    opacity: 0.3;
+    border-radius: 50%;
+    margin: 0px auto;
+}
