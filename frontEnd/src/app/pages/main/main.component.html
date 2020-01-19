@@ -27,7 +27,7 @@
             dignissimos.</p>
     </div>
 
-    <div class="goUpBtn" id="goUpBtn" (click)="scrollUpBtn()" >
+    <div *ngIf="scrollBtn" class="goUpBtn"   id="goUpBtn" (click)="scrollUp()" >
         <span></span>
     </div>
 </div>
