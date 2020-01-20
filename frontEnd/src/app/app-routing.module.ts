@@ -8,7 +8,7 @@ import { GalaryComponent } from './pages/galary/galary.component';
 import { PoslugiComponent } from './pages/poslugi/poslugi.component';
 import { AdminPortraitComponent } from './admin/admin-portrait/admin-portrait.component';
 import { AdminResponseComponent } from './admin/admin-response/admin-response.component';
-
+import { AdminListProjectComponent } from './admin/admin-list-project/admin-list-project.component';
 const routes: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
   {path: 'main', component: MainComponent},
@@ -21,6 +21,7 @@ const routes: Routes = [
   {path: 'admin', component: AdminComponent, children:[
     { path: '', redirectTo: 'portrait', pathMatch: 'full' },
     { path: 'portrait', component: AdminPortraitComponent },
+    { path: 'list-project', component: AdminListProjectComponent },
     { path: 'response', component: AdminResponseComponent },
   ]},
 
