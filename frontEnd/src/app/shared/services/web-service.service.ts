@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable } from 'rxjs/Observable';
+
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/toPromise';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +13,7 @@ export class WebServiceService {
   constructor(private http: HttpClient) { 
     this.ROOT_URL = 'http://localhost:3000';
   }
-  get(uri: string):Observable<any>{
+  get(uri: string){
     return this.http.get(`${this.ROOT_URL}/${uri}`);
   }
   post(uri: string, payload: Object){

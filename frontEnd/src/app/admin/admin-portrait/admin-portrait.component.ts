@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { BgService } from 'src/app/shared/services/bg.service';
-import Portrait from 'src/app/shared/classes/portrait';
 
 @Component({
   selector: 'app-admin-portrait',
@@ -10,18 +9,9 @@ import Portrait from 'src/app/shared/classes/portrait';
 })
 export class AdminPortraitComponent implements OnInit {
   formData: any;
-  portrait: Portrait[] = [];
   constructor(private api: BgService) { }
 
   ngOnInit() {
-    this.api.getPortrait()
-      .subscribe((res: any) => {
-        this.portrait = res;
-        console.log(this.portrait);
-      }, err => {
-        console.log(err);
-      });
-
     this.resetForm();
   }
   public resetForm(form?: NgForm) {

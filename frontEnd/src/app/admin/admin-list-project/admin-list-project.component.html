@@ -1,0 +1,24 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Назва проекта</th>
+        <th scope="col">Категорія</th>
+        <th scope="col">Редагувати</th>
+        <th scope="col">Видалити</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of portrait; let i=index">
+        <th scope="row">{{i+1}}</th>
+        <td>{{item.nameProject}}</td>
+        <td>{{item.categoryProject}}</td>
+        <td>
+          <button class="btn btn-sm btn-warning" (click)="onEdit(item)">Редаг.</button>
+      </td>
+      <td>
+          <button class="btn btn-sm btn-danger" (click)="onDelete(item)">Видалити</button>
+      </td>
+      </tr>
+    </tbody>
+  </table>
