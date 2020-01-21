@@ -1,33 +1,61 @@
 <div class="containerMain">
     <div class="aboutUs mainBloks">
-        <h3>aboutUs</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sunt fugit, possimus quos nisi incidunt rerum
-            voluptate accusantium necessitatibus ut sit corporis modi exercitationem odit repellendus, minus eum maxime
-            dignissimos.</p>
+        <div class="photoAU">
+            <img src="assets/img/photographer.jpg" alt="">
+        </div>
+        <div class="textAU">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sunt fugit, possimus quos nisi incidunt
+                rerum
+                voluptate accusantium necessitatibus ut sit corporis modi exercitationem odit repellendus, minus eum
+                maxime
+                dignissimos.</p>
+            <br>
+            <a href="">
+                <p> Instagram -></p>
+            </a>
+            <a href="">
+                <p> FAcebook -></p>
+            </a>
+            <a href="">
+                <p> Bihends -></p>
+            </a>
+        </div>
+
     </div>
-    <div class="strip"></div>
-    <div class="whatWe mainBloks">
-        <h3>whatWe</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sunt fugit, possimus quos nisi incidunt rerum
-            voluptate accusantium necessitatibus ut sit corporis modi exercitationem odit repellendus, minus eum maxime
-            dignissimos.</p>
-    </div>
-    <div class="strip"></div>
-    <div class="reviews mainBloks">
-        <h3>reviews</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sunt fugit, possimus quos nisi incidunt rerum
-            voluptate accusantium necessitatibus ut sit corporis modi exercitationem odit repellendus, minus eum maxime
-            dignissimos.</p>
-    </div>
-    <div class="strip"></div>
-    <div class="lastProject mainBloks">
-        <h3>lastProject</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sunt fugit, possimus quos nisi incidunt rerum
-            voluptate accusantium necessitatibus ut sit corporis modi exercitationem odit repellendus, minus eum maxime
-            dignissimos.</p>
+    <div class="ourWorks mainBloks">
+        <p class="title">Наші роботи</p>
+        <div class="galary">
+            <div>foto 1</div>
+            <div>foto 2</div>
+            <div>foto 3</div>
+            <div>foto 4</div>
+            <div>foto 5</div>
+            <div>foto 6</div>
+        </div>
     </div>
 
-    <div *ngIf="scrollBtn" class="goUpBtn" (click)="scrollUp()" >
-        <span></span>
+
+
+
+
+        <div class="reviews mainBloks">
+            <h3>Відгуки</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sunt fugit, possimus quos nisi incidunt
+                rerum
+                voluptate accusantium necessitatibus ut sit corporis modi exercitationem odit repellendus, minus eum
+                maxime
+                dignissimos.</p>
+        </div>
+        <div class="lastProject mainBloks">
+            <h3>Чому ми</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sunt fugit, possimus quos nisi incidunt
+                rerum
+                voluptate accusantium necessitatibus ut sit corporis modi exercitationem odit repellendus, minus eum
+                maxime
+                dignissimos.</p>
+        </div>
+
+        <div *ngIf="scrollBtn" class="goUpBtn" (click)="scrollUp()">
+            <span></span>
+        </div>
     </div>
-</div>
