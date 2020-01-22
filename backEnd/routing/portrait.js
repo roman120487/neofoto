@@ -16,8 +16,12 @@ router.get('/', cors(), (req, res) => {
 });
 
 router.patch('/edit-upd/:editId', cors(), (req, res) => {
+    console.log(req.body)
     Portrait.findByIdAndUpdate(req.params.editId, { $pull: { "arrayImg": { "filename": req.body.response } } })
-        .then((list) => res.send(list))
+        .then(list => {
+            fs.unlinkSync(`./uploads/project/${req.body.dirPhoto}/${req.body.response}`);
+            res.send(list)
+        })
         .catch((error) => console.log(error))
 })
 router.patch('/edit-updAll/:editId', cors(), (req, res) => {
@@ -36,7 +40,7 @@ router.patch('/edit-updAll/:editId', cors(), (req, res) => {
                 return console.log(error)
         });
     }
-    Portrait.findByIdAndUpdate(req.params.editId, {$set: req.body, $addToSet: {'arrayImg': obj}})
+    Portrait.findByIdAndUpdate(req.params.editId, { $set: req.body, $addToSet: { 'arrayImg': obj } })
         .then((list) => res.send(list))
         .catch((error) => console.log(error))
 })
@@ -47,6 +51,17 @@ router.get('/edit/:id', cors(), (req, res) => {
         })
         .catch((error) => console.log(error))
 });
+router.delete('/delete/:deleteId', (req, res) => {
+    Portrait.findById(req.params.deleteId)
+        .then(list => {
+            Portrait.findByIdAndRemove(req.params.deleteId)
+                .then(list => {
+                    fs.rmdirSync(`./uploads/project/${list.dirPhoto}`, { recursive: true });
+                    res.send(list)
+                })
+                .catch((error) => console.log(error))
+        })
+})
 router.post('/', cors(), function (req, res) {
     const date = req.body;
     let obj = [];
