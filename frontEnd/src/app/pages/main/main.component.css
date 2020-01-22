@@ -318,7 +318,23 @@ a {
 /* ------------------------------ */
 /* -------modal-------- */
 
+.modal-lg{
+    min-width: 80% !important;
+    background-color: black;
+}
 .modal-content{
-    
+    background-color: #EFF9F1
+}
+.modal-body{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    /* align-items: center; */
+}
+.modal-body img{
+    max-width: 500px;
+    max-height: 500px;
+    border: 15px solid white;
+    margin-top: 25px;
 }
 /* -------------------- */
