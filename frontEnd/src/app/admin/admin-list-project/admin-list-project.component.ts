@@ -52,9 +52,13 @@ export class AdminListProjectComponent implements OnInit {
     this.getProjectByID();
   }
   deleteImg(event) {
+    console.log(event.target)
+    let deleteImg: any = new FormData();
+    deleteImg.append('response', event.target.name);
+    deleteImg.append('dirPhoto', this.portraitOne.dirPhoto);
     if (confirm('Are you sure to delete this record')) {
       // this.api.updatePortrait(this.formData._id, this.formData)
-      this.api.updatePortrait(this.formData._id, event.target.name)
+      this.api.updatePortrait(this.formData._id, deleteImg)
         .subscribe((res: any) => {
           this.getProjectByID()
           this.refreshProject()
@@ -82,6 +86,16 @@ export class AdminListProjectComponent implements OnInit {
       for (let img of event.target.files) {
         this.formDataImg.append('filesUpdate', img);
       }
+    }
+  }
+  onDelete(item) {
+    if (confirm('Are you sure to delete this record')) {
+      this.api.deletePortait(item._id)
+        .subscribe((res: any) => {
+          this.refreshProject()
+        }, (err: any) => {
+          console.log(err);
+        });
     }
   }
 }
