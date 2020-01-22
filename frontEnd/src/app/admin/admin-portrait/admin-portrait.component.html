@@ -10,13 +10,13 @@
     <label for="exampleFormControlSelect1">Виберіть категорію:</label>
     <select class="form-control" #categoryProject="ngModel" name="categoryProject"
       [(ngModel)]="formData.categoryProject">
-      <option>Портрет</option>
-      <option>Комерція</option>
+      <option>Portrait</option>
+      <option>Commerce</option>
     </select>
   </div>
   <div class="form-group">
     <label for="exampleFormControlFile1">Виберіть Фото</label>
-    <input type="file" (change)="onFileSelected($event)" class="form-control-file" name="file" id="file">
+    <input type="file" (change)="onFileSelected($event)" multiple class="form-control-file" name="files" id="files">
   </div>
   <div class="form-group">
     <div class="col-sm-10 text-right">
