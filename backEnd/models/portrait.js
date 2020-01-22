@@ -10,6 +10,16 @@ const PortraitSchema = new mongoose.Schema({
         type: String,
         trim: true,
         minlength: 1
+    },
+    arrayImg:{
+        type: Array,
+        trim: true,
+        minlength: 1
+    },
+    dirPhoto:{
+        type: String,
+        trim: true,
+        minlength: 1
     }
 });
 
