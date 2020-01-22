@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { BgService } from 'src/app/shared/services/bg.service';
+import Portrait from 'src/app/shared/classes/portrait';
 
 @Component({
   selector: 'app-admin-portrait',
@@ -8,29 +9,44 @@ import { BgService } from 'src/app/shared/services/bg.service';
   styleUrls: ['./admin-portrait.component.css']
 })
 export class AdminPortraitComponent implements OnInit {
-  formData: any;
-  constructor(private api: BgService) { }
+  formData: Portrait;
+  // multipleImages = [];
+  formDataImg: any = new FormData();
+  // editProjectID;
+
+  constructor(private api: BgService) {
+  }
 
   ngOnInit() {
     this.resetForm();
+    // this.editProjectID = this.api.getId()
+    // if (this.editProjectID) this.editProject();
   }
+
+
   public resetForm(form?: NgForm) {
     if (form != null) {
       form.resetForm();
     }
     this.formData = {
-      id: null,
+      _id: null,
       nameProject: '',
       categoryProject: '',
     }
   }
   public onSubmit(form: NgForm) {
     const data = Object.assign({}, form.value);
-    console.log(data)
-    this.api.createPortrait(data).subscribe((res: any) => {
-    }, (err: any) => {
-        console.log(err);
-      });
-    delete data.id;;
+    this.formDataImg.append('nameProject', data.nameProject);
+    this.formDataImg.append('categoryProject', data.categoryProject);
+    this.api.createPortrait(this.formDataImg).subscribe((res: any) => {}, (err: any) => {console.log(err);});
+    delete data.id;
+  }
+  onFileSelected(event) {
+    if (event.target.files.length > 0) {
+      // this.multipleImages = event.target.files;
+      for (let img of event.target.files) {
+        this.formDataImg.append('files', img);
+      }
+    }
   }
 }
