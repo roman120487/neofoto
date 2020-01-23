@@ -18,7 +18,7 @@ export class AdminResponseComponent implements OnInit {
   constructor(private api: BgService) { }
 
   ngOnInit() {
-    this.refreshResponse()
+    this.refreshResponse();
   }
 
   addResponse() {

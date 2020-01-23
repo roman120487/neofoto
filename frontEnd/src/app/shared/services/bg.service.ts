@@ -46,7 +46,7 @@ export class BgService {
 
 
   getResponse() {
-    return this.http.get(this.baseUrl)
+    return this.http.get(this.baseUrl);
   }
   createResponse(data: Response) {
     console.log(data)

@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-
+import { BgService } from 'src/app/shared/services/bg.service';
 
 @Component({
   selector: 'app-main',
@@ -9,10 +9,19 @@ import { Component, OnInit, HostListener } from '@angular/core';
 
 export class MainComponent implements OnInit {
   scrollBtn: boolean = false;
-  constructor() { }
+  reviews: any;
+  constructor(public bgService: BgService) {
+
+  }
 
   ngOnInit() {
+    this.refreshResponse();
+  }
 
+  refreshResponse() {
+    this.bgService.getResponse().subscribe((res) => {
+      this.reviews = res;
+    })
   }
 
   @HostListener('window:scroll', ['$event']) onscroll(event): void {
@@ -41,4 +50,10 @@ export class MainComponent implements OnInit {
 
 
 
+
+
+
+
 }
+
+

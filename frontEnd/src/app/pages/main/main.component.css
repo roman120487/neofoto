@@ -164,7 +164,7 @@ a {
 }
 
 .slideRew {
-    width: 35%;
+    width: 70%;
     height: 350px;
     display: flex;
     justify-content: center;
@@ -177,18 +177,19 @@ a {
     padding-top: 10px;
 }
 
-.slideRew :nth-child(1) {
-    width: 150px;
-    height: 150px;
+.fotoRew{
+    max-width: 150px;
+    max-height: 150px;
     border-radius: 50%;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; */
+}
+.fotoRew img{
+    height: 100%;
 }
 
 .slideRew :nth-child(1) img {
-    height: initial;
+    height: 100%;
+    /* max-width: 150px; */
+    /* max-height: 150px; */
     /* width: auto; */
 }
 
