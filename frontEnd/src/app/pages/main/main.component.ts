@@ -10,17 +10,36 @@ import { BgService } from 'src/app/shared/services/bg.service';
 export class MainComponent implements OnInit {
   scrollBtn: boolean = false;
   reviews: any;
+
+  slides2: any = [[]];
   constructor(public bgService: BgService) {
 
   }
 
   ngOnInit() {
     this.refreshResponse();
+    setTimeout(() => {
+      this.slides2 = this.chunk2(this.reviews, 3);
+      console.log(this.slides2);
+    }, 1000);
+
   }
+
+  chunk2(arr, chunkSize) {
+    let Z = [];
+    for (let i = 0, len = arr.length; i < len; i += chunkSize) {
+      Z.push(arr.slice(i, i + chunkSize));
+    }
+    // console.log(R);
+    return Z;
+  }
+
 
   refreshResponse() {
     this.bgService.getResponse().subscribe((res) => {
       this.reviews = res;
+      // console.log(this.reviews);
+
     })
   }
 
@@ -45,6 +64,8 @@ export class MainComponent implements OnInit {
       }
     }
   }
+
+
 
 
 

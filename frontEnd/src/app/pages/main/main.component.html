@@ -70,85 +70,74 @@
         </div>
     </div>
 
-    <!-- <div class="reviews mainBloks">
+    <!--------------------------- sliderReview -------------------------------->
+    <div class="mainBloks">
         <div class="title">Відгуки</div>
-        <div class="rewSlider">
-            <div class="arrowLeft">
-                <span></span>
-            </div>
-            <div class="slideRew" *ngFor="let item of reviews">
-                <img class="fotoRew" src="{{item.idImgUrl + item.idImg}}" alt="">
-                <div class="textRew">{{item.response}}</div>
-            </div>
-            <div class="arrowRight">
-                <span></span>
-            </div>
+        <div class="arrowLeft">
+            <span></span>
         </div>
-    </div> -->
+        <div class="rewSliderMain">
+
+            <mdb-carousel [isControls]="true" class="carousel-multi-item multi-animation" [type]="'carousel-multi-item'"
+                [animation]="'slide'">
+                <mdb-carousel-item *ngFor="let item of slides2; let i = index">
+                    <div class="col-md-4" [ngClass]="{'d-none d-md-block': cardIndex !== 0}" *ngFor="let card of item; let cardIndex = index">
+                        <mdb-card class="my-1">
+                            <mdb-card-img [src]="card.idImgUrl+card.idImg" alt="Card image cap"></mdb-card-img>
+                            <mdb-card-body>
+                                <p>{{card.response}}</p>
+                            </mdb-card-body>
+                        </mdb-card>
+                    </div>
+                </mdb-carousel-item>
+            </mdb-carousel>
+
+        </div>
+
+
+        <!-- ------------------------------------------------------------------------ -->
+
+
+        <div class="lastProject mainBloks">
+            <h3>Чому ми</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sunt fugit, possimus quos nisi incidunt
+                rerum
+                voluptate accusantium necessitatibus ut sit corporis modi exercitationem odit repellendus, minus eum
+                maxime
+                dignissimos.</p>
+        </div>
+
+        <div *ngIf="scrollBtn" class="goUpBtn" (click)="scrollUp()">
+            <span></span>
+        </div>
+    </div>
 
 
 
 
 
-    <div class="reviews mainBloks">
-        <owl-carousel-o>
-            <div class="arrowLeft">
-                <span></span>
-            </div>
-            <ng-template carouselSlide *ngFor="let item of reviews">
-                <div class="slideRew">
-                    <img class="fotoRew" src="{{item.idImgUrl + item.idImg}}" alt="">
-                    <div class="textRew">{{item.response}}</div>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content ">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Назва проекту</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-            </ng-template>
-        </owl-carousel-o>
-    </div>
-
-
-
-
-
-
-    <div class="lastProject mainBloks">
-        <h3>Чому ми</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sunt fugit, possimus quos nisi incidunt
-            rerum
-            voluptate accusantium necessitatibus ut sit corporis modi exercitationem odit repellendus, minus eum
-            maxime
-            dignissimos.</p>
-    </div>
-
-    <div *ngIf="scrollBtn" class="goUpBtn" (click)="scrollUp()">
-        <span></span>
-    </div>
-</div>
-
-
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content ">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Назва проекту</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                <img src="assets/img/galary_main/1444685949_dsc08577.jpg" alt="">
-                <img src="assets/img/galary_main/1506718164116659892.png" alt="">
-                <img src="assets/img/galary_main/wedding-photo-editing-services.jpg" alt="">
-                <img src="assets/img/galary_main/dc70224031a4ad5d8f0a5ced566cd87a.jpg" alt="">
-                <img src="assets/img/galary_main/photo_effects_filters_app05.jpg" alt="">
-                <img src="assets/img/galary_main/1444685949_dsc08577.jpg" alt="">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <div class="modal-body">
+                    <img src="assets/img/galary_main/1444685949_dsc08577.jpg" alt="">
+                    <img src="assets/img/galary_main/1506718164116659892.png" alt="">
+                    <img src="assets/img/galary_main/wedding-photo-editing-services.jpg" alt="">
+                    <img src="assets/img/galary_main/dc70224031a4ad5d8f0a5ced566cd87a.jpg" alt="">
+                    <img src="assets/img/galary_main/photo_effects_filters_app05.jpg" alt="">
+                    <img src="assets/img/galary_main/1444685949_dsc08577.jpg" alt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
-</div>

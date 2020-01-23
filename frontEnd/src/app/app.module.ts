@@ -15,7 +15,8 @@ import { PoslugiComponent } from './pages/poslugi/poslugi.component';
 import { AdminPortraitComponent } from './admin/admin-portrait/admin-portrait.component';
 import { AdminResponseComponent } from './admin/admin-response/admin-response.component';
 import { AdminListProjectComponent } from './admin/admin-list-project/admin-list-project.component';
-import { CarouselModule } from 'ngx-owl-carousel-o';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -35,9 +36,10 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CarouselModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
+    MDBBootstrapModule.forRoot()
     // Observable
   ],
   providers: [],

@@ -9,6 +9,7 @@
     min-height: 450px;
     /* border: 1px solid black; */
     margin-top: 100px;
+    position: relative;
 }
 
 .aboutUs {
@@ -151,40 +152,49 @@ a {
 
 /* -------Rewievs--------------- */
 
-.rewSlider {
-    width: 100%;
+.rewSliderMain {
+    width: auto;
     height: 100%;
     /* border: 1px solid black; */
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-around;
+    /* justify-content: space-around; */
     position: relative;
+    border: 1px solid black;
+    justify-content: space-between;
     /* padding: 0px 35px; */
 }
 
 .slideRew {
-    width: 70%;
+    width: 30%;
     height: 350px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: white;
-    -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+    border: 1px solid red;
+    /* background-color: white;
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
     border-radius: 5px;
     padding-top: 10px;
+    margin-left: 50px; */
+}
+.slideRew img{
+    max-width: 350px;
+    max-height: 350px;
 }
 
 .fotoRew{
-    max-width: 150px;
-    max-height: 150px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid white;
     border-radius: 50%;
 }
-.fotoRew img{
-    height: 100%;
+.textRew{
+    text-align: inherit;
 }
+
+
 
 .slideRew :nth-child(1) img {
     height: 100%;
@@ -211,6 +221,7 @@ a {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    z-index: 3;
 }
 
 .arrowLeft {
