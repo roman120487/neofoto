@@ -42,11 +42,14 @@ export class AdminPortraitComponent implements OnInit {
     delete data.id;
   }
   onFileSelected(event) {
-    if (event.target.files.length > 0) {
+    if (event.target.files.length > 1) {
       // this.multipleImages = event.target.files;
       for (let img of event.target.files) {
         this.formDataImg.append('files', img);
       }
+    }
+    else {
+      this.formDataImg.append('files', event.target.files[0]);
     }
   }
 }
