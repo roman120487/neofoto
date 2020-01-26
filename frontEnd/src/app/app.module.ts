@@ -16,7 +16,6 @@ import { AdminPortraitComponent } from './admin/admin-portrait/admin-portrait.co
 import { AdminResponseComponent } from './admin/admin-response/admin-response.component';
 import { AdminListProjectComponent } from './admin/admin-list-project/admin-list-project.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 @NgModule({
@@ -39,7 +38,6 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    MDBBootstrapModule.forRoot()
     // Observable
   ],
   providers: [],

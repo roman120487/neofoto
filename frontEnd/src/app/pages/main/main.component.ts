@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { BgService } from 'src/app/shared/services/bg.service';
+// import { setInterval } from 'timers';
 
 @Component({
   selector: 'app-main',
@@ -10,35 +11,62 @@ import { BgService } from 'src/app/shared/services/bg.service';
 export class MainComponent implements OnInit {
   scrollBtn: boolean = false;
   reviews: any;
+  widthRewDiv: number;
+  positionLeft: string;
+  positionRight: string;
+  positionRew: number = 0;
 
-  slides2: any = [[]];
   constructor(public bgService: BgService) {
 
   }
 
   ngOnInit() {
     this.refreshResponse();
-    setTimeout(() => {
-      this.slides2 = this.chunk2(this.reviews, 3);
-      console.log(this.slides2);
-    }, 1000);
+    console.log(this.widthRewDiv);
+
 
   }
 
-  chunk2(arr, chunkSize) {
-    let Z = [];
-    for (let i = 0, len = arr.length; i < len; i += chunkSize) {
-      Z.push(arr.slice(i, i + chunkSize));
+  moveRightBtn() {
+    if (this.positionRew < 0) {
+      this.positionRew = 0;
     }
-    // console.log(R);
-    return Z;
+    let move;
+    move = setInterval(() => {
+      this.positionLeft = `-${this.positionRew}px`;
+      this.positionRew += 10;
+      console.log(this.positionRew);
+    }, 5);
+
+    setTimeout(() => {
+      move = clearInterval(move)
+    }, 500);
+  }
+
+  moveLeftBtn() {
+    if (this.positionRew > 0) {
+      let move;
+      move = setInterval(() => {
+        this.positionLeft = `-${this.positionRew}px`;
+        this.positionRew -= 10;
+        console.log(this.positionRew);
+      }, 5);
+
+      setTimeout(() => {
+        move = clearInterval(move)
+      }, 500);
+    } else {
+      this.positionRew = 0;
+      console.log(this.positionRew);
+    }
+
   }
 
 
   refreshResponse() {
     this.bgService.getResponse().subscribe((res) => {
       this.reviews = res;
-      // console.log(this.reviews);
+      console.log(this.reviews);
 
     })
   }
