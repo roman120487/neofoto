@@ -17,6 +17,9 @@ export class MainComponent implements OnInit {
   widthClient: number;
   offsetWidth: number;
   counter: number = 0;
+  
+  timer: any;
+  step: number;
 
   constructor(public bgService: BgService) {
 
@@ -38,35 +41,33 @@ export class MainComponent implements OnInit {
   }
 
   moveRightBtn() {
-    console.log('qweqwe');
+    console.log('------------------------');
     console.log(this.positionRew);
     console.log(this.widthClient);
     console.log(this.offsetWidth);
-    
-    
+
     if (this.positionRew < this.widthClient - this.offsetWidth) {
       if (this.positionRew < 0) {
         this.positionRew = 0;
       }
-      let step = this.offsetWidth;
-      let move;
-     
-
-
-      move = setInterval(() => {
+      if(this.step == this.offsetWidth){
+        this.step +=this.offsetWidth
+      }
+      this.step = this.offsetWidth;
+      this.timer = setInterval(() => {
         this.positionLeft = `-${this.positionRew}px`;
         this.positionRew += 5;
         // console.log(this.positionRew);
-        
-      });
-
-      setTimeout(() => {
-        move = clearInterval(move)
-      }, 1000);
+        if (this.positionRew > this.step) {
+          this.stopp();
+        }
+      }, 1);
     }
   }
-  
 
+  stopp() {
+    clearInterval(this.timer)
+  }
 
   moveLeftBtn() {
     if (this.positionRew > 0) {
