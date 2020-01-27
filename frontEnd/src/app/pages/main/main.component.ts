@@ -11,10 +11,12 @@ import { BgService } from 'src/app/shared/services/bg.service';
 export class MainComponent implements OnInit {
   scrollBtn: boolean = false;
   reviews: any;
-  widthRewDiv: number;
   positionLeft: string;
   positionRight: string;
   positionRew: number = 0;
+  widthClient: number;
+  offsetWidth: number;
+  counter: number = 0;
 
   constructor(public bgService: BgService) {
 
@@ -22,26 +24,49 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     this.refreshResponse();
-    console.log(this.widthRewDiv);
 
-
+  }
+  windowParam(elem) {
+    if (this.counter == 0) {
+      this.widthClient = elem.clientWidth;
+      // console.log(elem.target.clientWidth);
+      this.widthClient = elem.target.clientWidth;
+      this.offsetWidth = elem.relatedTarget.offsetWidth;
+      console.log(this.offsetWidth);
+      this.counter = 1;
+    }
   }
 
   moveRightBtn() {
-    if (this.positionRew < 0) {
-      this.positionRew = 0;
-    }
-    let move;
-    move = setInterval(() => {
-      this.positionLeft = `-${this.positionRew}px`;
-      this.positionRew += 10;
-      console.log(this.positionRew);
-    }, 5);
+    console.log('qweqwe');
+    console.log(this.positionRew);
+    console.log(this.widthClient);
+    console.log(this.offsetWidth);
+    
+    
+    if (this.positionRew < this.widthClient - this.offsetWidth) {
+      if (this.positionRew < 0) {
+        this.positionRew = 0;
+      }
+      let step = this.offsetWidth;
+      let move;
+     
 
-    setTimeout(() => {
-      move = clearInterval(move)
-    }, 500);
+
+      move = setInterval(() => {
+        this.positionLeft = `-${this.positionRew}px`;
+        this.positionRew += 5;
+        // console.log(this.positionRew);
+        
+      });
+
+      setTimeout(() => {
+        move = clearInterval(move)
+      }, 1000);
+    }
   }
+  
+
 
   moveLeftBtn() {
     if (this.positionRew > 0) {
@@ -49,7 +74,7 @@ export class MainComponent implements OnInit {
       move = setInterval(() => {
         this.positionLeft = `-${this.positionRew}px`;
         this.positionRew -= 10;
-        console.log(this.positionRew);
+        // console.log(this.positionRew);
       }, 5);
 
       setTimeout(() => {

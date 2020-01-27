@@ -1,4 +1,7 @@
 .containerAllSite{
-    width: 100%;
-    padding: 20px 20px ;
+    width: 1704px;
+    width: 90%;
+    /* padding: 30px ; */
+    margin: 0px auto;
+    /* border: 1px solid lightgray; */
 }

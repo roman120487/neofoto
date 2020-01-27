@@ -1,11 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
-*{
+@font-face{
+    font-family: 'Baskerville';
+    src: url(/assets/fonts/baskerville/baskervi.ttf);
+}
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #EFF9F1;
+
+body {
+    background-color: #fafafa;
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+html, body {
+    height: 100%;
+    font-family: 'Baskerville';
+}

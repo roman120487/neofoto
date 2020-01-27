@@ -1,23 +1,32 @@
 <div class="containerMain">
     <div class="aboutUs mainBloks">
         <div class="photoAU">
-            <img src="assets/img/photographer.jpg" alt="">
+            <img src="assets/img/photographer.png" alt="">
         </div>
         <div class="textAU">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sunt fugit, possimus quos nisi incidunt
-                rerum
-                voluptate accusantium necessitatibus ut sit corporis modi exercitationem odit repellendus, minus eum
-                maxime
-                dignissimos.</p>
+            <p>My name is Olena Rudyuk and I'm a photographer. Photography has always been a hobby of mine, but
+                true love and professionalism became three years ago. I attended a photo school of the famous Lviv
+                photographer Yaroslav Monchak "Lighthouse" in the courses "Basic", "Universal" and
+                "Treatment and retouching", where she has not only acquired theoretical and practical skills, but also
+                incredible inspiration for creativity.</p>
             <br>
             <a href="">
-                <p> Instagram -></p>
+                <p>Instagram</p>
+                <div class="arrowSocial">
+                    <span></span>
+                </div>
             </a>
             <a href="">
-                <p> FAcebook -></p>
+                <p>Facebook</p>
+                <div class="arrowSocial">
+                    <span></span>
+                </div>
             </a>
             <a href="">
-                <p> Bihends -></p>
+                <p>Behance</p>
+                <div class="arrowSocial">
+                    <span></span>
+                </div>
             </a>
         </div>
 
@@ -73,11 +82,11 @@
     <!--------------------------- sliderReview -------------------------------->
     <div class="mainBloks">
         <div class="title">Відгуки</div>
-        <div class="arrowLeft" (click)="moveLeftBtn()" >
+        <div class="arrowLeft" (click)="moveLeftBtn()">
             <span></span>
         </div>
-        <div class="rewSliderMain" ([ngStyle])="{width: widthRewDiv}">
-            <div class="sliderLable" [ngStyle]="{left:positionLeft}">
+        <div class="rewSliderMain" >
+            <div class="sliderLable" [ngStyle]="{left:positionLeft}" (mouseover)="windowParam($event)">
                 <div class="slideRew" *ngFor="let item of reviews">
                     <div class="fotoRew"><img src="{{item.idImgUrl + item.idImg}}" alt=""></div>
                     <div class="textRew">{{item.response}}</div>
@@ -85,7 +94,7 @@
             </div>
 
         </div>
-        <div class="arrowRight" (click)="moveRightBtn()" >
+        <div class="arrowRight" (click)="moveRightBtn()">
             <span></span>
         </div>
     </div>
