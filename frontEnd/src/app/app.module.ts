@@ -15,6 +15,7 @@ import { PoslugiComponent } from './pages/poslugi/poslugi.component';
 import { AdminPortraitComponent } from './admin/admin-portrait/admin-portrait.component';
 import { AdminResponseComponent } from './admin/admin-response/admin-response.component';
 import { AdminListProjectComponent } from './admin/admin-list-project/admin-list-project.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -36,6 +37,7 @@ import { AdminListProjectComponent } from './admin/admin-list-project/admin-list
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    BrowserAnimationsModule,
     // Observable
   ],
   providers: [],

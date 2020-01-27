@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-
+import { BgService } from 'src/app/shared/services/bg.service';
+// import { setInterval } from 'timers';
 
 @Component({
   selector: 'app-main',
@@ -9,10 +10,90 @@ import { Component, OnInit, HostListener } from '@angular/core';
 
 export class MainComponent implements OnInit {
   scrollBtn: boolean = false;
-  constructor() { }
+  reviews: any;
+  positionLeft: string;
+  positionRight: string;
+  positionRew: number = 0;
+  widthClient: number;
+  offsetWidth: number;
+  counter: number = 0;
+
+  constructor(public bgService: BgService) {
+
+  }
 
   ngOnInit() {
+    this.refreshResponse();
 
+  }
+  windowParam(elem) {
+    if (this.counter == 0) {
+      this.widthClient = elem.clientWidth;
+      // console.log(elem.target.clientWidth);
+      this.widthClient = elem.target.clientWidth;
+      this.offsetWidth = elem.relatedTarget.offsetWidth;
+      console.log(this.offsetWidth);
+      this.counter = 1;
+    }
+  }
+
+  moveRightBtn() {
+    console.log('qweqwe');
+    console.log(this.positionRew);
+    console.log(this.widthClient);
+    console.log(this.offsetWidth);
+    
+    
+    if (this.positionRew < this.widthClient - this.offsetWidth) {
+      if (this.positionRew < 0) {
+        this.positionRew = 0;
+      }
+      let step = this.offsetWidth;
+      let move;
+     
+
+
+      move = setInterval(() => {
+        this.positionLeft = `-${this.positionRew}px`;
+        this.positionRew += 5;
+        // console.log(this.positionRew);
+        
+      });
+
+      setTimeout(() => {
+        move = clearInterval(move)
+      }, 1000);
+    }
+  }
+  
+
+
+  moveLeftBtn() {
+    if (this.positionRew > 0) {
+      let move;
+      move = setInterval(() => {
+        this.positionLeft = `-${this.positionRew}px`;
+        this.positionRew -= 10;
+        // console.log(this.positionRew);
+      }, 5);
+
+      setTimeout(() => {
+        move = clearInterval(move)
+      }, 500);
+    } else {
+      this.positionRew = 0;
+      console.log(this.positionRew);
+    }
+
+  }
+
+
+  refreshResponse() {
+    this.bgService.getResponse().subscribe((res) => {
+      this.reviews = res;
+      console.log(this.reviews);
+
+    })
   }
 
   @HostListener('window:scroll', ['$event']) onscroll(event): void {
@@ -41,4 +122,12 @@ export class MainComponent implements OnInit {
 
 
 
+
+
+
+
+
+
 }
+
+
