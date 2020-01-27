@@ -8,6 +8,10 @@ const Response = require('../models/response')
 
 router.use(cors())
 
+var corsOptions = {
+    origin: 'http://localhost'
+  }
+
 const storageConfig = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, "./uploads/response/");
@@ -38,6 +42,7 @@ router.get('/', cors(), (req, res) => {
     })
 });
 router.post('/', cors(), function (req, res) {
+    console.log('norm')
     const date = req.body;
     let emp = new Response({
         'response': date.response,
