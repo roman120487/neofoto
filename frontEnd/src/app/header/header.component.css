@@ -1,15 +1,7 @@
 .containerHeader {
     height: 1030px;
-    /* background-image: url(/assets/img/bg-header.png); */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
-    /* background-position-y: 56px; */
     position: relative;
-    /* border: 1px solid black; */
     box-shadow: 0 30px 40px rgba(0, 0, 0, 0.16);
-    /* background-color: rgba(0, 0, 0, 0.16); */
-    /* background-size: 2em; */
-    /* position: relative; */
     overflow: hidden;
 }
 

@@ -1,12 +1,15 @@
 .containerMain {
     width: 100%;
 }
+
 .title {
     width: 100%;
+    margin-bottom: 60px;
     font-size: 25px;
     font-weight: bold;
     /* height: 50px; */
 }
+
 .mainBloks {
     width: 100%;
     padding: 15px 25px;
@@ -59,10 +62,12 @@ a {
     flex-direction: row;
     margin-top: 0;
 }
-a:hover{
+
+a:hover {
     color: #f3c6b8;
 }
-a:hover .arrowSocial{
+
+a:hover .arrowSocial {
     display: flex;
 }
 
@@ -74,7 +79,6 @@ a:hover .arrowSocial{
     align-items: center;
     margin-left: 20px;
 }
-
 
 .arrowSocial span, .arrowSocial span::after, .arrowSocial span::before {
     width: 35px;
@@ -107,8 +111,8 @@ a:hover .arrowSocial{
     width: 14px;
     transform: rotate(-45deg);
 }
-/* -------------------------------------------- */
 
+/* -------------------------------------------- */
 
 .galary {
     /* height: 700px; */
@@ -196,6 +200,39 @@ a:hover .arrowSocial{
 .galary div img {
     height: 100%;
 }
+
+/* ---------what We ----------------- */
+
+.whatWe {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.whatWe>div {
+    width: 530px;
+    height: 771px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+.whatWe>div>p {
+    color: #222222;
+    font-size: 24px;
+    font-weight: 300;
+    width: 184px;
+    height: 57px;
+    text-align: center;
+    margin: 59px auto;
+}
+
+.whatWe>div>img {
+    margin: 125px auto;
+}
+
+/* --------------------------------- */
 
 /* -------Rewievs--------------- */
 
@@ -323,6 +360,102 @@ a:hover .arrowSocial{
     width: 14px;
     transform: rotate(-45deg);
 }
+
+/* -------------orderPhoto ------------------------ */
+
+.orderPhoto {
+    width: 99vw;
+    height: 260px;
+    /* background-image: url(/assets/img/orderbg.png); */
+    /* background-size: 100% 100%; */
+    position: relative;
+    padding: 59px 109px;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+}
+
+.labelOrder>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.labelOrder {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.orderPhoto p {
+    position: absolute;
+    width: 437px;
+    height: 60px;
+    color: #ffffff;
+    font-size: 50px;
+    /* font-weight: 700; */
+    z-index: 99;
+}
+.orderPhoto a{
+    margin-top: 90px;
+}
+.orderPhoto a>p {
+    font-size: 24px;
+    padding-top: 5px;
+}
+.arrowOrder {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 140px;
+}
+
+.arrowOrder span, .arrowOrder span::after, .arrowOrder span::before {
+    width: 35px;
+    height: 3px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    position: absolute;
+    border-radius: 20%;
+}
+
+.arrowOrder {
+    right: 20px;
+}
+
+.arrowOrder span::before, .arrowOrder span::after {
+    display: block;
+    content: '';
+}
+
+.arrowOrder span::before {
+    top: -5px;
+    right: -2px;
+    width: 14px;
+    transform: rotate(45deg);
+}
+
+.arrowOrder span::after {
+    top: 3px;
+    right: -2px;
+    width: 14px;
+    transform: rotate(-45deg);
+}
+.orderPhoto a p:hover{
+    color: #f3c6b8;
+}
+
+/* -------------------------------------------------- */
 
 /* ---------scroll button to top --------------------*/
 

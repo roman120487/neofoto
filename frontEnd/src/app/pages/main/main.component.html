@@ -32,7 +32,7 @@
 
     </div>
     <div class="ourWorks mainBloks">
-        <p class="title">Наші роботи</p>
+        <p class="title">My latest works</p>
         <div class="galary">
             <div>
                 <div class="darkHoverGalary">
@@ -79,13 +79,34 @@
         </div>
     </div>
 
+    <div class="mainBloks">
+        <div class="title">Our advantages</div>
+        <div class="whatWe">
+            <div>
+                <p>A Comprehensive
+                    Approach</p>
+                <img src="assets/img/ww1.png" alt="">
+            </div>
+            <div>
+                <p>Open to
+                    Your Ideas</p>
+                <img src="assets/img/ww2.png" alt="">
+            </div>
+            <div>
+                <p>Timely Execution
+                    of the Order</p>
+                <img src="assets/img/ww3.png" alt="">
+            </div>
+        </div>
+    </div>
+
     <!--------------------------- sliderReview -------------------------------->
     <div class="mainBloks">
         <div class="title">Відгуки</div>
         <div class="arrowLeft" (click)="moveLeftBtn()">
             <span></span>
         </div>
-        <div class="rewSliderMain" >
+        <div class="rewSliderMain">
             <div class="sliderLable" [ngStyle]="{left:positionLeft}" (mouseover)="windowParam($event)">
                 <div class="slideRew" *ngFor="let item of reviews">
                     <div class="fotoRew"><img src="{{item.idImgUrl + item.idImg}}" alt=""></div>
@@ -102,13 +123,20 @@
     <!-- ------------------------------------------------------------------------ -->
 
 
-    <div class="lastProject mainBloks">
-        <h3>Чому ми</h3>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure sunt fugit, possimus quos nisi incidunt
-            rerum
-            voluptate accusantium necessitatibus ut sit corporis modi exercitationem odit repellendus, minus eum
-            maxime
-            dignissimos.</p>
+    <div class="orderPhoto">
+        <p>Let`s talk about you</p>
+
+        <div class="labelOrder">
+            <img src="assets/img/orderbg.png" alt="">
+        </div>
+        <a href="">
+            <p>Get in touch</p>
+            <div class="arrowOrder">
+                <span></span>
+            </div>
+        </a>
+
+
     </div>
 
     <div *ngIf="scrollBtn" class="goUpBtn" (click)="scrollUp()">
