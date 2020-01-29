@@ -16,12 +16,14 @@ a{
 /* -------------------------------------------- */
 
 .galary {
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(5, 200px);
     grid-gap: 50px;
     justify-items: center;
     padding: 150px 0px;
+    align-items: inherit;
 }
 
 .galary>div {
@@ -65,6 +67,9 @@ a{
     padding: 0px 15px;
     border-radius: 5px;
 }
+.galary{
+    --n:
+}
 
 .darkHoverGalary:hover {
     opacity: 0.7;
@@ -96,8 +101,4 @@ a{
 
 .galary :nth-child(6) {
     grid-row: 3/6;
-}
-
-.galary div img {
-    height: 100%;
 }

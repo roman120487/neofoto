@@ -8,11 +8,12 @@ import { BgService } from 'src/app/shared/services/bg.service';
 })
 export class GalaryComponent implements OnInit {
   photoArray: any;
+  photoArrayPies: any = [];
   constructor(public api: BgService) { }
 
   ngOnInit() {
     this.refreshProject();
-    
+    this.dropPhoto();
 
   }
 
@@ -20,9 +21,23 @@ export class GalaryComponent implements OnInit {
   refreshProject() {
     this.api.getPortrait().subscribe((res) => {
       this.photoArray = res;
-      console.log(this.photoArray);
-      console.log(this.photoArray[1].arrayImg[1]);
     });
+  }
+
+  dropPhoto() {
+    setTimeout(() => {
+      // debugger
+      console.log(this.photoArray);
+      const r = Math.ceil(this.photoArray.length / 6);
+      console.log(r);
+
+
+      for (let i = 0; i < r; i++) {
+        this.photoArrayPies.push(this.photoArray.slice(i, 6));
+      }
+      console.log(this.photoArrayPies);
+
+    }, 1000);
   }
 
 }
