@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BgService } from 'src/app/shared/services/bg.service';
 
 @Component({
   selector: 'app-galary',
@@ -6,10 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./galary.component.css']
 })
 export class GalaryComponent implements OnInit {
-
-  constructor() { }
+  photoArray: any;
+  constructor(public api: BgService) { }
 
   ngOnInit() {
+    this.refreshProject();
+    
+
+  }
+
+
+  refreshProject() {
+    this.api.getPortrait().subscribe((res) => {
+      this.photoArray = res;
+      console.log(this.photoArray);
+      console.log(this.photoArray[1].arrayImg[1]);
+    });
   }
 
 }

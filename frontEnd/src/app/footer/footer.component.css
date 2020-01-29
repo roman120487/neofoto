@@ -8,11 +8,11 @@ footer{
 /* -------------orderPhoto ------------------------ */
 
 .orderPhoto {
-    width: 99vw;
     height: 260px;
     padding: 59px 109px;
     position: absolute;
     left: 0;
+    right: 0;
     overflow: hidden;
 }
 

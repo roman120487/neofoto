@@ -1,0 +1,103 @@
+.gallaryContainer{
+    width: 100%;
+}
+.titleMain{
+    width: 184px;
+height: 71px;
+color: #222222;
+font-family: Baskerville;
+font-size: 60px;
+font-weight: 700;
+}
+a{
+    text-decoration: none;
+}
+
+/* -------------------------------------------- */
+
+.galary {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(5, 200px);
+    grid-gap: 50px;
+    justify-items: center;
+    padding: 150px 0px;
+}
+
+.galary>div {
+    width: 400px;
+    /* border: 10px solid white; */
+    font-size: 35px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.darkHoverGalary {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    opacity: 0;
+    z-index: 2;
+    transition: 0.7s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.darkHoverGalary :nth-child(1) {
+    color: white;
+}
+
+.darkHoverGalary :nth-child(2) {
+    cursor: pointer;
+    border: 3px solid white;
+    color: white;
+    padding: 0px 15px;
+    border-radius: 5px;
+}
+
+.darkHoverGalary:hover {
+    opacity: 0.7;
+}
+
+.galary>div>img {
+    height: 100%;
+}
+
+.galary :nth-child(1) {
+    grid-row: 1/3;
+}
+
+.galary :nth-child(2) {
+    grid-row: 1/4;
+}
+
+.galary :nth-child(3) {
+    grid-row: 1/3;
+}
+
+.galary :nth-child(4) {
+    grid-row: 3/6;
+}
+
+.galary :nth-child(5) {
+    grid-row: 4/6;
+}
+
+.galary :nth-child(6) {
+    grid-row: 3/6;
+}
+
+.galary div img {
+    height: 100%;
+}
