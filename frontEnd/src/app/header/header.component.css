@@ -1,7 +1,7 @@
 .containerHeader {
     height: 74px;
     position: relative;
-    box-shadow: 0 30px 40px rgba(0, 0, 0, 0.16);
+    
     overflow: hidden;
 }
 
