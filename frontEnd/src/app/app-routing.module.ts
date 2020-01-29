@@ -9,6 +9,9 @@ import { PoslugiComponent } from './pages/poslugi/poslugi.component';
 import { AdminPortraitComponent } from './admin/admin-portrait/admin-portrait.component';
 import { AdminResponseComponent } from './admin/admin-response/admin-response.component';
 import { AdminListProjectComponent } from './admin/admin-list-project/admin-list-project.component';
+import { ViewPhotoComponent } from './pages/galary/view-photo/view-photo.component';
+
+
 const routes: Routes = [
   {path: '', redirectTo: '/main', pathMatch: 'full'},
   {path: 'main', component: MainComponent},
@@ -17,6 +20,7 @@ const routes: Routes = [
     {path: 'comerce', component: ComerceComponent},
   ]*/},
   {path: 'galary', component: GalaryComponent},
+  {path: 'viewPhoto', component: ViewPhotoComponent},
   {path: 'contacts', component: ContactsComponent},
   {path: 'admin', component: AdminComponent, children:[
     { path: '', redirectTo: 'portrait', pathMatch: 'full' },

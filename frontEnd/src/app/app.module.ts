@@ -16,6 +16,7 @@ import { AdminPortraitComponent } from './admin/admin-portrait/admin-portrait.co
 import { AdminResponseComponent } from './admin/admin-response/admin-response.component';
 import { AdminListProjectComponent } from './admin/admin-list-project/admin-list-project.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ViewPhotoComponent } from './pages/galary/view-photo/view-photo.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PoslugiComponent,
     AdminPortraitComponent,
     AdminResponseComponent,
-    AdminListProjectComponent
+    AdminListProjectComponent,
+    ViewPhotoComponent,
   ],
   imports: [
     BrowserModule,
