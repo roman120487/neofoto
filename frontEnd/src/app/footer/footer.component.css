@@ -1,6 +1,137 @@
 footer{
     width: 100%;
+    height: 650px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* -------------orderPhoto ------------------------ */
+
+.orderPhoto {
+    width: 99vw;
+    height: 260px;
+    padding: 59px 109px;
+    position: absolute;
+    left: 0;
+    overflow: hidden;
+}
+
+.labelOrder>img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+}
+
+.labelOrder {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.orderPhoto p {
+    position: absolute;
+    width: 437px;
+    height: 60px;
+    color: #ffffff;
+    font-size: 50px;
+    /* font-weight: 700; */
+    z-index: 5;
+}
+.orderPhoto a{
+    margin-top: 90px;
+}
+.orderPhoto a>p {
+    font-size: 24px;
+    padding-top: 75px;
+    opacity: 1;
+}
+.arrowOrder {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 140px;
+    margin-top: 70px;
+}
+
+.arrowOrder span, .arrowOrder span::after, .arrowOrder span::before {
+    width: 35px;
+    height: 3px;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    position: absolute;
+    border-radius: 20%;
+}
+
+.arrowOrder {
+    right: 20px;
+}
+
+.arrowOrder span::before, .arrowOrder span::after {
+    display: block;
+    content: '';
+}
+
+.arrowOrder span::before {
+    top: -5px;
+    right: -2px;
+    width: 14px;
+    transform: rotate(45deg);
+}
+
+.arrowOrder span::after {
+    top: 3px;
+    right: -2px;
+    width: 14px;
+    transform: rotate(-45deg);
+}
+.orderPhoto a p:hover{
+    color: #f3c6b8;
+}
+
+/* -------------------------------------------------- */
+.fContainer{
+    width: 100%;
+    margin-top: 320px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.logo{
+    width: 200px;
     height: 150px;
-    background-color: #F3F095;
-    margin-top: 10px;
+    background-color: white;
+    border-radius: 25px;
+    border: 1px solid lightgrey;
+}
+.fNAv, .fSocial, .fContactd{
+    margin-left: 130px;
+}
+.fContainer a, .fContactd p{
+    /* width: 47px; */
+    font-size: 18px;
+    text-decoration: none;
+    color: #1a1a1a;
+    opacity: 0.5;
+    height: 22px;
+    line-height: 2;
+}
+footer a:hover{
+    opacity: 1;
+}
+.copiRight{
+    border-top: 1px solid black;
+    width: 100%;
+    height: 70px;
+    margin-top: 50px;
+    padding-top: 15px;
 }
