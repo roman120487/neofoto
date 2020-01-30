@@ -54,11 +54,15 @@ export class BgService {
   }
   updateResponse(id: string, response: string) {
     console.log(response)
-    return this.http.put(`http://localhost:3000/api/response/edit/${id}`, { response })
+    return this.http.put(`http://localhost:3000/api/response/edit/${id}`, response )
   }
   deleteResponse(id: string) {
     return this.http.delete(`http://localhost:3000/api/response/delete/${id}`)
   }
 
 
+  auth(data: string) {
+    console.log(data)
+    return this.webService.post('auth', data)
+  }
 }

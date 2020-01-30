@@ -6,6 +6,11 @@ const ResponseSchema = new mongoose.Schema({
         trim: true,
         minlength: 1
     },
+    author:{
+        type: String,
+        trim: true,
+        minlength: 1
+    },
     idImg:{
         type: String,
         trim: true,

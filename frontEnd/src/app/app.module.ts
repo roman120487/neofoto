@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,8 @@ import { AdminResponseComponent } from './admin/admin-response/admin-response.co
 import { AdminListProjectComponent } from './admin/admin-list-project/admin-list-project.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewPhotoComponent } from './pages/galary/view-photo/view-photo.component';
+import { AuthComponent } from './auth/auth.component';
+import { IsLoggedIn } from './auth/isLogged.guard';
 
 
 @NgModule({
@@ -33,6 +36,7 @@ import { ViewPhotoComponent } from './pages/galary/view-photo/view-photo.compone
     AdminResponseComponent,
     AdminListProjectComponent,
     ViewPhotoComponent,
+    AuthComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,9 +44,9 @@ import { ViewPhotoComponent } from './pages/galary/view-photo/view-photo.compone
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    // Observable
+    HttpModule
   ],
-  providers: [],
+  providers: [IsLoggedIn],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
