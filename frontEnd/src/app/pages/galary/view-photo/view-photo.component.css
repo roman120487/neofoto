@@ -1,0 +1,27 @@
+.photoDetailContainer {
+    width: 100%;
+}
+
+.title {
+    border: 1px solid black;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: 83px;
+    color: #222222;
+    font-size: 40px;
+    font-weight: 700;
+}
+.title p{
+    margin-left: 25px;
+}
+
+.bigPhoto {
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
+}
+.arrowBack{
+    cursor: pointer;
+}

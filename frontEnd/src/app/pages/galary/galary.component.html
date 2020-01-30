@@ -2,24 +2,13 @@
     <div class="titleMain">
         <p>Gallary</p>
     </div>
-    <!-- <div class="mainBox">
-        <div class="galary">
-            <div *ngFor="let project of photoArray; let i = index">
-                <div class="darkHoverGalary">
-                    <span class="title">{{project.nameProject}}</span>
-                    <a routerLink="/viewPhoto"><span>Детальніше</span></a>
-                </div>
-                <img src="{{project.arrayImg[1].path + project.arrayImg[1].filename}}" alt="">
-            </div>
-        </div>
-    </div> -->
 
     <div class="mainBox">
-        <div class="galary" *ngFor="let item of photoArrayPies" >
+        <div class="galary" *ngFor="let item of photoArrayPies">
             <div *ngFor="let project of item; let i = index">
                 <div class="darkHoverGalary">
                     <span class="title">{{project.nameProject}}</span>
-                    <a routerLink="/viewPhoto"><span>Детальніше</span></a>
+                    <a routerLink="/viewPhoto" (click)="photoDetails(project.id)"><span>Детальніше</span></a>
                 </div>
                 <img src="{{project.arrayImg[1].path + project.arrayImg[1].filename}}" alt="">
             </div>
