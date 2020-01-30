@@ -37,6 +37,7 @@ export class AuthComponent implements OnInit {
         console.log('no')
       }
       else{
+        console.log('no else');
         this.router.navigate(['/admin'])
         this.auth.storeUser(res.token, res.user);
       }
