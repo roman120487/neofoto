@@ -26,18 +26,12 @@ export class GalaryComponent implements OnInit {
 
   dropPhoto() {
     setTimeout(() => {
-      // debugger
       console.log(this.photoArray);
-      const r = Math.ceil(this.photoArray.length / 6);
-      console.log(r);
-
-
-      for (let i = 0; i < r; i++) {
-        this.photoArrayPies.push(this.photoArray.slice(i, 6));
+      for (let i = 0; i < this.photoArray.length; i += 6) {
+        this.photoArrayPies.push(this.photoArray.slice(i, i + 6));
       }
       console.log(this.photoArrayPies);
-
-    }, 1000);
+    }, 500);
   }
 
 }
