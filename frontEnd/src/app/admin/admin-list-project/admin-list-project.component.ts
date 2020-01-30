@@ -25,7 +25,6 @@ export class AdminListProjectComponent implements OnInit {
   constructor(private api: BgService) { }
 
   ngOnInit() {
-    // this.api.getPortrait().subscribe((res: any) => {this.portrait = res;}, err => {console.log(err);});
     this.refreshProject();
     this.resetForm();
   }

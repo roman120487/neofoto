@@ -10,6 +10,7 @@ import Response from 'src/app/shared/classes/response';
 })
 export class AdminResponseComponent implements OnInit {
   response: string;
+  author: string;
   fileData;
   responseObj;
   edit: boolean;
@@ -25,12 +26,14 @@ export class AdminResponseComponent implements OnInit {
     if (this.response) {
       let formDataImg: any = new FormData();
       formDataImg.append('response', this.response);
+      formDataImg.append('author', this.author);
       formDataImg.append('file', this.fileData);
       this.api.createResponse(formDataImg).subscribe((res: any) => {
         this.refreshResponse()
       }, (err: any) => { console.log(err); })
     }
     this.response = '';
+    this.author = '';
     (<HTMLInputElement>window.document.getElementById('file')).value = "";
   }
   onFileSelected(event) {
@@ -45,17 +48,22 @@ export class AdminResponseComponent implements OnInit {
     console.log(item)
     this.saveId = item._id;
     this.response = item.response;
+    this.author = item.author;
     this.edit = true;
   }
   saveResponse() {
     console.log(this.response)
-    this.api.updateResponse(this.saveId, this.response)
+    let formDataSave: any = new FormData();
+    formDataSave.append('response', this.response);
+    formDataSave.append('author', this.author);
+    this.api.updateResponse(this.saveId, formDataSave)
       .subscribe((res: any) => {
         this.refreshResponse();
       }, (err: any) => {
         console.log(err);
       });
     this.response = '';
+    this.author = '';
     this.edit = false;
   }
   onDelete(item) {

@@ -46,6 +46,7 @@ router.post('/', cors(), function (req, res) {
     const date = req.body;
     let emp = new Response({
         'response': date.response,
+        'author': date.author,
         'idImg': req.file.filename,
         'idImgUrl': 'http://localhost:3000/uploads/response/'
     });
@@ -54,7 +55,7 @@ router.post('/', cors(), function (req, res) {
     })
 })
 router.put('/edit/:editId', cors(), (req, res) => {
-    Response.findByIdAndUpdate(req.params.editId, { response: req.body.response })
+    Response.findByIdAndUpdate(req.params.editId, {$set: req.body})
         .then((list) => res.send(list))
         .catch((error) => console.log(error))
 })
