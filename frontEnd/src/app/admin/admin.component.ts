@@ -15,6 +15,6 @@ export class AdminComponent implements OnInit {
 
   logoutIsAdmin(){
     this.auth.logout();
-    this.router.navigate(['/main'])
+    this.router.navigate(['/main']);
   }
 }
