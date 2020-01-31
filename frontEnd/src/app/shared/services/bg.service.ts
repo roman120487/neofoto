@@ -34,13 +34,13 @@ export class BgService {
   }
   updatePortrait(id: string, response: string) {
     console.log(response)
-    return this.http.patch(`http://localhost:3000/api/portrait/edit-upd/${id}`, response )
+    return this.http.patch(`http://localhost:3000/api/portrait/edit-upd/${id}`, response );
   }
   updatePortraitAll(id: string, data: string) {
-    return this.http.patch(`http://localhost:3000/api/portrait/edit-updAll/${id}`, data)
+    return this.http.patch(`http://localhost:3000/api/portrait/edit-updAll/${id}`, data);
   }
   deletePortait(id: string) {
-    return this.http.delete(`http://localhost:3000/api/portrait/delete/${id}`)
+    return this.http.delete(`http://localhost:3000/api/portrait/delete/${id}`);
   }
 
 

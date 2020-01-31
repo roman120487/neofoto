@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BgService } from 'src/app/shared/services/bg.service';
+import { GallaryService } from 'src/app/shared/services/gallary.service';
 
 @Component({
   selector: 'app-galary',
@@ -9,7 +10,7 @@ import { BgService } from 'src/app/shared/services/bg.service';
 export class GalaryComponent implements OnInit {
   photoArray: any;
   photoArrayPies: any = [];
-  constructor(public api: BgService) { }
+  constructor(public api: BgService, public galary: GallaryService) { }
 
   ngOnInit() {
     this.refreshProject();
@@ -33,8 +34,7 @@ export class GalaryComponent implements OnInit {
   }
 
   photoDetails(e){
-    console.log(e);
-    
+    this.galary.arrayPhoto = e;
   }
 
 }

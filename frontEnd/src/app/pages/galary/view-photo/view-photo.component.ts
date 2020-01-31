@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { GallaryService } from 'src/app/shared/services/gallary.service';
 
 @Component({
   selector: 'app-view-photo',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-photo.component.css']
 })
 export class ViewPhotoComponent implements OnInit {
-
-  constructor() { }
+  arrayPhoto: any = {};
+  photo: any = {};
+  constructor(public gallry: GallaryService) { }
 
   ngOnInit() {
+    this.arrayPhoto = this.gallry.arrayPhoto;
+    this.photo = this.arrayPhoto.arrayImg[0];
+    // console.log(this.arrayPhoto);
   }
+
+  viewBigPhoto(e) {
+    console.log(e);
+    this.photo = e;
+    console.log(this.photo);
+  }
+
 
 }

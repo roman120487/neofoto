@@ -8,9 +8,9 @@
             <div *ngFor="let project of item; let i = index">
                 <div class="darkHoverGalary">
                     <span class="title">{{project.nameProject}}</span>
-                    <a routerLink="/viewPhoto" (click)="photoDetails(project.id)"><span>Детальніше</span></a>
+                    <a routerLink="/viewPhoto" (click)="photoDetails(project)"><span>Детальніше</span></a>
                 </div>
-                <img src="{{project.arrayImg[1].path + project.arrayImg[1].filename}}" alt="">
+                <img src="{{project.arrayImg[0].path + project.arrayImg[0].filename}}" alt="">
             </div>
         </div>
     </div>
