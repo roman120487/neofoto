@@ -5,10 +5,10 @@
 
     <div class="mainBox">
         <div class="galary" *ngFor="let item of photoArrayPies">
-            <div *ngFor="let project of item; let i = index">
+            <div *ngFor="let project of item; let i = index" routerLink="/viewPhoto" (click)="photoDetails(project)">
                 <div class="darkHoverGalary">
                     <span class="title">{{project.nameProject}}</span>
-                    <a routerLink="/viewPhoto" (click)="photoDetails(project)"><span>Детальніше</span></a>
+                    <span>Детальніше</span>
                 </div>
                 <img src="{{project.arrayImg[0].path + project.arrayImg[0].filename}}" alt="">
             </div>

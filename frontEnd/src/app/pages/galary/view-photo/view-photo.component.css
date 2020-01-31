@@ -75,9 +75,12 @@
     /* border: 3px solid red; */
     display: flex;
     justify-content: center;
+    transition: 1s;
+    
 }
 .bigPhoto img{
     height: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 .bandPhotos{
     width: 100%;
@@ -85,7 +88,7 @@
     /* border: 2px solid green; */
     display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
     justify-content: space-around;
     margin-top: 25px;
 }
@@ -97,7 +100,10 @@
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    
+
 }
 .minphoto img{
     height: 100%;
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); */
 }
