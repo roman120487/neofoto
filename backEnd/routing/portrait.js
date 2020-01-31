@@ -46,7 +46,7 @@ router.patch('/edit-updAll/:editId', cors(), (req, res) => {
             console.log(oneimg[i].mimetype)
             let editFilles = oneimg[i].mimetype.indexOf('/');
             let img = `${oneimg[i].name}.${oneimg[i].mimetype.slice(editFilles + 1)}`
-            obj.push({ filename: img, path: `http://45.128.204.73:8080/uploads/project/${req.body.dirPhoto}/` })
+            obj.push({ filename: img, path: `http://localhost:3000/uploads/project/${req.body.dirPhoto}/` })
     
             oneimg[i].mv(`./uploads/project/${req.body.dirPhoto}/${img}`, function (error) {
                 if (error)
@@ -100,7 +100,7 @@ router.post('/', cors(), function (req, res) {
                 oneImgArray[i].name = Math.random().toString(36).substring(2);
                 let editFilles = oneImgArray[i].mimetype.indexOf('/');
                 let img = `${oneImgArray[i].name}.${oneImgArray[i].mimetype.slice(editFilles + 1)}`
-                obj.push({ filename: img, path: `http://45.128.204.73:8080/uploads/project/${renderMkr}/` })
+                obj.push({ filename: img, path: `http://localhost:3000/uploads/project/${renderMkr}/` })
 
                 oneImgArray[i].mv(`./uploads/project/${renderMkr}/${img}`, function (error) {
                     if (error)
