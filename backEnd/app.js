@@ -27,15 +27,17 @@ const portrait = require('./routing/portrait')
 const response = require('./routing/response')
 const account = require('./routing/account')
 const feedback = require('./routing/feedback')
+
 app.use('/api/portrait', portrait);
 app.use('/api/response', response);
 app.use('/api/feedback', feedback);
+
 app.use('/', account)
 app.use(passport.initialize())
 app.use(passport.session())
 require('./config/passport')(passport);
 
 
-app.listen(process.env.PORT || 3000, () => console.log('Server start on port 3000'));
+app.listen(process.env.PORT || 3001, () => console.log('Server start on port 3001'));
 
 module.exports = app;
