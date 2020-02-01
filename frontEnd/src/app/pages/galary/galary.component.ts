@@ -30,7 +30,7 @@ export class GalaryComponent implements OnInit {
       for (let i = 0; i < this.photoArray.length; i += 6) {
         this.photoArrayPies.push(this.photoArray.slice(i, i + 6));
       }
-    }, 200);
+    }, 400);
   }
 
   photoDetails(e){

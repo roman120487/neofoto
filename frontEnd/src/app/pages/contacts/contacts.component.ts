@@ -29,5 +29,7 @@ export class ContactsComponent implements OnInit {
     const data = Object.assign({}, form.value);
     this.api.feedback(data).subscribe((res: any) => {}, (err: any) => {console.log(err);});
     delete data.id;
+    console.log('send');
+    
   }
 }

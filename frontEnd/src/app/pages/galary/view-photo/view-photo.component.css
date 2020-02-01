@@ -84,7 +84,7 @@
 }
 .bandPhotos{
     width: 100%;
-    height: 200px;
+    /* height: 200px; */
     /* border: 2px solid green; */
     display: flex;
     flex-direction: row;
@@ -93,13 +93,14 @@
     margin-top: 25px;
 }
 .minphoto{
-    height: 100%;
+    height: 200px;
     width: 250px;
     /* border: 2px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin-top: 20px;
     
 
 }

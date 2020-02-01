@@ -17,9 +17,13 @@ export class MainComponent implements OnInit {
   widthClient: number;
   offsetWidth: number;
   counter: number = 0;
-  
+
   timer: any;
   step: number;
+
+  photoArray: any;
+  numStart: number = 1;
+  numFinish: number = 7;
 
   constructor(public bgService: BgService) {
 
@@ -27,8 +31,18 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
     this.refreshResponse();
+    this.refreshProject();
 
   }
+  refreshProject() {
+    this.bgService.getPortrait().subscribe((res) => {
+      this.photoArray = res;
+      this.numStart = Math.floor((Math.random() * ((this.photoArray.length - 6) - 0) + 0));
+      this.numFinish = this.numStart + 6;
+    });
+  }
+
+
   windowParam(elem) {
     if (this.counter == 0) {
       this.widthClient = elem.clientWidth;
@@ -50,8 +64,8 @@ export class MainComponent implements OnInit {
       if (this.positionRew < 0) {
         this.positionRew = 0;
       }
-      if(this.step == this.offsetWidth){
-        this.step +=this.offsetWidth
+      if (this.step == this.offsetWidth) {
+        this.step += this.offsetWidth
       }
       this.step = this.offsetWidth;
       this.timer = setInterval(() => {
@@ -92,7 +106,7 @@ export class MainComponent implements OnInit {
   refreshResponse() {
     this.bgService.getResponse().subscribe((res) => {
       this.reviews = res;
-      console.log(this.reviews);
+      // console.log(this.reviews);
 
     })
   }

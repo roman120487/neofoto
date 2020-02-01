@@ -3,9 +3,9 @@
         <img src="/assets/img/bg-header.png" alt="">
         <div class="rightSideBar">
             <div></div>
-                <a href=""><img src="assets/img/be.png" alt=""></a>
-                <a href=""><img src="assets/img/ig.png" alt=""></a>
-                <a href=""><img src="assets/img/fb.png" alt=""></a>
+            <a href=""><img src="assets/img/be.png" alt=""></a>
+            <a href=""><img src="assets/img/ig.png" alt=""></a>
+            <a href=""><img src="assets/img/fb.png" alt=""></a>
             <div></div>
         </div>
     </div>
@@ -46,54 +46,21 @@
 
     </div>
 
-    
+
     <div class="ourWorks mainBloks">
         <p class="title">My latest works</p>
         <div class="galary">
-            <div>
+            <div *ngFor="let project of photoArray | slice: numStart:numFinish">
                 <div class="darkHoverGalary">
-                    <span class="title">Проект 1</span>
+                    <span class="title">{{project.nameProject}}</span>
                     <span data-toggle="modal" data-target="#exampleModal">Детальніше</span>
                 </div>
-                <img src="assets/img/galary_main/1444685949_dsc08577.jpg" alt="">
-            </div>
-            <div>
-                <div class="darkHoverGalary">
-                    <span class="title">Проект 1</span>
-                    <span data-toggle="modal" data-target="#exampleModal">Детальніше</span>
-                </div>
-                <img src="assets/img/galary_main/1506718164116659892.png" alt="">
-            </div>
-            <div>
-                <div class="darkHoverGalary">
-                    <span class="title">Проект 1</span>
-                    <span data-toggle="modal" data-target="#exampleModal">Детальніше</span>
-                </div>
-                <img src="assets/img/galary_main/wedding-photo-editing-services.jpg" alt=""> foto 3
-            </div>
-            <div>
-                <div class="darkHoverGalary">
-                    <span class="title">Проект 1</span>
-                    <span data-toggle="modal" data-target="#exampleModal">Детальніше</span>
-                </div>
-                <img src="assets/img/galary_main/579b.jpg" alt="">foto 4
-            </div>
-            <div>
-                <div class="darkHoverGalary">
-                    <span class="title">Проект 1</span>
-                    <span data-toggle="modal" data-target="#exampleModal">Детальніше</span>
-                </div>
-                <img src="assets/img/galary_main/dc70224031a4ad5d8f0a5ced566cd87a.jpg" alt="">foto 5
-            </div>
-            <div>
-                <div class="darkHoverGalary">
-                    <span class="title">Проект 1</span>
-                    <span data-toggle="modal" data-target="#exampleModal">Детальніше</span>
-                </div>
-                <img src="assets/img/galary_main/photo_effects_filters_app05.jpg" alt="">foto 6
+                <img src="{{project.arrayImg[0].path + project.arrayImg[0].filename}}" alt="">
             </div>
         </div>
     </div>
+
+    
 
     <div class="mainBloks">
         <div class="title">Our advantages</div>
