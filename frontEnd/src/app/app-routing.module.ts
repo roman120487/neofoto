@@ -18,10 +18,7 @@ const routes: Routes = [
   {path: 'auth', component: AuthComponent},
   {path: '', redirectTo: '/main', pathMatch: 'full'},
   {path: 'main', component: MainComponent},
-  {path: 'paslugi', component: PoslugiComponent /*, children: [
-    {path: 'portret', component: PortretComponent},
-    {path: 'comerce', component: ComerceComponent},
-  ]*/},
+  {path: 'paslugi', component: PoslugiComponent},
   {path: 'galary', component: GalaryComponent},
   {path: 'viewPhoto', component: ViewPhotoComponent},
   {path: 'contacts', component: ContactsComponent},

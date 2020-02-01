@@ -16,7 +16,7 @@ export class AdminResponseComponent implements OnInit {
   edit: boolean;
   saveId: string;
 
-  constructor(private api: BgService) { }
+  constructor(public api: BgService) { }
 
   ngOnInit() {
     this.refreshResponse();

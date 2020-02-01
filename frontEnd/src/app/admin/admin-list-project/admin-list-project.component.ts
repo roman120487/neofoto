@@ -22,7 +22,7 @@ export class AdminListProjectComponent implements OnInit {
   nameProject: string;
   categoryProject: string;
 
-  constructor(private api: BgService) { }
+  constructor(public api: BgService) { }
 
   ngOnInit() {
     this.refreshProject();

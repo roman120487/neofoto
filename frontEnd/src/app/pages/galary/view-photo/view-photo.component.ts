@@ -14,13 +14,10 @@ export class ViewPhotoComponent implements OnInit {
   ngOnInit() {
     this.arrayPhoto = this.gallry.arrayPhoto;
     this.photo = this.arrayPhoto.arrayImg[0];
-    // console.log(this.arrayPhoto);
   }
 
   viewBigPhoto(e) {
-    console.log(e);
     this.photo = e;
-    console.log(this.photo);
   }
 
 

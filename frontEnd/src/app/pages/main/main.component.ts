@@ -37,8 +37,13 @@ export class MainComponent implements OnInit {
   refreshProject() {
     this.bgService.getPortrait().subscribe((res) => {
       this.photoArray = res;
-      this.numStart = Math.floor((Math.random() * ((this.photoArray.length - 6) - 0) + 0));
+      this.numStart = Math.floor((Math.random() * ((this.photoArray.length - 5) - 0) + 0));
       this.numFinish = this.numStart + 6;
+      console.log(this.photoArray);
+      
+      console.log(this.numStart);
+      console.log(this.numFinish);
+      
     });
   }
 
@@ -55,11 +60,6 @@ export class MainComponent implements OnInit {
   }
 
   moveRightBtn() {
-    console.log('------------------------');
-    console.log(this.positionRew);
-    console.log(this.widthClient);
-    console.log(this.offsetWidth);
-
     if (this.positionRew < this.widthClient - this.offsetWidth) {
       if (this.positionRew < 0) {
         this.positionRew = 0;
@@ -71,7 +71,6 @@ export class MainComponent implements OnInit {
       this.timer = setInterval(() => {
         this.positionLeft = `-${this.positionRew}px`;
         this.positionRew += 5;
-        // console.log(this.positionRew);
         if (this.positionRew > this.step) {
           this.stopp();
         }

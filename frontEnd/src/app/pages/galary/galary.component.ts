@@ -10,30 +10,29 @@ import { GallaryService } from 'src/app/shared/services/gallary.service';
 export class GalaryComponent implements OnInit {
   photoArray: any;
   photoArrayPies: any = [];
+
   constructor(public api: BgService, public galary: GallaryService) { }
 
   ngOnInit() {
     this.refreshProject();
-    this.dropPhoto();
-
   }
+
 
 
   refreshProject() {
     this.api.getPortrait().subscribe((res) => {
       this.photoArray = res;
+      this.dropPhoto();
     });
   }
 
   dropPhoto() {
-    setTimeout(() => {
-      for (let i = 0; i < this.photoArray.length; i += 6) {
-        this.photoArrayPies.push(this.photoArray.slice(i, i + 6));
-      }
-    }, 400);
+    for (let i = 0; i < this.photoArray.length; i += 6) {
+      this.photoArrayPies.push(this.photoArray.slice(i, i + 6));
+    }
   }
 
-  photoDetails(e){
+  photoDetails(e) {
     this.galary.arrayPhoto = e;
   }
 
