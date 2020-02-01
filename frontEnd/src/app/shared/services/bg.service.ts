@@ -33,7 +33,6 @@ export class BgService {
     return this.webService.post('api/portrait', data)
   }
   updatePortrait(id: string, response: string) {
-    console.log(response)
     return this.http.patch(`http://localhost:3000/api/portrait/edit-upd/${id}`, response );
   }
   updatePortraitAll(id: string, data: string) {
@@ -60,9 +59,12 @@ export class BgService {
     return this.http.delete(`http://localhost:3000/api/response/delete/${id}`)
   }
 
-
   auth(data: string) {
     console.log(data)
     return this.webService.post('auth', data)
+  }
+
+  feedback(data: string){
+    return this.webService.post('api/feedback', data)
   }
 }
