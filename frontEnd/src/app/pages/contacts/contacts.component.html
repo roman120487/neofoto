@@ -29,16 +29,16 @@
     </div>
     <div class="formSend">
         <h5>Hello. Let`s get in touch.</h5>
-        <form action="">
+        <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
             <p>NAME</p>
-            <input type="text" placeholder="your name">
+            <input #namePerson="ngModel" name="namePerson" [(ngModel)]="formData.namePerson" type="text" placeholder="your name">
             <p>PHONE NUMBER</p>
-            <input type="text" placeholder="Your phone number">
+            <input #namePersonPhone="ngModel" name="namePersonPhone" [(ngModel)]="formData.namePersonPhone" type="text" placeholder="Your phone number">
             <p>EMAIL</p>
-            <input type="text" placeholder="Your email">
+            <input #namePersonEmail="ngModel" name="namePersonEmail" [(ngModel)]="formData.namePersonEmail" type="text" placeholder="Your email">
             <p>MESSAGE</p>
-            <textarea name="" id="" cols="30" rows="3" placeholder="Start typing here"></textarea><br>
-            <button>Send message</button>
+            <textarea #namePersonMessage="ngModel" name="namePersonMessage" [(ngModel)]="formData.namePersonMessage" id="" cols="30" rows="3" placeholder="Start typing here"></textarea><br>
+            <button type="submit">Send message</button>
         </form>
     </div>
 

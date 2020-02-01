@@ -26,8 +26,10 @@ app.use('/uploads', express.static('uploads'))
 const portrait = require('./routing/portrait')
 const response = require('./routing/response')
 const account = require('./routing/account')
+const feedback = require('./routing/feedback')
 app.use('/api/portrait', portrait);
 app.use('/api/response', response);
+app.use('/api/feedback', feedback);
 app.use('/', account)
 app.use(passport.initialize())
 app.use(passport.session())
