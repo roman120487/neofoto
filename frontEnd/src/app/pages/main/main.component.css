@@ -1,4 +1,4 @@
-.containerMain {
+    .containerMain {
     width: 100%;
 }
 .bgHeader {
@@ -478,8 +478,14 @@ a:hover .arrowSocial {
     justify-content: space-around;
     /* align-items: center; */
 }
+.modalImg{
+    max-width: 500px;
+    max-height: 500px;
+    border: 15px solid white;
+    margin-top: 25px;
+}
 
-.modal-body img {
+.modalImg img {
     max-width: 500px;
     max-height: 500px;
     border: 15px solid white;

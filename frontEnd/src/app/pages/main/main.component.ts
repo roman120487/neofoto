@@ -25,6 +25,8 @@ export class MainComponent implements OnInit {
   numStart: number = 1;
   numFinish: number = 7;
 
+  modalImg: any =[];
+
   constructor(public bgService: BgService) {
 
   }
@@ -33,6 +35,13 @@ export class MainComponent implements OnInit {
     this.refreshResponse();
     this.refreshProject();
 
+  }
+  addModalImg(e){
+    this.modalImg = e;
+    // console.log(e);
+
+    console.log(this.modalImg);
+    
   }
   refreshProject() {
     this.bgService.getPortrait().subscribe((res) => {
