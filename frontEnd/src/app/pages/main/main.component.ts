@@ -37,22 +37,13 @@ export class MainComponent implements OnInit {
 
   }
   addModalImg(e){
-    this.modalImg = e;
-    // console.log(e);
-
-    console.log(this.modalImg);
-    
+    this.modalImg = e;  
   }
   refreshProject() {
     this.bgService.getPortrait().subscribe((res) => {
       this.photoArray = res;
       this.numStart = Math.floor((Math.random() * ((this.photoArray.length - 5) - 0) + 0));
       this.numFinish = this.numStart + 6;
-      console.log(this.photoArray);
-      
-      console.log(this.numStart);
-      console.log(this.numFinish);
-      
     });
   }
 
