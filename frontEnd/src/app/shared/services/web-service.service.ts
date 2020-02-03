@@ -11,7 +11,7 @@ import 'rxjs/add/operator/toPromise';
 export class WebServiceService {
   readonly ROOT_URL;
   constructor(private http: HttpClient) { 
-    this.ROOT_URL = 'http://188.40.170.11:3001';
+    this.ROOT_URL = 'http://localhost:3000';
   }
   get(uri: string){
     return this.http.get(`${this.ROOT_URL}/${uri}`);

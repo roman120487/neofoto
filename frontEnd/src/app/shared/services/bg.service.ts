@@ -16,8 +16,8 @@ export class BgService {
   getPortraits: Portrait;
   getPortraitsArray: Portrait[];
 
-  readonly baseUrl = 'http://188.40.170.11:3001/api/response'
-  readonly baseUrlPortrait = 'http://188.40.170.11:3001/api/portrait'
+  readonly baseUrl = 'http://localhost:3000/api/response'
+  readonly baseUrlPortrait = 'http://localhost:3000/api/portrait'
   constructor(private webService: WebServiceService, private http: HttpClient) {
     this.getResponses = new Response();
     this.getPortraits = new Portrait();
@@ -33,13 +33,13 @@ export class BgService {
     return this.webService.post('api/portrait', data)
   }
   updatePortrait(id: string, response: string) {
-    return this.http.patch(`http://188.40.170.11:3001/api/portrait/edit-upd/${id}`, response );
+    return this.http.patch(`http://localhost:3000/api/portrait/edit-upd/${id}`, response );
   }
   updatePortraitAll(id: string, data: string) {
-    return this.http.patch(`http://188.40.170.11:3001/api/portrait/edit-updAll/${id}`, data);
+    return this.http.patch(`http://localhost:3000/api/portrait/edit-updAll/${id}`, data);
   }
   deletePortait(id: string) {
-    return this.http.delete(`http://188.40.170.11:3001/api/portrait/delete/${id}`);
+    return this.http.delete(`http://localhost:3000/api/portrait/delete/${id}`);
   }
 
 
@@ -53,10 +53,10 @@ export class BgService {
   }
   updateResponse(id: string, response: string) {
     console.log(response)
-    return this.http.put(`http://188.40.170.11:3001/api/response/edit/${id}`, response )
+    return this.http.put(`http://localhost:3000/api/response/edit/${id}`, response )
   }
   deleteResponse(id: string) {
-    return this.http.delete(`http://188.40.170.11:3001/api/response/delete/${id}`)
+    return this.http.delete(`http://localhost:3000/api/response/delete/${id}`)
   }
 
   auth(data: string) {

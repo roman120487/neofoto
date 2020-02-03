@@ -9,7 +9,7 @@ const Response = require('../models/response')
 router.use(cors())
 
 var corsOptions = {
-    origin: 'http://188.40.170.11:3001'
+    origin: 'http://localhost'
   }
 
 const storageConfig = multer.diskStorage({
@@ -48,7 +48,7 @@ router.post('/', cors(), function (req, res) {
         'response': date.response,
         'author': date.author,
         'idImg': req.file.filename,
-        'idImgUrl': 'http://188.40.170.11:3001/uploads/response/'
+        'idImgUrl': 'http://localhost:3000/uploads/response/'
     });
     emp.save((err, doc) => {
         if (!err) { res.send(doc); }
