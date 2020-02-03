@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { BgService } from 'src/app/shared/services/bg.service';
-// import { setInterval } from 'timers';
+declare var $: any;
+
 
 @Component({
   selector: 'app-main',
@@ -9,6 +10,7 @@ import { BgService } from 'src/app/shared/services/bg.service';
 })
 
 export class MainComponent implements OnInit {
+  [x: string]: any;
   scrollBtn: boolean = false;
   reviews: any;
   positionLeft: string;
@@ -18,6 +20,7 @@ export class MainComponent implements OnInit {
   offsetWidth: number;
   counter: number = 0;
 
+
   timer: any;
   step: number;
 
@@ -25,19 +28,24 @@ export class MainComponent implements OnInit {
   numStart: number = 1;
   numFinish: number = 7;
 
-  modalImg: any =[];
+  modalImg: any = [];
 
   constructor(public bgService: BgService) {
 
   }
 
   ngOnInit() {
+
     this.refreshResponse();
     this.refreshProject();
+    
+    $('button').click(function () {
+      alert('press')
+    });
 
   }
-  addModalImg(e){
-    this.modalImg = e;  
+  addModalImg(e) {
+    this.modalImg = e;
   }
   refreshProject() {
     this.bgService.getPortrait().subscribe((res) => {
