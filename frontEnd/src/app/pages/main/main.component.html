@@ -89,19 +89,19 @@
     <!--------------------------- sliderReview -------------------------------->
     <div class="mainBloks">
         <div class="title">Відгуки</div>
-        <div class="arrowLeft" (click)="moveLeftBtn()">
+        <div class="arrowLeft">
             <span></span>
         </div>
         <div class="rewSliderMain">
-            <div class="sliderLable" [ngStyle]="{left:positionLeft}" (mouseover)="windowParam($event)">
+            <!-- <div class="sliderLable"> -->
                 <div class="slideRew" *ngFor="let item of reviews">
                     <div class="fotoRew"><img src="{{item.idImgUrl + item.idImg}}" alt=""></div>
                     <div class="textRew">{{item.response}}</div>
                 </div>
-            </div>
+            <!-- </div> -->
 
         </div>
-        <div class="arrowRight" (click)="moveRightBtn()">
+        <div class="arrowRight">
             <span></span>
         </div>
     </div>

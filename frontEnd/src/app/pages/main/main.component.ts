@@ -67,47 +67,47 @@ export class MainComponent implements OnInit {
     }
   }
 
-  moveRightBtn() {
-    if (this.positionRew < this.widthClient - this.offsetWidth) {
-      if (this.positionRew < 0) {
-        this.positionRew = 0;
-      }
-      if (this.step == this.offsetWidth) {
-        this.step += this.offsetWidth
-      }
-      this.step = this.offsetWidth;
-      this.timer = setInterval(() => {
-        this.positionLeft = `-${this.positionRew}px`;
-        this.positionRew += 5;
-        if (this.positionRew > this.step) {
-          this.stopp();
-        }
-      }, 1);
-    }
-  }
+  // moveRightBtn() {
+  //   if (this.positionRew < this.widthClient - this.offsetWidth) {
+  //     if (this.positionRew < 0) {
+  //       this.positionRew = 0;
+  //     }
+  //     if (this.step == this.offsetWidth) {
+  //       this.step += this.offsetWidth
+  //     }
+  //     this.step = this.offsetWidth;
+  //     this.timer = setInterval(() => {
+  //       this.positionLeft = `-${this.positionRew}px`;
+  //       this.positionRew += 5;
+  //       if (this.positionRew > this.step) {
+  //         this.stopp();
+  //       }
+  //     }, 1);
+  //   }
+  // }
 
-  stopp() {
-    clearInterval(this.timer)
-  }
+  // stopp() {
+  //   clearInterval(this.timer)
+  // }
 
-  moveLeftBtn() {
-    if (this.positionRew > 0) {
-      let move;
-      move = setInterval(() => {
-        this.positionLeft = `-${this.positionRew}px`;
-        this.positionRew -= 10;
-        // console.log(this.positionRew);
-      }, 5);
+  // moveLeftBtn() {
+  //   if (this.positionRew > 0) {
+  //     let move;
+  //     move = setInterval(() => {
+  //       this.positionLeft = `-${this.positionRew}px`;
+  //       this.positionRew -= 10;
+  //       // console.log(this.positionRew);
+  //     }, 5);
 
-      setTimeout(() => {
-        move = clearInterval(move)
-      }, 500);
-    } else {
-      this.positionRew = 0;
-      console.log(this.positionRew);
-    }
+  //     setTimeout(() => {
+  //       move = clearInterval(move)
+  //     }, 500);
+  //   } else {
+  //     this.positionRew = 0;
+  //     console.log(this.positionRew);
+  //   }
 
-  }
+  // }
 
 
   refreshResponse() {
