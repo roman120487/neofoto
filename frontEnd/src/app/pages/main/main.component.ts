@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { BgService } from 'src/app/shared/services/bg.service';
-declare var $: any;
+// declare var $: any;
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 
 @Component({
@@ -29,6 +30,7 @@ export class MainComponent implements OnInit {
   numFinish: number = 7;
 
   modalImg: any = [];
+  slideConfig = {"slidesToShow": 3, "slidesToScroll": 1};
 
   constructor(public bgService: BgService) {
 
@@ -38,10 +40,6 @@ export class MainComponent implements OnInit {
 
     this.refreshResponse();
     this.refreshProject();
-    
-    $('button').click(function () {
-      alert('press')
-    });
 
   }
   addModalImg(e) {

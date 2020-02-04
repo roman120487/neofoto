@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ViewPhotoComponent } from './pages/galary/view-photo/view-photo.component';
 import { AuthComponent } from './auth/auth.component';
 import { IsLoggedIn } from './auth/isLogged.guard';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { IsLoggedIn } from './auth/isLogged.guard';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    HttpModule
+    HttpModule,
+    SlickCarouselModule
   ],
   providers: [IsLoggedIn],
   bootstrap: [AppComponent]

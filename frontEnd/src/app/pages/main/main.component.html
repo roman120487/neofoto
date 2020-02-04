@@ -93,12 +93,26 @@
             <span></span>
         </div>
         <div class="rewSliderMain">
-            <!-- <div class="sliderLable"> -->
+            <!-- <div class="sliderLable">
                 <div class="slideRew" *ngFor="let item of reviews">
                     <div class="fotoRew"><img src="{{item.idImgUrl + item.idImg}}" alt=""></div>
                     <div class="textRew">{{item.response}}</div>
                 </div>
-            <!-- </div> -->
+            </div> -->
+
+
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
+                (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+                (beforeChange)="beforeChange($event)">
+                <div ngxSlickItem class="slideRew slide" *ngFor="let item of reviews">
+                    <div class="fotoRew"><img src="{{item.idImgUrl + item.idImg}}" alt=""></div>
+                    <div class="textRew">{{item.response}}</div>
+                </div>
+            </ngx-slick-carousel>
+
+            <button (click)="slickModal.slickGoTo(1)">slickGoto 2</button>
+
+
 
         </div>
         <div class="arrowRight">
