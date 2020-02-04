@@ -11,23 +11,12 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 })
 
 export class MainComponent implements OnInit {
-  [x: string]: any;
   scrollBtn: boolean = false;
   reviews: any;
-  positionLeft: string;
-  positionRight: string;
-  positionRew: number = 0;
-  widthClient: number;
-  offsetWidth: number;
-  counter: number = 0;
-
-
-  timer: any;
-  step: number;
 
   photoArray: any;
-  numStart: number = 1;
-  numFinish: number = 7;
+  numStart: number;
+  numFinish: number;
 
   modalImg: any = [];
   slideConfig = {"slidesToShow": 3, "slidesToScroll": 1};
@@ -45,6 +34,7 @@ export class MainComponent implements OnInit {
   addModalImg(e) {
     this.modalImg = e;
   }
+
   refreshProject() {
     this.bgService.getPortrait().subscribe((res) => {
       this.photoArray = res;
@@ -53,59 +43,6 @@ export class MainComponent implements OnInit {
     });
   }
 
-
-  windowParam(elem) {
-    if (this.counter == 0) {
-      this.widthClient = elem.clientWidth;
-      // console.log(elem.target.clientWidth);
-      this.widthClient = elem.target.clientWidth;
-      this.offsetWidth = elem.relatedTarget.offsetWidth;
-      console.log(this.offsetWidth);
-      this.counter = 1;
-    }
-  }
-
-  // moveRightBtn() {
-  //   if (this.positionRew < this.widthClient - this.offsetWidth) {
-  //     if (this.positionRew < 0) {
-  //       this.positionRew = 0;
-  //     }
-  //     if (this.step == this.offsetWidth) {
-  //       this.step += this.offsetWidth
-  //     }
-  //     this.step = this.offsetWidth;
-  //     this.timer = setInterval(() => {
-  //       this.positionLeft = `-${this.positionRew}px`;
-  //       this.positionRew += 5;
-  //       if (this.positionRew > this.step) {
-  //         this.stopp();
-  //       }
-  //     }, 1);
-  //   }
-  // }
-
-  // stopp() {
-  //   clearInterval(this.timer)
-  // }
-
-  // moveLeftBtn() {
-  //   if (this.positionRew > 0) {
-  //     let move;
-  //     move = setInterval(() => {
-  //       this.positionLeft = `-${this.positionRew}px`;
-  //       this.positionRew -= 10;
-  //       // console.log(this.positionRew);
-  //     }, 5);
-
-  //     setTimeout(() => {
-  //       move = clearInterval(move)
-  //     }, 500);
-  //   } else {
-  //     this.positionRew = 0;
-  //     console.log(this.positionRew);
-  //   }
-
-  // }
 
 
   refreshResponse() {
