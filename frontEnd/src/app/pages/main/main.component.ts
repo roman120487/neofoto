@@ -19,7 +19,29 @@ export class MainComponent implements OnInit {
   numFinish: number;
 
   modalImg: any = [];
-  slideConfig = {"slidesToShow": 3, "slidesToScroll": 1};
+  slideConfig = {
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    speed: 1400,
+    infinite: true,
+    lazyLoad: "ondemand",
+    responsive: [
+      {
+        breakpoint: 991,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          autoplaySpeed: 2000,
+          speed: 100
+        }
+      },
+      {
+        breakpoint: 575,
+      }
+    ]
+  };
 
   constructor(public bgService: BgService) {
 
