@@ -16,15 +16,15 @@ export class BgService {
   getPortraits: Portrait;
   getPortraitsArray: Portrait[];
 
-  readonly baseUrl = 'http://localhost:3000/api/response'
-  readonly baseUrlPortrait = 'http://localhost:3000/api/portrait'
+  // readonly baseUrl = 'http://188.40.170.11:3001/api/response'
+  // readonly baseUrlPortrait = 'http://188.40.170.11:3001/api/portrait'
   constructor(private webService: WebServiceService, private http: HttpClient) {
     this.getResponses = new Response();
     this.getPortraits = new Portrait();
   }
 
   getPortrait() {
-    return this.http.get(this.baseUrlPortrait);
+    return this.webService.get('api/portrait');
   }
   getIdPortait(id: string){
     return this.webService.get(`api/portrait/edit/${id}`);
@@ -33,38 +33,45 @@ export class BgService {
     return this.webService.post('api/portrait', data)
   }
   updatePortrait(id: string, response: string) {
-    return this.http.patch(`http://localhost:3000/api/portrait/edit-upd/${id}`, response );
+    return this.webService.patch(`api/portrait/edit-upd/${id}`, response );
   }
   updatePortraitAll(id: string, data: string) {
-    return this.http.patch(`http://localhost:3000/api/portrait/edit-updAll/${id}`, data);
+    return this.webService.patch(`api/portrait/edit-updAll/${id}`, data);
   }
   deletePortait(id: string) {
-    return this.http.delete(`http://localhost:3000/api/portrait/delete/${id}`);
+    return this.webService.delete(`api/portrait/delete/${id}`);
   }
-
-
-
   getResponse() {
-    return this.http.get(this.baseUrl);
+    return this.webService.get('api/response');
   }
   createResponse(data: Response) {
-    console.log(data)
-    return this.http.post(this.baseUrl, data)
+    return this.webService.post('api/response', data)
   }
   updateResponse(id: string, response: string) {
-    console.log(response)
-    return this.http.put(`http://localhost:3000/api/response/edit/${id}`, response )
+    return this.webService.patch(`api/response/edit/${id}`, response )
   }
   deleteResponse(id: string) {
-    return this.http.delete(`http://localhost:3000/api/response/delete/${id}`)
+    return this.webService.delete(`api/response/delete/${id}`)
   }
-
   auth(data: string) {
     console.log(data)
     return this.webService.post('auth', data)
   }
-
   feedback(data: string){
     return this.webService.post('api/feedback', data)
+  }
+
+
+  getTeam(){
+    return this.webService.get('api/team')
+  }
+  postTeam(data){
+    return this.webService.post('api/team', data)
+  }
+  updateTeam(id, data){
+    return this.webService.patch(`api/team/edit/${id}`, data )
+  }
+  deleteTeam(id){
+    return this.webService.delete(`api/team/delete/${id}`)
   }
 }

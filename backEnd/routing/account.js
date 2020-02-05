@@ -4,7 +4,6 @@ const cors = require('cors')
 const User = require('../models/user')
 const passport = require('passport')
 const jwt = require('jsonwebtoken')
-const sercret = 'secret';
 
 router.post('/auth', cors(),(req, res) =>{
     console.log(req.body.login)
@@ -17,7 +16,7 @@ router.post('/auth', cors(),(req, res) =>{
         User.comparePass(req.body.pass, user.pass, (err, isMatch) =>{
             if(err) throw err;
             if(isMatch){
-                const token = jwt.sign(user.toJSON(), sercret,{
+                const token = jwt.sign(user.toJSON(), secretKey,{
                     expiresIn: 3600
                 });
                 res.json({

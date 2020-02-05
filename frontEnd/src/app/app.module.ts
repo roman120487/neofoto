@@ -21,6 +21,7 @@ import { ViewPhotoComponent } from './pages/galary/view-photo/view-photo.compone
 import { AuthComponent } from './auth/auth.component';
 import { IsLoggedIn } from './auth/isLogged.guard';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { AdminTeamComponent } from './admin/admin-team/admin-team.component';
 
 
 @NgModule({
@@ -38,6 +39,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
     AdminListProjectComponent,
     ViewPhotoComponent,
     AuthComponent,
+    AdminTeamComponent,
   ],
   imports: [
     BrowserModule,

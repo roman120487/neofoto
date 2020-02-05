@@ -17,7 +17,7 @@ export class AuthService {
     console.log(user)
     let headers = new Headers();
     headers.append('Content-Type', 'application/json')
-    return this.http.post('http://localhost:3000/auth', 
+    return this.http.post('http://188.40.170.11:3001/auth', 
     user, 
     {headers: headers}).pipe(map((response: any) => response.json()));
   }
