@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { BgService } from 'src/app/shared/services/bg.service';
 // declare var $: any;
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { GallaryService } from 'src/app/shared/services/gallary.service';
 
 
 @Component({
@@ -44,7 +45,7 @@ export class MainComponent implements OnInit {
     ]
   };
 
-  constructor(public bgService: BgService) {
+  constructor(public bgService: BgService, public galary: GallaryService) {
 
   }
 
@@ -66,12 +67,9 @@ export class MainComponent implements OnInit {
     });
   }
 
-  // slideRight(){
-  //   this.x +=2;
-  // }
-  // slideLeft(){
-  //   this.x -=2;
-  // }
+  photoDetails(e) {
+    this.galary.arrayPhoto = e;
+  }
 
 
 

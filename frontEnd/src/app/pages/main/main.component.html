@@ -1,5 +1,6 @@
 <div class="containerMain">
     <div class="bgHeader">
+        <p>Neofoto</p>
         <img src="/assets/img/bg-header.png" alt="">
         <div class="rightSideBar">
             <div></div>
@@ -51,7 +52,7 @@
     <div class="ourWorks mainBloks">
         <p class="title">My latest works</p>
         <div class="galary">
-            <div *ngFor="let project of photoArray | slice: numStart:numFinish">
+            <div *ngFor="let project of photoArray | slice: numStart:numFinish" routerLink="/viewPhoto" (click)="photoDetails(project)">
                 <div class="darkHoverGalary">
                     <span class="title">{{project.nameProject}}</span>
                     <span data-toggle="modal" data-target="#exampleModal"
@@ -70,17 +71,17 @@
             <div>
                 <p>A Comprehensive
                     Approach</p>
-                <img src="assets/img/ww1.png" alt="">
+                <img src="assets/img/wwBg1.png" alt="">
             </div>
             <div>
                 <p>Open to
                     Your Ideas</p>
-                <img src="assets/img/ww2.png" alt="">
+                <img src="assets/img/wwBg2.png" alt="">
             </div>
             <div>
                 <p>Timely Execution
                     of the Order</p>
-                <img src="assets/img/ww3.png" alt="">
+                <img src="assets/img/wwBg3.png" alt="">
             </div>
         </div>
     </div>
@@ -121,7 +122,7 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
     aria-hidden="true">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content ">
@@ -141,4 +142,4 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
