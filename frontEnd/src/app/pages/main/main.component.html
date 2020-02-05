@@ -1,6 +1,7 @@
 <div class="containerMain">
     <div class="bgHeader">
-        <p>Neofoto</p>
+        <p id="neofotoTitle">Neofoto</p>
+        <p id="scrollDown"> &#8595; &#8595; Scroll down &#8595; &#8595; </p>
         <img src="/assets/img/bg-header.png" alt="">
         <div class="rightSideBar">
             <div></div>
@@ -52,7 +53,8 @@
     <div class="ourWorks mainBloks">
         <p class="title">My latest works</p>
         <div class="galary">
-            <div *ngFor="let project of photoArray | slice: numStart:numFinish" routerLink="/viewPhoto" (click)="photoDetails(project)">
+            <div *ngFor="let project of photoArray | slice: numStart:numFinish" routerLink="/viewPhoto"
+                (click)="photoDetails(project)">
                 <div class="darkHoverGalary">
                     <span class="title">{{project.nameProject}}</span>
                     <span data-toggle="modal" data-target="#exampleModal"
@@ -76,6 +78,7 @@
             <div>
                 <p>Open to
                     Your Ideas</p>
+                <img class="lamp" src="assets/img/lamp.png" alt="">
                 <img src="assets/img/wwBg2.png" alt="">
             </div>
             <div>
@@ -96,7 +99,7 @@
             <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
                 (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
                 (beforeChange)="beforeChange($event)">
-                <div ngxSlickItem class="slideRew slide" *ngFor="let item of reviews" >
+                <div ngxSlickItem class="slideRew slide" *ngFor="let item of reviews">
                     <div class="fotoRew"><img src="{{item.idImgUrl + item.idImg}}" alt=""></div>
                     <div class="textRew">{{item.response}}</div>
                 </div>
