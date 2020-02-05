@@ -17,8 +17,6 @@ router.get('/', cors(), (req, res) => {
 });
 
 router.patch('/edit-upd/:editId', cors(), (req, res) => {
-    console.log(req.body)
-    console.log(req.params.editId)
     Portrait.findByIdAndUpdate(req.params.editId, { $pull: { "arrayImg": { "filename": req.body.response } } })
         .then(list => {
             fs.unlinkSync(`./uploads/project/${req.body.dirPhoto}/${req.body.response}`);
@@ -30,23 +28,20 @@ router.patch('/edit-updAll/:editId', cors(), (req, res) => {
     let obj = [];
     let oneimg = [];
     if(req.files.filesUpdate.length === undefined){
-        console.log('undefined')
         oneimg.push(req.files.filesUpdate)
     }
     else{
-        console.log('lenght')
         for(let i=0; i<req.files.filesUpdate.length; i++){
             oneimg.push(req.files.filesUpdate[i])
         }
     }
-    console.log(oneimg)
     if(req.files.filesUpdate){
         for (let i = 0; i < oneimg.length; i++) {
             oneimg[i].name = Math.random().toString(36).substring(2);
             console.log(oneimg[i].mimetype)
             let editFilles = oneimg[i].mimetype.indexOf('/');
             let img = `${oneimg[i].name}.${oneimg[i].mimetype.slice(editFilles + 1)}`
-            obj.push({ filename: img, path: `http://localhost:3000/uploads/project/${req.body.dirPhoto}/` })
+            obj.push({ filename: img, path: `http://${SERVERIP}:${SERVER_PORT}/uploads/project/${req.body.dirPhoto}/` })
     
             oneimg[i].mv(`./uploads/project/${req.body.dirPhoto}/${img}`, function (error) {
                 if (error)
@@ -81,11 +76,9 @@ router.post('/', cors(), function (req, res) {
     let obj = [];
     let oneImgArray = [];
     if(req.files.files.length === undefined){
-        console.log('undefined')
         oneImgArray.push(req.files.files)
     }
     else{
-        console.log('lenght')
         for(let i=0; i<req.files.files.length; i++){
             oneImgArray.push(req.files.files[i])
         }
@@ -100,7 +93,7 @@ router.post('/', cors(), function (req, res) {
                 oneImgArray[i].name = Math.random().toString(36).substring(2);
                 let editFilles = oneImgArray[i].mimetype.indexOf('/');
                 let img = `${oneImgArray[i].name}.${oneImgArray[i].mimetype.slice(editFilles + 1)}`
-                obj.push({ filename: img, path: `http://localhost:3000/uploads/project/${renderMkr}/` })
+                obj.push({ filename: img, path: `http://${SERVERIP}:${SERVER_PORT}/uploads/project/${renderMkr}/` })
 
                 oneImgArray[i].mv(`./uploads/project/${renderMkr}/${img}`, function (error) {
                     if (error)

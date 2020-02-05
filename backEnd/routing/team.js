@@ -2,16 +2,15 @@ const express = require('express');
 const router = express.Router();
 const cors = require('cors')
 const multer = require('multer')
-const fs = require('fs');
-
-const Response = require('../models/response')
+const fs = require('fs')
+const Team = require('../models/team')
 
 router.use(cors())
 
 
 const storageConfig = multer.diskStorage({
     destination: (req, file, cb) => {
-        cb(null, "./uploads/response/");
+        cb(null, "./uploads/team/");
     },
     filename: (req, file, cb) => {
         let editFilles = file.originalname.toLowerCase().indexOf('.jpg') || file.originalname.toLowerCase().indexOf('.jpeg') || file.originalname.toLowerCase().indexOf('.png')
@@ -34,34 +33,35 @@ const fileFilter = (req, file, cb) => {
 router.use(multer({ storage: storageConfig, fileFilter: fileFilter }).single("file"));
 
 router.get('/', cors(), (req, res) => {
-    Response.find((err, docs) => {
+    Team.find((err, docs) => {
         if (!err) { res.send(docs); }
     })
 });
 router.post('/', cors(), function (req, res) {
-    console.log('norm')
     const date = req.body;
-    let emp = new Response({
-        'response': date.response,
-        'author': date.author,
-        'idImg': req.file.filename,
-        'idImgUrl': `http://${SERVERIP}:${SERVER_PORT}/uploads/response/`
+    let emp = new Team({
+        'firstName': date.firstName,
+        'lastName': date.lastName,
+        'linkNetwork': date.linkNetwork,
+        'imgID': req.file.filename,
+        'idImgUrl': `http://${SERVERIP}:${SERVER_PORT}/uploads/team/`
     });
     emp.save((err, doc) => {
         if (!err) { res.send(doc); }
     })
 })
-router.put('/edit/:editId', cors(), (req, res) => {
-    Response.findByIdAndUpdate(req.params.editId, {$set: req.body})
-        .then((list) => res.send(list))
-        .catch((error) => console.log(error))
-})
+
+// router.put('/edit/:editId', cors(), (req, res) => {
+//     Response.findByIdAndUpdate(req.params.editId, {$set: req.body})
+//         .then((list) => res.send(list))
+//         .catch((error) => console.log(error))
+// })
 router.delete('/delete/:deleteId', (req, res) => {
-    Response.findById(req.params.deleteId)
+    Team.findById(req.params.deleteId)
         .then(list => {
-            Response.findByIdAndRemove(req.params.deleteId)
+            Team.findByIdAndRemove(req.params.deleteId)
                 .then(list => {
-                    fs.unlinkSync(`./uploads/response/${list.idImg}`);
+                    fs.unlinkSync(`./uploads/team/${list.imgID}`);
                     res.send(list)
                 })
                 .catch((error) => console.log(error))

@@ -12,8 +12,7 @@ export class AdminPortraitComponent implements OnInit {
   formData: Portrait;
   formDataImg: any = new FormData();
 
-  constructor(private api: BgService) {
-  }
+  constructor(private api: BgService) {}
 
   ngOnInit() {
     this.resetForm();

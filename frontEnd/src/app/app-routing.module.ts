@@ -12,6 +12,7 @@ import { AdminListProjectComponent } from './admin/admin-list-project/admin-list
 import { ViewPhotoComponent } from './pages/galary/view-photo/view-photo.component';
 import { AuthComponent } from './auth/auth.component';
 
+import { AdminTeamComponent } from './admin/admin-team/admin-team.component';
 import { IsLoggedIn } from './auth/isLogged.guard'
 
 const routes: Routes = [
@@ -27,6 +28,7 @@ const routes: Routes = [
     { path: 'portrait', component: AdminPortraitComponent, canActivate:[IsLoggedIn] },
     { path: 'list-project', component: AdminListProjectComponent, canActivate:[IsLoggedIn] },
     { path: 'response', component: AdminResponseComponent, canActivate:[IsLoggedIn] },
+    { path: 'team', component: AdminTeamComponent, canActivate:[IsLoggedIn] },
   ]},
 
 ];
