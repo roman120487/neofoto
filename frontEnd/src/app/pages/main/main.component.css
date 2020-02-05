@@ -309,7 +309,7 @@
       z-index: 1 !important;
       opacity: 0;
       /* display: none; */
-      transition: 1s;
+      transition: 0.5s;
   }
 
   /* --------------------------------- */
