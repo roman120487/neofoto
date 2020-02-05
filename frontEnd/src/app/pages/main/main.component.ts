@@ -13,6 +13,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 export class MainComponent implements OnInit {
   scrollBtn: boolean = false;
   reviews: any;
+  x: number = 2;
 
   photoArray: any;
   numStart: number;
@@ -20,11 +21,11 @@ export class MainComponent implements OnInit {
 
   modalImg: any = [];
   slideConfig = {
-    slidesToShow: 3,
+    slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
-    speed: 1400,
+    autoplaySpeed: 3000,
+    speed: 5000,
     infinite: true,
     lazyLoad: "ondemand",
     responsive: [
@@ -33,7 +34,7 @@ export class MainComponent implements OnInit {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
-          autoplaySpeed: 2000,
+          autoplaySpeed: 3000,
           speed: 100
         }
       },
@@ -64,6 +65,13 @@ export class MainComponent implements OnInit {
       this.numFinish = this.numStart + 6;
     });
   }
+
+  // slideRight(){
+  //   this.x +=2;
+  // }
+  // slideLeft(){
+  //   this.x -=2;
+  // }
 
 
 

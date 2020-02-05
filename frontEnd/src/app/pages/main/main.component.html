@@ -88,9 +88,9 @@
     <!--------------------------- sliderReview -------------------------------->
     <div class="mainBloks">
         <div class="title">Відгуки</div>
-        <div class="arrowLeft" (click)="slideLeft()">
+        <!-- <div class="arrowLeft" (click)="slickModal.slickGoTo(x)" (click)="slideLeft()">
             <span></span>
-        </div>
+        </div> -->
         <div class="rewSliderMain">
             <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
                 (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
@@ -101,9 +101,9 @@
                 </div>
             </ngx-slick-carousel>
         </div>
-        <div class="arrowRight" (click)="slickModal.slickGoTo(2)" >
+        <!-- <div class="arrowRight" (click)="slickModal.slickGoTo(x)" (click)="slideRight()" >
             <span></span>
-        </div>
+        </div> -->
     </div>
 
     <!-- ------------------------------------------------------------------------ -->
