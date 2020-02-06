@@ -1,21 +1,44 @@
 <footer>
     <div class="orderPhoto">
-        <p>Let`s talk about you</p>
-
-        <div class="labelOrder">
-            <img src="assets/img/orderbg.png" alt="">
-        </div>
-        <a href="">
-            <p>Get in touch</p>
+        <a routerLink="contacts">
+            <p *ngIf="langService.lang">Замовити фотосесію</p>
+            <p *ngIf="!langService.lang">Let`s talk about you</p>
             <div class="arrowOrder">
                 <span></span>
             </div>
         </a>
+            <img src="assets/img/orderbg.png" alt="">
     </div>
 
 
-    
-    <div class="fContainer">
+
+    <div *ngIf="langService.lang" class="fContainer">
+        <div class="fLogo">
+            <div class="logo"></div>
+        </div>
+        <div class="fNAv">
+            <h4>Навігація</h4>
+            <a routerLink="main">Домашня</a><br>
+            <a routerLink="galary">Галерея</a><br>
+            <a routerLink="paslugi">Послуги</a><br>
+            <a routerLink="contacts">Контакти</a>
+        </div>
+        <div class="fSocial">
+            <h4>Соціальні мережі</h4>
+            <a href="">Instagram</a><br>
+            <a href="">Facebook</a><br>
+            <a href="">Behance</a><br>
+
+        </div>
+        <div class="fContactd">
+            <h4>Наші контакти</h4>
+            <p>м.Львів вул.Володимира Великого 18</p>
+            <p>офіс 825</p>
+            <p>+38(067) 280 16 61</p>
+        </div>
+    </div>
+
+    <div *ngIf="!langService.lang" class="fContainer">
         <div class="fLogo">
             <div class="logo"></div>
         </div>
@@ -37,8 +60,13 @@
             <h4>Contact us</h4>
             <p>Office 825, 18 Volodymyra str.</p>
             <p>Lviv, Ukraine</p>
-            <p>+38(097) 945 53 18</p>
+            <p>+38(067) 280 16 61</p>
         </div>
     </div>
-    <div class="copiRight"><p>Designed by GoodGuys.com.ua © 2020 </p></div>
+
+
+    <div class="copiRight">
+        <p *ngIf="langService.lang">Розроблено WEBJedi.com.ua © 2020 </p>
+        <p *ngIf="!langService.lang">Designed by WEBJedi.com.ua © 2020 </p>
+    </div>
 </footer>

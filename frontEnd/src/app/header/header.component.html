@@ -3,30 +3,31 @@
   <nav class="navbar navbar-expand-lg navbar-light ">
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a class="nav-link" routerLink="main" routerLinkActive='active'>Home <span
-            class="sr-only">(current)</span></a>
+        <a *ngIf="langService.lang"  class="nav-link" routerLink="main" routerLinkActive='active'>Домашня</a>
+        <a *ngIf="!langService.lang" class="nav-link" routerLink="main" routerLinkActive='active'>Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="galary" routerLinkActive='active'>Gallary</a>
+        <a *ngIf="langService.lang" class="nav-link" routerLink="galary" routerLinkActive='active'>Галерея</a>
+        <a *ngIf="!langService.lang" class="nav-link" routerLink="galary" routerLinkActive='active'>Gallary</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="paslugi" routerLinkActive='active'>Services</a>
+        <a *ngIf="langService.lang" class="nav-link" routerLink="paslugi" routerLinkActive='active'>Послуги</a>
+        <a *ngIf="!langService.lang" class="nav-link" routerLink="paslugi" routerLinkActive='active'>Services</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="contacts" routerLinkActive='active'>Contacts</a>
+        <a *ngIf="langService.lang" class="nav-link" routerLink="contacts" routerLinkActive='active'>Контакти</a>
+        <a *ngIf="!langService.lang" class="nav-link" routerLink="contacts" routerLinkActive='active'>Contacts</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <select id="lang"  [(ngModel)]="lang" name="lang" (change) = "selectLang()">
+            <option value="ukr">УКР</option>
+            <option value="en">EN</option>
+          </select>
+        </a>
       </li>
     </ul>
   </nav>
-
-  <!-- <div class="bgHeader">
-    <img src="/assets/img/bg-header.png" alt="">
-  </div> -->
-
-  <!-- <div class="rightSideBar">
-    <div></div>
-      <a href=""><img src="assets/img/be.png" alt=""></a>
-      <a href=""><img src="assets/img/ig.png" alt=""></a>
-      <a href=""><img src="assets/img/fb.png" alt=""></a>
-    <div></div>
-  </div> -->
 </div>
+
+<!-- <span class="sr-only">(current)</span> -->

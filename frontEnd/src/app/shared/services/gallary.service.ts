@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class GallaryService {
   arrayPhoto: any;
+  lang: boolean = true;
 
   constructor() { }
 }

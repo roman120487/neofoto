@@ -1,6 +1,7 @@
 <div class="gallaryContainer">
     <div class="titleMain">
-        <p>Gallary</p>
+        <p *ngIf="galary.lang" >Галерея</p>
+        <p *ngIf="!galary.lang">Gallary</p>
     </div>
 
     <div class="mainBox">
@@ -8,7 +9,8 @@
             <div *ngFor="let project of item; let i = index" routerLink="/viewPhoto" (click)="photoDetails(project)">
                 <div class="darkHoverGalary">
                     <span class="title">{{project.nameProject}}</span>
-                    <span>Детальніше</span>
+                    <span *ngIf="galary.lang">Детальніше</span>
+                    <span *ngIf="!galary.lang">Details</span>
                 </div>
                 <img src="{{project.arrayImg[0].path + project.arrayImg[0].filename}}" alt="">
             </div>

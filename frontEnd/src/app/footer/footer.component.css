@@ -14,9 +14,10 @@ footer{
     left: 0;
     right: 0;
     overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.65);
 }
 
-.labelOrder>img {
+.orderPhoto>img {
     width: 100%;
     height: 100%;
     position: absolute;
@@ -27,31 +28,14 @@ footer{
     z-index: -1;
 }
 
-.labelOrder {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.65);
-}
-
 .orderPhoto p {
-    position: absolute;
-    width: 437px;
+    /* position: absolute; */
+    /* width: 500px; */
     height: 60px;
     color: #ffffff;
     font-size: 50px;
-    /* font-weight: 700; */
-    z-index: 5;
-}
-.orderPhoto a{
-    margin-top: 90px;
-}
-.orderPhoto a>p {
-    font-size: 24px;
-    padding-top: 75px;
-    opacity: 1;
+    float: left;
+    
 }
 .arrowOrder {
     width: 50px;
@@ -59,8 +43,12 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 140px;
-    margin-top: 70px;
+    margin-top: 15px;
+    /* margin-left: 555px; */
+
+    /* margin-left: 140px;
+    margin-top: 70px; */
+    /* float: left; */
 }
 
 .arrowOrder span, .arrowOrder span::after, .arrowOrder span::before {
@@ -70,10 +58,6 @@ footer{
     border: 1px solid #ffffff;
     position: absolute;
     border-radius: 20%;
-}
-
-.arrowOrder {
-    right: 20px;
 }
 
 .arrowOrder span::before, .arrowOrder span::after {
@@ -94,7 +78,7 @@ footer{
     width: 14px;
     transform: rotate(-45deg);
 }
-.orderPhoto a p:hover{
+.orderPhoto:hover p{
     color: #f3c6b8;
 }
 
