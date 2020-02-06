@@ -51,7 +51,7 @@ router.post('/', cors(), function (req, res) {
         if (!err) { res.send(doc); }
     })
 })
-router.put('/edit/:editId', cors(), (req, res) => {
+router.patch('/edit/:editId', cors(), (req, res) => {
     Response.findByIdAndUpdate(req.params.editId, {$set: req.body})
         .then((list) => res.send(list))
         .catch((error) => console.log(error))

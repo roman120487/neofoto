@@ -3,4 +3,6 @@ export default class Team{
     firstName: string;
     lastName: string;
     linkNetwork: string;
+    imgID?: string;
+    idImgUrl?: string;
 }

@@ -9,7 +9,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AdminTeamComponent implements OnInit {
   formData: Team;
-  arrayTeam;
+  arrayTeam = [];
   fileData;
   constructor(private api: BgService) { }
 
@@ -46,7 +46,7 @@ export class AdminTeamComponent implements OnInit {
   onFileSelected(event) { this.fileData = <File>event.target.files[0]; }
   refreshDate() {
     this.api.getTeam().subscribe((res) => {
-      this.arrayTeam = res;
+      this.api.getTeamsArray = res as Team[];
     })
   }
   onDelete(item) {

@@ -8,7 +8,7 @@ const fs = require('fs');
 const Portrait = require('../models/portrait')
 
 router.use(cors())
-router.use(fileUpload({parseNested: true}));
+router.use(fileUpload({ parseNested: true }));
 
 router.get('/', cors(), (req, res) => {
     Portrait.find((err, docs) => {
@@ -27,31 +27,40 @@ router.patch('/edit-upd/:editId', cors(), (req, res) => {
 router.patch('/edit-updAll/:editId', cors(), (req, res) => {
     let obj = [];
     let oneimg = [];
-    if(req.files.filesUpdate.length === undefined){
-        oneimg.push(req.files.filesUpdate)
+    console.log(req.files.filesUpdate)
+    if (req.files.filesUpdate === undefined) {
+        Portrait.findByIdAndUpdate(req.params.editId, { $set: req.body, $addToSet: { 'arrayImg': obj } })
+            .then((list) => res.send(list))
+            .catch((error) => console.log(error))
     }
-    else{
-        for(let i=0; i<req.files.filesUpdate.length; i++){
-            oneimg.push(req.files.filesUpdate[i])
+    else {
+        if (req.files.filesUpdate.length === undefined) {
+            oneimg.push(req.files.filesUpdate)
+            console.log(oneimg)
+        }
+        else {
+            for (let i = 0; i < req.files.filesUpdate.length; i++) {
+                oneimg.push(req.files.filesUpdate[i])
+            }
+        }
+        if (oneimg.length >= 0) {
+            for (let i = 0; i < oneimg.length; i++) {
+                oneimg[i].name = Math.random().toString(36).substring(2);
+                console.log(oneimg[i].mimetype)
+                let editFilles = oneimg[i].mimetype.indexOf('/');
+                let img = `${oneimg[i].name}.${oneimg[i].mimetype.slice(editFilles + 1)}`
+                obj.push({ filename: img, path: `http://${SERVERIP}:${SERVER_PORT}/uploads/project/${req.body.dirPhoto}/` })
+
+                oneimg[i].mv(`./uploads/project/${req.body.dirPhoto}/${img}`, function (error) {
+                    if (error)
+                        return console.log(error)
+                });
+            }
+            Portrait.findByIdAndUpdate(req.params.editId, { $set: req.body, $addToSet: { 'arrayImg': obj } })
+                .then((list) => res.send(list))
+                .catch((error) => console.log(error))
         }
     }
-    if(req.files.filesUpdate){
-        for (let i = 0; i < oneimg.length; i++) {
-            oneimg[i].name = Math.random().toString(36).substring(2);
-            console.log(oneimg[i].mimetype)
-            let editFilles = oneimg[i].mimetype.indexOf('/');
-            let img = `${oneimg[i].name}.${oneimg[i].mimetype.slice(editFilles + 1)}`
-            obj.push({ filename: img, path: `http://${SERVERIP}:${SERVER_PORT}/uploads/project/${req.body.dirPhoto}/` })
-    
-            oneimg[i].mv(`./uploads/project/${req.body.dirPhoto}/${img}`, function (error) {
-                if (error)
-                    return console.log(error)
-            });
-        }
-    }
-    Portrait.findByIdAndUpdate(req.params.editId, { $set: req.body, $addToSet: { 'arrayImg': obj } })
-        .then((list) => res.send(list))
-        .catch((error) => console.log(error))
 })
 router.get('/edit/:id', cors(), (req, res) => {
     Portrait.findById({ '_id': req.params.id })
@@ -75,11 +84,11 @@ router.post('/', cors(), function (req, res) {
     const date = req.body;
     let obj = [];
     let oneImgArray = [];
-    if(req.files.files.length === undefined){
+    if (req.files.files.length === undefined) {
         oneImgArray.push(req.files.files)
     }
-    else{
-        for(let i=0; i<req.files.files.length; i++){
+    else {
+        for (let i = 0; i < req.files.files.length; i++) {
             oneImgArray.push(req.files.files[i])
         }
     }
