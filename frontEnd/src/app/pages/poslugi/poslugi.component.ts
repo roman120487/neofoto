@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GallaryService } from 'src/app/shared/services/gallary.service';
 
 @Component({
   selector: 'app-poslugi',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PoslugiComponent implements OnInit {
 
-  constructor() { }
+  constructor( private lagService: GallaryService) { }
 
   ngOnInit() {
   }

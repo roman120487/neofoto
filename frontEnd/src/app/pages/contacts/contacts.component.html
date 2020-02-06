@@ -1,4 +1,50 @@
-<div class="containerMain">
+<div *ngIf="galService.lang"  class="containerMain">
+    <div class="title">
+        <p>Контакти</p>
+    </div>
+    <div class="map">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2574.6539235594387!2d24.001820225380026!3d49.81137364139647!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473ae797a76fe6e9%3A0xdc27fc456e39b628!2z0LLRg9C70LjRhtGPINCS0L7Qu9C-0LTQuNC80LjRgNCwINCS0LXQu9C40LrQvtCz0L4sIDE4LCDQm9GM0LLRltCyLCDQm9GM0LLRltCy0YHRjNC60LAg0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1suk!2sua!4v1580465317907!5m2!1suk!2sua"
+            width="700" height="650" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+    </div>
+    <div class="contactInformation">
+        <h3>Контактна інформація</h3>
+        <p>Телефон: <br>
+            +380(93)456-8989</p>
+        <p>Email:<br>
+            olenarudyuk@gmail.com</p>
+        <p>Соціальні мережі:<br>
+            Instagram<br>
+            Facebook<br>
+            Behance</p>
+        <p>м.Львів вул.Володимира Великого 18<br>
+            офіс 825</p>
+    </div>
+
+    <div class="text">
+        <h3>Давайте працювати разом</h3>
+        <p>Наша студія розташована прямо в самому центрі мистецького та технологічного центру Львова. <br>
+        Команда Neofoto завжди рада поговорити з вами та відповісти на будь-які запитання. Просто заповніть форму нижче, і ми будемо
+        контактувати.</p>
+    </div>
+    <div class="formSend">
+        <h5>Привіт! Напишіть нам:</h5>
+        <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+            <p>ІМ'Я</p>
+            <input #namePerson="ngModel" name="namePerson" [(ngModel)]="formData.namePerson" type="text" placeholder="Ваше ім'я">
+            <p>НОМЕР ТЕЛЕФОНУ</p>
+            <input #namePersonPhone="ngModel" name="namePersonPhone" [(ngModel)]="formData.namePersonPhone" type="text" placeholder="Ваш номер телефону">
+            <p>EMAIL</p>
+            <input #namePersonEmail="ngModel" name="namePersonEmail" [(ngModel)]="formData.namePersonEmail" type="text" placeholder="Ваша електронна пошта">
+            <p>ПОВІДОМЛЕННЯ</p>
+            <textarea #namePersonMessage="ngModel" name="namePersonMessage" [(ngModel)]="formData.namePersonMessage" id="" cols="30" rows="3" placeholder="Напишіть повідомлення тут"></textarea><br>
+            <button type="submit">Надіслати повідомлення</button>
+        </form>
+    </div>
+</div>
+
+
+<div *ngIf="!galService.lang" class="containerMain">
     <div class="title">
         <p>Contact us</p>
     </div>
@@ -41,10 +87,4 @@
             <button type="submit">Send message</button>
         </form>
     </div>
-
-
-
-
-
-
 </div>

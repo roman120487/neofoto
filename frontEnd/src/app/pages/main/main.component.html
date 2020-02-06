@@ -1,7 +1,8 @@
 <div class="containerMain">
     <div class="bgHeader">
         <p id="neofotoTitle">Neofoto</p>
-        <p id="scrollDown"> &#8595; &#8595; Scroll down &#8595; &#8595; </p>
+        <p *ngIf="galary.lang" id="scrollDown"> &#8595; &#8595; Прокрути вниз &#8595; &#8595; </p>
+        <p *ngIf="!galary.lang" id="scrollDown"> &#8595; &#8595; Scroll down &#8595; &#8595; </p>
         <img src="/assets/img/bg-header.png" alt="">
         <div class="rightSideBar">
             <div></div>
