@@ -26,7 +26,7 @@ export class MainComponent implements OnInit {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    speed: 5000,
+    speed: 1500,
     infinite: true,
     lazyLoad: "ondemand",
     responsive: [
