@@ -65,13 +65,14 @@
                 (click)="photoDetails(project)">
                 <div class="darkHoverGalary">
                     <span class="title">{{project.nameProject}}</span>
-                    <span data-toggle="modal" data-target="#exampleModal"
-                        (click)="addModalImg(project)">Детальніше</span>
+                    <span *ngIf="galary.lang">Детальніше</span>
+                    <span *ngIf="!galary.lang">Details</span>
                 </div>
                 <img src="{{project.arrayImg[0].path + project.arrayImg[0].filename}}" alt="">
             </div>
         </div>
     </div>
+    
 
 
 
