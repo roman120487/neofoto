@@ -17,6 +17,7 @@ const portrait = require('./routing/portrait')
 const response = require('./routing/response')
 const account = require('./routing/account')
 const feedback = require('./routing/feedback')
+
 const team = require('./routing/team')
 const config = require('./config/config');
 app.use('/api/portrait', portrait);

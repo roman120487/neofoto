@@ -37,6 +37,7 @@ router.get('/', cors(), (req, res) => {
         if (!err) { res.send(docs); }
     })
 });
+
 router.post('/', cors(), function (req, res) {
     const date = req.body;
     let emp = new Team({

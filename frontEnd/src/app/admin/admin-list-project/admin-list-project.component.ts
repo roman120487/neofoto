@@ -57,35 +57,19 @@ export class AdminListProjectComponent implements OnInit {
     this.resetForm();
     this.checkEdit = false;
   }
-  // saveFunction() {
-  //   this.formDataImg.append('nameProject', this.nameProject);
-  //   this.formDataImg.append('categoryProject', this.categoryProject);
-  //   this.formDataImg.append('dirPhoto', this.portraitOne.dirPhoto);
-
-  //   this.api.updatePortraitAll(this.saveId, this.formDataImg).subscribe((res: any) => {
-  //     console.log(this.formDataImg)
-  //     this.refreshProject();
-  //   }, (err: any) => { console.log(err); });
-  //   this.formDataImg.delete('nameProject');
-  //   this.formDataImg.delete('categoryProject');
-  //   this.formDataImg.delete('dirPhoto');
-  //   this.resetForm();
-  //   this.checkEdit = false;
-  // }
   onEdit(item) {
     this.checkEdit = true;
     this.saveId = item._id;
     this.getProjectByID();
   }
   deleteImg(event) {
-    console.log(event.target)
-    let deleteImg: any = new FormData();
-    deleteImg.append('response', event.target.name);
-    deleteImg.append('dirPhoto', this.portraitOne.dirPhoto);
+    // let deleteImg: any = new FormData();
+    // deleteImg.append('response', event.target.name);
+    // deleteImg.append('dirPhoto', this.portraitOne.dirPhoto);
 
     if (confirm('Are you sure to delete this record')) {
       // this.api.updatePortrait(this.formData._id, this.formData)
-      this.api.updatePortrait(this.saveId, deleteImg)
+      this.api.updatePortrait(this.saveId, this.formDataImg)
         .subscribe((res: any) => {
           this.getProjectByID()
           this.refreshProject()
@@ -105,9 +89,6 @@ export class AdminListProjectComponent implements OnInit {
       this.formData._id = res._id;
       this.formData.categoryProject = res.categoryProject;
       this.formData.nameProject = res.nameProject;
-      // this.formData._id = res._id;
-      // this.categoryProject = res.categoryProject;
-      // this.nameProject = res.nameProject;
     }, err => { console.log(err); });
   }
   onFileSelected(event) {

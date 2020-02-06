@@ -5,6 +5,7 @@ import { Observable, Subject } from 'rxjs';
 import { WebServiceService } from './web-service.service';
 import Response from '../classes/response';
 import Portrait from '../classes/portrait';
+import Team from '../classes/team';
 
 @Injectable({
   providedIn: 'root'
@@ -16,11 +17,15 @@ export class BgService {
   getPortraits: Portrait;
   getPortraitsArray: Portrait[];
 
+  getTeams: Team;
+  getTeamsArray: Team[];
+
   // readonly baseUrl = 'http://188.40.170.11:3001/api/response'
   // readonly baseUrlPortrait = 'http://188.40.170.11:3001/api/portrait'
   constructor(private webService: WebServiceService, private http: HttpClient) {
     this.getResponses = new Response();
     this.getPortraits = new Portrait();
+    this.getTeams = new Team();
   }
 
   getPortrait() {

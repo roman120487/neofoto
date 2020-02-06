@@ -14,7 +14,6 @@ export class AuthService {
   constructor(private web: WebServiceService, private http: Http) { }
 
   authUser(user){
-    console.log(user)
     let headers = new Headers();
     headers.append('Content-Type', 'application/json')
     return this.http.post('http://188.40.170.11:3001/auth', 
