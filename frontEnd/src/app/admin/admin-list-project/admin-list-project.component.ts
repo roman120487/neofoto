@@ -67,10 +67,15 @@ export class AdminListProjectComponent implements OnInit {
     // deleteImg.append('response', event.target.name);
     // deleteImg.append('dirPhoto', this.portraitOne.dirPhoto);
 
+    this.formDataImg.append('response', event.target.name);
+    this.formDataImg.append('dirPhoto', this.portraitOne.dirPhoto);
+    console.log(this.formDataImg)
     if (confirm('Are you sure to delete this record')) {
       // this.api.updatePortrait(this.formData._id, this.formData)
       this.api.updatePortrait(this.saveId, this.formDataImg)
         .subscribe((res: any) => {
+          this.formDataImg.delete('response');
+          this.formDataImg.delete('dirPhoto');
           this.getProjectByID()
           this.refreshProject()
         }, (err: any) => {
