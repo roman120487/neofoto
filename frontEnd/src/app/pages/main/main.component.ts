@@ -53,6 +53,8 @@ export class MainComponent implements OnInit {
 
     this.refreshResponse();
     this.refreshProject();
+    
+    
 
   }
   addModalImg(e) {
@@ -76,7 +78,7 @@ export class MainComponent implements OnInit {
   refreshResponse() {
     this.bgService.getResponse().subscribe((res) => {
       this.reviews = res;
-      // console.log(this.reviews);
+      console.log(this.reviews);
 
     })
   }

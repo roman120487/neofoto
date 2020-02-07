@@ -1,15 +1,17 @@
-.gallaryContainer{
+.gallaryContainer {
     width: 100%;
 }
-.titleMain{
+
+.titleMain {
     width: 184px;
-height: 71px;
-color: #222222;
-font-family: Baskerville;
-font-size: 60px;
-font-weight: 700;
+    height: 71px;
+    color: #222222;
+    font-family: Baskerville;
+    font-size: 60px;
+    font-weight: 700;
 }
-a{
+
+a {
     text-decoration: none;
 }
 
@@ -62,7 +64,6 @@ a{
 }
 
 .darkHoverGalary :nth-child(2) {
-    
     border: 3px solid white;
     color: white;
     padding: 0px 15px;
@@ -99,4 +100,11 @@ a{
 
 .galary :nth-child(6) {
     grid-row: 3/6;
+}
+
+.lastSlide {
+    color: #222222;
+    font-size: 32px;
+    font-weight: 600;
+    font-style: italic;
 }

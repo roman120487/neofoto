@@ -52,6 +52,10 @@
                     <span></span>
                 </div>
             </a>
+            <div id="podpisAU">
+                <p>O. Rudyuk<br>
+                Founder and Photographer</p>
+            </div>
         </div>
 
     </div>
@@ -64,9 +68,12 @@
             <div *ngFor="let project of photoArray | slice: numStart:numFinish" routerLink="/viewPhoto"
                 (click)="photoDetails(project)">
                 <div class="darkHoverGalary">
-                    <span class="title">{{project.nameProject}}</span>
-                    <span *ngIf="galary.lang">Детальніше</span>
-                    <span *ngIf="!galary.lang">Details</span>
+                    <span class="titleGalary">{{project.nameProject}}</span>
+                    <div class="arrowSocial arrowGalary">
+                        <span></span>
+                    </div>
+                    <!-- <span *ngIf="galary.lang">Детальніше</span>
+                    <span *ngIf="!galary.lang">Details</span> -->
                 </div>
                 <img src="{{project.arrayImg[0].path + project.arrayImg[0].filename}}" alt="">
             </div>
@@ -112,6 +119,7 @@
                 (beforeChange)="beforeChange($event)">
                 <div ngxSlickItem class="slideRew slide" *ngFor="let item of reviews">
                     <div class="fotoRew"><img src="{{item.idImgUrl + item.idImg}}" alt=""></div>
+                    <div class="nameRew"><p>{{item.author}}</p></div>
                     <div class="textRew">{{item.response}}</div>
                 </div>
             </ngx-slick-carousel>
