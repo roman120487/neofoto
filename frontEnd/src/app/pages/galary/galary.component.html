@@ -9,8 +9,9 @@
             <div *ngFor="let project of item; let i = index" routerLink="/viewPhoto" (click)="photoDetails(project)">
                 <div class="darkHoverGalary">
                     <span class="title">{{project.nameProject}}</span>
-                    <span *ngIf="galary.lang">Детальніше</span>
-                    <span *ngIf="!galary.lang">Details</span>
+                    <div class="arrowSocial arrowGalary">
+                        <span></span>
+                    </div>
                 </div>
                 <img src="{{project.arrayImg[0].path + project.arrayImg[0].filename}}" alt="">
             </div>

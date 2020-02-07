@@ -389,7 +389,7 @@
       text-align: justify;
   }
 
-  .arrowLeft, .arrowRight {
+  /* .arrowLeft, .arrowRight {
       width: 50px;
       height: 50px;
       border-radius: 50px;
@@ -456,7 +456,7 @@
       right: -2px;
       width: 14px;
       transform: rotate(-45deg);
-  }
+  } */
 
   /* ---------scroll button to top --------------------*/
 
