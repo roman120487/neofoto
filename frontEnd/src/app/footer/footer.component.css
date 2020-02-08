@@ -1,10 +1,11 @@
-footer{
+footer {
     width: 100%;
-    height: 650px;
+    min-height: 650px;
     margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
 }
+
 /* -------------orderPhoto ------------------------ */
 
 .orderPhoto {
@@ -18,7 +19,7 @@ footer{
 }
 
 .orderPhoto>img {
-    width: 100%;
+    /* width: 100%; */
     height: 100%;
     position: absolute;
     top: 0;
@@ -29,14 +30,12 @@ footer{
 }
 
 .orderPhoto p {
-    /* position: absolute; */
-    /* width: 500px; */
     height: 60px;
     color: #ffffff;
     font-size: 50px;
     float: left;
-    
 }
+
 .arrowOrder {
     width: 50px;
     height: 50px;
@@ -44,11 +43,6 @@ footer{
     justify-content: center;
     align-items: center;
     margin-top: 15px;
-    /* margin-left: 555px; */
-
-    /* margin-left: 140px;
-    margin-top: 70px; */
-    /* float: left; */
 }
 
 .arrowOrder span, .arrowOrder span::after, .arrowOrder span::before {
@@ -78,30 +72,30 @@ footer{
     width: 14px;
     transform: rotate(-45deg);
 }
-.orderPhoto:hover p{
+
+.orderPhoto:hover p {
     color: #f3c6b8;
 }
 
 /* -------------------------------------------------- */
-.fContainer{
+
+.fContainer {
     width: 100%;
     margin-top: 320px;
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
-.logo{
+
+.logo {
     width: 200px;
     height: 150px;
     background-color: white;
     border-radius: 25px;
     border: 1px solid lightgrey;
 }
-.fNAv, .fSocial, .fContactd{
-    margin-left: 130px;
-}
-.fContainer a, .fContactd p{
-    /* width: 47px; */
+
+.fContainer a, .fContactd p {
     font-size: 18px;
     text-decoration: none;
     color: #1a1a1a;
@@ -109,13 +103,44 @@ footer{
     height: 22px;
     line-height: 2;
 }
-footer a:hover{
+
+footer a:hover {
     opacity: 1;
 }
-.copiRight{
+
+.copiRight {
     border-top: 1px solid black;
     width: 100%;
     height: 70px;
     margin-top: 50px;
     padding-top: 15px;
 }
+
+@media screen and (max-width: 1670px) and (min-width: 1025px) {
+    .orderPhoto {
+        height: 200px;
+    }
+    .orderPhoto p {
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 770px) {
+    .orderPhoto {
+        height: 170px;
+    }
+    .orderPhoto p {
+        height: 40px;
+    }
+    .logo {
+        width: 150px;
+        height: 100px;
+        background-color: white;
+        border-radius: 25px;
+        border: 1px solid lightgrey;
+    }
+}
+
+@media screen and (max-width: 769px) and (min-width: 646px) {}
+
+@media screen and (max-width: 645px) and (min-width: 200px) {}
