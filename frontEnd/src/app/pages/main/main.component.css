@@ -546,6 +546,88 @@
       }
   }
 
-  @media screen and (max-width: 769px) and (min-width: 646px) {}
+  @media screen and (max-width: 769px) and (min-width: 646px) {
+    .rightSideBar {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        margin-top: 350px;
+        padding: 0px 200px;
+    }
+  
+    .rightSideBar>div {
+       display: none;
+    }
+  
+    .rightSideBar img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .bgHeader {
+        width: 645px;
+        height: 580px;
+    }
+    #neofotoTitle {
+        margin-top: 180px;
+        font-size: 80px;
+        /* font-weight: 700; */
+    }
+    #scrollDown {
+        bottom: 10px;
+    }
+    .bgHeader>img {
+        height: 620px;
+        left: -200px;
+    }
+    .aboutUs {
+        padding: 20px;
+        height: 656px;
+    }
+    .photoAU {
+        padding: 0px 10px;
+        width: 40%;
+        position: relative;
+    }
+    .photoAU img {
+        position: absolute;
+        width: 230px;
+        top: 0;
+        /* height: 100%; */
+        /* overflow: hidden; */
+    }
+    .textAU {
+        width: 60%;
+        font-size: 18px;
+        padding: 0px 25px;
+    }
+    .textAU a {
+        display: block;
+        font-size: 24px;
+        width: 130px;
+        margin-left: -250px;
+        /* float: left; */
+    }
+    #podpisAU {
+        font-size: 24px;
+        margin-top: -100px;
+    }
+    .whatWe>div {
+        width: 260px;
+        height: 370px;
+    }
+    .whatWe>div>p {
+        font-size: 21px;
+    }
+    .whatWe div img {
+        width: 320px;
+    }
+    .lamp {
+       display: none;
+    }
+  }
 
   @media screen and (max-width: 645px) and (min-width: 200px) {}
