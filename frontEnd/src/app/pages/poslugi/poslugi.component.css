@@ -71,6 +71,7 @@ ul>li {
     height: 690px;
     margin-top: 15px;
     position: relative;
+    overflow: hidden;
 }
 
 .teamPerosn>p {
@@ -85,7 +86,8 @@ ul>li {
 .happyCounter {
     width: 100%;
     height: 366px;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 30px;
+    /* background-color: rgba(0, 0, 0, 0.2); */
     position: relative;
     margin: 120px 0;
     display: flex;
