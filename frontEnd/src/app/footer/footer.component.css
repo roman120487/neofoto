@@ -141,6 +141,47 @@ footer a:hover {
     }
 }
 
-@media screen and (max-width: 769px) and (min-width: 646px) {}
+@media screen and (max-width: 769px) and (min-width: 646px) {
+    .arrowOrder {
+        margin-top: 8px;
+    }
+    .orderPhoto {
+        height: 150px;
+    }
+    .orderPhoto p {
+        font-size: 40px;
+        height: 40px;
+    }
+    .fContainer {
+        margin-top: 320px;
+        justify-content: space-between;
+    }
+    .fLogo {
+        display: none;
+    }
+}
 
-@media screen and (max-width: 645px) and (min-width: 200px) {}
+@media screen and (max-width: 645px) and (min-width: 200px) {
+    .arrowOrder {
+        margin-top: -10px;
+    }
+    .orderPhoto {
+        height: 100px;
+        padding: 40px 25px;
+    }
+    .orderPhoto p {
+        font-size: 20px;
+        height: 40px;
+        width: 70%;
+    }
+    .fContainer {
+        margin-top: 130px;
+        flex-direction: column;
+        padding-left: 20px;
+        justify-content: space-between;
+        height: 600px;
+    }
+    .fLogo {
+        display: none;
+    }
+}

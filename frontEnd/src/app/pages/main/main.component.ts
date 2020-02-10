@@ -25,22 +25,28 @@ export class MainComponent implements OnInit {
     slidesToShow: 2,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     speed: 1500,
     infinite: true,
     lazyLoad: "ondemand",
     responsive: [
       {
-        breakpoint: 991,
+        breakpoint: 770,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          autoplaySpeed: 3000,
-          speed: 100
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplaySpeed: 5000,
+          speed: 1500
         }
       },
       {
         breakpoint: 575,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplaySpeed: 5000,
+          speed: 1500
+        }
       }
     ]
   };

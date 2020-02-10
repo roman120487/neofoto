@@ -22,6 +22,7 @@
 }
 @media screen and (max-width: 645px) and (min-width: 200px){
     .containerAllSite{
-        width: 326px;
+        /* width: 326px; */
+        width: 100%;
     }
 }

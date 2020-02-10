@@ -35,6 +35,7 @@
       left: -30px;
       top: -10px;
       z-index: -1;
+      margin-top: -150px;
   }
 
   .rightSideBar {
@@ -86,7 +87,6 @@
       height: 895px;
       width: 100%;
       background-color: #ffffff;
-      ;
   }
 
   .photoAU {
@@ -333,7 +333,7 @@
 
   .slideRew {
       width: 500px;
-      height: 350px;
+      height: 450px;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -343,6 +343,8 @@
       box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.2);
       outline: none;
       padding: 15px 25px;
+      font-size: 20px;
+      text-align: justify;
   }
 
   .fotoRew {
@@ -359,7 +361,7 @@
   .nameRew p {
       text-align: center;
       color: #464646;
-      font-size: 18px;
+      font-size: 26px;
       font-weight: 700;
   }
 
@@ -444,6 +446,7 @@
           height: 30px;
       }
       .bgHeader>img {
+          margin-top: -150px;
           width: 1237px;
       }
       .aboutUs {
@@ -480,6 +483,14 @@
           top: 142px !important;
           left: 138px !important;
       }
+      /* ---------Gallary */
+      .galary>div {
+          width: 350px;
+      }
+      .slideRew {
+          height: 400px;
+          margin: 30px 15px;
+      }
   }
 
   @media screen and (max-width: 1024px) and (min-width: 770px) {
@@ -499,7 +510,9 @@
           height: 30px;
       }
       .bgHeader>img {
-          height: 620px;
+          width: 900px;
+          margin-top: -100px;
+          /* height: 750px; */
       }
       .aboutUs {
           padding: 20px;
@@ -542,92 +555,255 @@
           width: 320px;
       }
       .lamp {
-         display: none;
+          display: none;
+      }
+      /* ---------Gallary */
+      .galary>div {
+          width: 250px;
+      }
+      .galary {
+          grid-template-rows: repeat(5, 100px);
+          grid-gap: 40px;
+      }
+      .slideRew {
+          height: 450px;
+          margin: 30px 15px;
       }
   }
 
   @media screen and (max-width: 769px) and (min-width: 646px) {
-    .rightSideBar {
-        width: 100%;
-        height: 100px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        margin-top: 350px;
-        padding: 0px 200px;
-    }
-  
-    .rightSideBar>div {
-       display: none;
-    }
-  
-    .rightSideBar img {
-        width: 40px;
-        height: 40px;
-    }
-
-    .bgHeader {
-        width: 645px;
-        height: 580px;
-    }
-    #neofotoTitle {
-        margin-top: 180px;
-        font-size: 80px;
-        /* font-weight: 700; */
-    }
-    #scrollDown {
-        bottom: 10px;
-    }
-    .bgHeader>img {
-        height: 620px;
-        left: -200px;
-    }
-    .aboutUs {
-        padding: 20px;
-        height: 656px;
-    }
-    .photoAU {
-        padding: 0px 10px;
-        width: 40%;
-        position: relative;
-    }
-    .photoAU img {
-        position: absolute;
-        width: 230px;
-        top: 0;
-        /* height: 100%; */
-        /* overflow: hidden; */
-    }
-    .textAU {
-        width: 60%;
-        font-size: 18px;
-        padding: 0px 25px;
-    }
-    .textAU a {
-        display: block;
-        font-size: 24px;
-        width: 130px;
-        margin-left: -250px;
-        /* float: left; */
-    }
-    #podpisAU {
-        font-size: 24px;
-        margin-top: -100px;
-    }
-    .whatWe>div {
-        width: 260px;
-        height: 370px;
-    }
-    .whatWe>div>p {
-        font-size: 21px;
-    }
-    .whatWe div img {
-        width: 320px;
-    }
-    .lamp {
-       display: none;
-    }
+      .rightSideBar {
+          width: 100%;
+          height: 100px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 350px;
+          padding: 0px 200px;
+      }
+      .rightSideBar>div {
+          display: none;
+      }
+      .rightSideBar img {
+          width: 40px;
+          height: 40px;
+      }
+      .bgHeader {
+          width: 645px;
+          height: 580px;
+      }
+      #neofotoTitle {
+          margin-top: 180px;
+          font-size: 80px;
+          /* font-weight: 700; */
+      }
+      #scrollDown {
+          bottom: 10px;
+      }
+      .bgHeader>img {
+          height: 620px;
+          left: -100px;
+      }
+      .aboutUs {
+          padding: 20px;
+          height: 656px;
+      }
+      .photoAU {
+          padding: 0px 10px;
+          width: 40%;
+          position: relative;
+      }
+      .photoAU img {
+          position: absolute;
+          width: 230px;
+          top: 0;
+          /* height: 100%; */
+          /* overflow: hidden; */
+      }
+      .textAU {
+          width: 60%;
+          font-size: 18px;
+          padding: 0px 25px;
+      }
+      .textAU a {
+          display: block;
+          font-size: 24px;
+          width: 130px;
+          margin-left: -250px;
+          /* float: left; */
+      }
+      #podpisAU {
+          font-size: 24px;
+          margin-top: -100px;
+      }
+      .whatWe{
+          flex-wrap: wrap;
+          justify-content: space-around;
+      }
+      .whatWe>div {
+          width: 260px;
+          height: 370px;
+          margin-top: 25px;
+      }
+      .whatWe>div>p {
+          font-size: 21px;
+      }
+      .whatWe div img {
+          width: 320px;
+      }
+      .lamp {
+          display: none;
+      }
+      .galary {
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: repeat(5, 100px);
+          grid-gap: 30px;
+      }
+      .galary>div {
+          width: 300px;
+      }
+      .galary :nth-child(3) {
+          display: none;
+      }
+      .galary :nth-child(6) {
+          display: none;
+      }
+      .slideRew {
+          height: 400px;
+          margin: 30px 15px;
+      }
   }
 
-  @media screen and (max-width: 645px) and (min-width: 200px) {}
+  @media screen and (max-width: 645px) and (min-width: 200px) {
+      .rightSideBar {
+          width: 100%;
+          height: 100px;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          align-items: center;
+          margin-top: 350px;
+          padding: 0px 50px;
+      }
+      .rightSideBar>div {
+          display: none;
+      }
+      .rightSideBar img {
+          width: 40px;
+          height: 40px;
+      }
+      .bgHeader {
+          /* width: 326px; */
+          width: 100%;
+          height: 540px;
+      }
+      #neofotoTitle {
+          margin-top: 180px;
+          font-size: 80px;
+          /* font-weight: 700; */
+      }
+      #scrollDown {
+          bottom: 10px;
+      }
+      .bgHeader>img {
+          height: 580px;
+          left: -200px;
+          margin-top: 0;
+      }
+      .aboutUs {
+          padding: 20px;
+          height: 1100px;
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          background-color: #ffffff;
+      }
+      .photoAU {
+          padding: 0px 10px;
+          width: 100%;
+      }
+      .photoAU img {
+          width: 95%;
+      }
+      .textAU {
+          width: 100%;
+          font-size: 18px;
+          padding: 15px 0px;
+      }
+      .textAU a {
+          display: block;
+          font-size: 24px;
+          width: 130px;
+          /* margin-left: -250px; */
+          /* float: left; */
+      }
+      #podpisAU {
+          font-size: 24px;
+          /* margin-top: -100px; */
+      }
+      .galary {
+          /* display: none; */
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(9, 100px);
+          grid-gap: 30px;
+      }
+      .galary>div {
+          width: 300px;
+      }
+      .galary :nth-child(1) {
+          grid-row: 1/4;
+      }
+      .galary :nth-child(2) {
+          /* display: none; */
+          grid-row: 7/10;
+      }
+      .galary :nth-child(3) {
+          display: none;
+          grid-row: 1/3;
+      }
+      .galary :nth-child(4) {
+          grid-row: 4/7;
+      }
+      .galary :nth-child(5) {
+          display: none;
+          grid-row: 4/6;
+      }
+      .galary :nth-child(6) {
+          display: none;
+          grid-row: 3/6;
+      }
+      .whatWe {
+          flex-direction: column;
+          align-items: center;
+      }
+      .whatWe>div {
+          /* width: 260px; */
+          width: 80%;
+          height: 290px;
+          margin-top: 15px;
+      }
+      .whatWe>div>p {
+          font-size: 21px;
+      }
+      .whatWe div img {
+          width: 330px;
+      }
+      .lamp {
+          display: none;
+      }
+      .rewSliderMain {
+          width: 100%;
+          height: 750px;
+      }
+      .slideRew {
+          height: 720px;
+          margin: 30px 15px;
+          font-size: 18px;
+      }
+      .goUpBtn {
+          bottom: 100px;
+          right: 25px;
+          opacity: 0.8;
+      }
+  }
