@@ -16,7 +16,7 @@
 
 
 
-    <div class="aboutUs mainBloks">
+    <div class="mainBloks aboutUs ">
         <div class="photoAU">
             <img src="assets/img/photographer.png" alt="">
         </div>
@@ -62,8 +62,8 @@
 
 
     <div class="ourWorks mainBloks">
-        <p *ngIf="galary.lang" class="title">Мої останні роботи</p>
-        <p *ngIf="!galary.lang" class="title">My latest works</p>
+        <p *ngIf="galary.lang" class="title">Портфоліо</p>
+        <p *ngIf="!galary.lang" class="title">Portfolio</p>
         <div class="galary">
             <div *ngFor="let project of photoArray | slice: numStart:numFinish" routerLink="/viewPhoto"
                 (click)="photoDetails(project)">
