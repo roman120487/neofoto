@@ -3,6 +3,9 @@
     position: relative;
     overflow: hidden;
 }
+.menu-min{
+    display: none;
+}
 
 .navbar-expand {
     justify-content: flex-end;
@@ -48,7 +51,8 @@
 }
 
 @media screen and (max-width: 645px) and (min-width: 200px) {
-    .navbar{
+    
+    .containerHeader{
         display: none;
     }
     .nav1 {
