@@ -4,10 +4,9 @@
     overflow: hidden;
 }
 
-.navbar-expand-lg {
+.navbar-expand {
     justify-content: flex-end;
     height: 74px;
-    
     font-weight: 400;
     color: #1a1a1a;
 }
@@ -26,6 +25,7 @@
     border: none;
     background-color: #FAFAFA;
 }
+
 @media screen and (max-width: 1670px) and (min-width: 1025px) {
     .nav-link {
         margin-right: 72px;
@@ -39,17 +39,16 @@
 }
 
 @media screen and (max-width: 769px) and (min-width: 646px) {
-    .navbar-expand-lg {
-        width: 100%;
-        flex-wrap: nowrap;
-        flex-direction: row;
+    .navbar-expand {
         justify-content: space-between;
     }
-    
-    .nav-link {
-        margin-right: 0px;
-        font-size: 18px;
+    .nav-item {
+        width: 130px;
     }
 }
 
-@media screen and (max-width: 645px) and (min-width: 200px) {}
+@media screen and (max-width: 645px) and (min-width: 200px) {
+    .navbar{
+        display: none;
+    }
+}
