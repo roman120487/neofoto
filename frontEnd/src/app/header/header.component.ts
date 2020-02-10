@@ -8,6 +8,7 @@ import { GallaryService } from '../shared/services/gallary.service';
 })
 export class HeaderComponent implements OnInit {
   lang: string = 'ukr';
+  menuActive: boolean;
   constructor(private langService: GallaryService) { }
 
   ngOnInit() {
@@ -18,6 +19,13 @@ export class HeaderComponent implements OnInit {
       this.langService.lang = true;
     } else {
       this.langService.lang = false;
+    }
+  }
+  public menuMinActive(): void {
+    if (this.menuActive) {
+      this.menuActive = false;
+    } else {
+      this.menuActive = true;
     }
   }
 }

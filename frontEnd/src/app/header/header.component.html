@@ -31,3 +31,38 @@
 </div>
 
 <!-- <span class="sr-only">(current)</span> -->
+
+<div class="menu-min" [ngClass]="{menuMinHight:menuActive}" >
+  <div class="menuBtn" (click)="menuMinActive()" [ngClass]="{menuMinActive:menuActive}">
+    <span></span> 
+  </div>
+  <div class="menuMinTitle">
+    <span>Меню</span>
+  </div>
+  <ul class="nav nav1" [ngClass]="{menuMinHide:menuActive}" >
+    <li class="nav-item">
+      <a *ngIf="langService.lang"  class="nav-link" routerLink="main" routerLinkActive='active'>Домашня</a>
+      <a *ngIf="!langService.lang" class="nav-link" routerLink="main" routerLinkActive='active'>Home</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="langService.lang" class="nav-link" routerLink="galary" routerLinkActive='active'>Галерея</a>
+      <a *ngIf="!langService.lang" class="nav-link" routerLink="galary" routerLinkActive='active'>Gallary</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="langService.lang" class="nav-link" routerLink="paslugi" routerLinkActive='active'>Послуги</a>
+      <a *ngIf="!langService.lang" class="nav-link" routerLink="paslugi" routerLinkActive='active'>Services</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="langService.lang" class="nav-link" routerLink="contacts" routerLinkActive='active'>Контакти</a>
+      <a *ngIf="!langService.lang" class="nav-link" routerLink="contacts" routerLinkActive='active'>Contacts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">
+        <select id="lang"  [(ngModel)]="lang" name="lang" (change) = "selectLang()">
+          <option value="ukr">Укр</option>
+          <option value="en">Eng</option>
+        </select>
+      </a>
+    </li>
+  </ul>
+</div>
