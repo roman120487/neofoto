@@ -32,15 +32,21 @@
 
 <!-- <span class="sr-only">(current)</span> -->
 
-<div class="menuMini">
-  <ul class="nav nav1">
-    <li class="nav-item menuBtn">
+<div class="menu-min" [ngClass]="{menuMinHight:menuActive}" >
+  <div class="menuBtn" (click)="menuMinActive()" [ngClass]="{menuMinActive:menuActive}">
+    <span></span> 
+  </div>
+  <div class="menuMinTitle">
+    <span>Меню</span>
+  </div>
+  <ul class="nav nav1" [ngClass]="{menuMinHide:menuActive}" >
+    <li   class="nav-item">
       <a class="nav-link" routerLink="main" routerLinkActive='active'>Головна</a>
     </li>
-    <li class="nav-item">
+    <li    class="nav-item">
       <a class="nav-link" routerLink="about-us" routerLinkActive='active'>Про нас</a>
     </li>
-    <li class="nav-item dropdown">
+    <li    class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" role="button" data-toggle="dropdown"
         aria-haspopup="true" aria-expanded="false">
         Продукція
@@ -52,18 +58,14 @@
         <a class="nav-link" routerLink="frozen" routerLinkActive='active'>Холодильне обладнання</a>
       </div>
     </li>
-    <li class="nav-item">
+    <li    class="nav-item">
       <a class="nav-link" routerLink="brends" routerLinkActive='active'>Бренди</a>
     </li>
-    <li class="nav-item">
+    <li    class="nav-item">
       <a class="nav-link" routerLink="reference" routerLinkActive='active'>Референс</a>
     </li>
-    <li class="nav-item">
+    <li  class="nav-item">
       <a class="nav-link" routerLink="contacts" routerLinkActive='active'>Контакти</a>
     </li>
-
-    <!-- <li class="nav-item" *ngIf="enterAdmin">
-      <a class="nav-link" routerLink="admin" routerLinkActive='active'>Адмінка</a>
-    </li> -->
   </ul>
 </div>
