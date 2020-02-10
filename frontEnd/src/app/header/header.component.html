@@ -40,32 +40,29 @@
     <span>Меню</span>
   </div>
   <ul class="nav nav1" [ngClass]="{menuMinHide:menuActive}" >
-    <li   class="nav-item">
-      <a class="nav-link" routerLink="main" routerLinkActive='active'>Головна</a>
+    <li class="nav-item">
+      <a *ngIf="langService.lang"  class="nav-link" routerLink="main" routerLinkActive='active'>Домашня</a>
+      <a *ngIf="!langService.lang" class="nav-link" routerLink="main" routerLinkActive='active'>Home</a>
     </li>
-    <li    class="nav-item">
-      <a class="nav-link" routerLink="about-us" routerLinkActive='active'>Про нас</a>
+    <li class="nav-item">
+      <a *ngIf="langService.lang" class="nav-link" routerLink="galary" routerLinkActive='active'>Галерея</a>
+      <a *ngIf="!langService.lang" class="nav-link" routerLink="galary" routerLinkActive='active'>Gallary</a>
     </li>
-    <li    class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" routerLink="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-        aria-haspopup="true" aria-expanded="false">
-        Продукція
+    <li class="nav-item">
+      <a *ngIf="langService.lang" class="nav-link" routerLink="paslugi" routerLinkActive='active'>Послуги</a>
+      <a *ngIf="!langService.lang" class="nav-link" routerLink="paslugi" routerLinkActive='active'>Services</a>
+    </li>
+    <li class="nav-item">
+      <a *ngIf="langService.lang" class="nav-link" routerLink="contacts" routerLinkActive='active'>Контакти</a>
+      <a *ngIf="!langService.lang" class="nav-link" routerLink="contacts" routerLinkActive='active'>Contacts</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link">
+        <select id="lang"  [(ngModel)]="lang" name="lang" (change) = "selectLang()">
+          <option value="ukr">Укр</option>
+          <option value="en">Eng</option>
+        </select>
       </a>
-      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-        <a class="nav-link" routerLink="cotels" routerLinkActive='active'>Системи опалення</a>
-        <a class="nav-link" routerLink="hotPumps" routerLinkActive='active'>Теплові Насоси</a>
-        <a class="nav-link" routerLink="ventilation" routerLinkActive='active'>Вентиляційні системи</a>
-        <a class="nav-link" routerLink="frozen" routerLinkActive='active'>Холодильне обладнання</a>
-      </div>
-    </li>
-    <li    class="nav-item">
-      <a class="nav-link" routerLink="brends" routerLinkActive='active'>Бренди</a>
-    </li>
-    <li    class="nav-item">
-      <a class="nav-link" routerLink="reference" routerLinkActive='active'>Референс</a>
-    </li>
-    <li  class="nav-item">
-      <a class="nav-link" routerLink="contacts" routerLinkActive='active'>Контакти</a>
     </li>
   </ul>
 </div>
