@@ -12,7 +12,7 @@ export class HeaderComponent implements OnInit {
   constructor(private langService: GallaryService) { }
 
   ngOnInit() {
-    console.log(this.langService.lang);
+    // console.log(this.langService.lang);
   }
   selectLang() {
     if (this.lang == 'ukr') {

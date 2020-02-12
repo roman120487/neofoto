@@ -92,23 +92,19 @@
   }
 
   .photoAU {
-      /* padding: 25px 20px; */
+      padding: 0px 15px;
       width: 40%;
       overflow: hidden;
+      cursor: w-resize;
   }
 
   .fotoPhotograf {
-      /* position: absolute; */
-      /* height: 100%; */
-      /* width: 350px; */
       position: relative;
   }
 
   .fotoPhotograf>div>img {
       position: absolute;
       bottom: 0px;
-      /* margin: 0px 55px; */
-      /* overflow: hidden; */
   }
 
   .textAU {
