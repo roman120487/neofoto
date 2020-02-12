@@ -1,14 +1,14 @@
 <div class="containerMain">
     <div class="bgHeader">
         <p id="neofotoTitle">Neofoto</p>
-        <p *ngIf="galary.lang" id="scrollDown"> Прокрути вниз  </p>
+        <p *ngIf="galary.lang" id="scrollDown"> Прокрути вниз </p>
         <p *ngIf="!galary.lang" id="scrollDown"> Scroll down </p>
         <img src="/assets/img/bg-header.png" alt="">
         <div class="rightSideBar">
             <div></div>
-            <a href=""><img src="assets/img/be.svg" alt=""></a>
-            <a href=""><img src="assets/img/ig.svg" alt=""></a>
-            <a href=""><img src="assets/img/fb.svg" alt=""></a>
+            <a target="_blank" href=""><img src="assets/img/be.svg" alt=""></a>
+            <a target="_blank" href="https://www.instagram.com/neofotolviv/"><img src="assets/img/ig.svg" alt=""></a>
+            <a target="_blank" href=""><img src="assets/img/fb.svg" alt=""></a>
             <div></div>
         </div>
     </div>
@@ -18,7 +18,14 @@
 
     <div class="mainBloks aboutUs ">
         <div class="photoAU">
-            <img src="assets/img/photographer.png" alt="">
+
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigPhoto"
+                (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
+                (beforeChange)="beforeChange($event)">
+                <div ngxSlickItem class="slide fotoPhotograf" *ngFor="let item of photografImg">
+                    <img src="{{item.src}}" alt="">
+                </div>
+            </ngx-slick-carousel>
         </div>
         <div class="textAU">
             <p *ngIf="galary.lang">Мене звуть Олена Рудюк і я фотограф. Фотографія завжди була моїм захопленням, але
@@ -34,19 +41,19 @@
                 also
                 incredible inspiration for creativity.</p>
             <br>
-            <a href="">
+            <a target="_blank" href="https://www.instagram.com/neofotolviv/">
                 <p>Instagram</p>
                 <div class="arrowSocial">
                     <span></span>
                 </div>
             </a>
-            <a href="">
+            <a target="_blank" href="">
                 <p>Facebook</p>
                 <div class="arrowSocial">
                     <span></span>
                 </div>
             </a>
-            <a href="">
+            <a target="_blank" href="">
                 <p>Behance</p>
                 <div class="arrowSocial">
                     <span></span>
@@ -54,7 +61,7 @@
             </a>
             <div id="podpisAU">
                 <p>O. Rudyuk<br>
-                Founder and Photographer</p>
+                    Founder and Photographer</p>
             </div>
         </div>
 
@@ -77,7 +84,7 @@
             </div>
         </div>
     </div>
-    
+
 
 
 
@@ -117,7 +124,9 @@
                 (beforeChange)="beforeChange($event)">
                 <div ngxSlickItem class="slideRew slide" *ngFor="let item of reviews">
                     <div class="fotoRew"><img src="{{item.idImgUrl + item.idImg}}" alt=""></div>
-                    <div class="nameRew"><p>{{item.author}}</p></div>
+                    <div class="nameRew">
+                        <p>{{item.author}}</p>
+                    </div>
                     <div class="textRew">{{item.response}}</div>
                 </div>
             </ngx-slick-carousel>
@@ -134,4 +143,4 @@
     <div *ngIf="scrollBtn" class="goUpBtn" (click)="scrollUp()">
         <span></span>
     </div>
-</div> 
+</div>

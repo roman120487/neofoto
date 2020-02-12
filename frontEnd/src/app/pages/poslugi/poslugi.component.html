@@ -2,25 +2,23 @@
     <div class="title1">Послуги</div>
     <div class="typePhoto">
         <div class="title2">Тип фотографії:</div>
-        <div *ngIf="lagService.lang"  class="comercial">
+        <div class="comercial">
             <p>Комерційна фотографія</p>
             <ul>
-                <li>Перше</li>
-                <li>Друге</li>
-                <li>Трете</li>
-                <li>First second words all is good today, bla bla And bla bla</li>
-                <li>First second words all is good today, bla bla And bla bla</li>
+                <li>Підбір моделей відповідно до короткого опису</li>
+                <li>Пошук місця</li>
+                <li>Послуги візажиста, стиліста та перукаря</li>
+                <li>Пост-продакшн</li>
             </ul>
             <img src="assets/img/comerceBg.png" alt="">
         </div>
         <div class="portrait">
             <p>Портретня фотографія</p>
             <ul>
-                <li>Перше</li>
-                <li>Друге</li>
-                <li>Трете</li>
-                <li>First second words all is good today, bla bla And bla bla</li>
-                <li>First second words all is good today, bla bla And bla bla</li>
+                <li>Пакет "Базовий"</li>
+                <li>Пакет "Все включено"</li>
+                <li>Пакет "Зйомка на місці"</li>
+                <li>Зйомка за межами Львова</li>
             </ul>
             <img src="assets/img/portraitBg.png" alt="">
         </div>
@@ -29,37 +27,45 @@
 
     <div class="team">
         <div class="title2">Команда професіоналів:</div>
-        <div class="teamPerosn">
-            <p>Олена Rudyuk</p>
-            <img src="assets/img/team1.png" alt="">
+        <div class="teamPerson">
+            <div class="rightSideBar">
+                <div></div>
+                <a target="_blank" href="https://www.instagram.com/neofotolviv/"><img src="assets/img/ig.svg" alt=""></a>
+                <div></div>
+            </div>
+            <p>Олена Рудюк</p>
+            <img src="assets/img/team1.jpg" alt="">
         </div>
-        <div class="teamPerosn">
-            <p>Яна Blyha</p>
-            <img src="assets/img/team2.png" alt="">
+        <div class="teamPerson">
+            <div class="rightSideBar">
+                <div></div>
+                <a target="_blank" href="https://www.instagram.com/roksolana_make_up_lviv/"><img src="assets/img/ig.svg" alt=""></a>
+                <div></div>
+            </div>
+            <p>Роксолана Бубела</p>
+            <img src="assets/img/team2.jpg" alt="">
         </div>
-        <div class="teamPerosn">
-            <p></p>
+        <div class="teamPerson">
+            <p >We are open 
+                to cooperation :)</p>
             <img src="" alt="">
         </div>
     </div>
 
     <div class="happyCounter">
         <div>
-            <p>5</p>
-            <p>Років роботи</p>
+            <p>4</p>
+            <p>Роки роботи</p>
         </div>
         <div>
-            <p>24</p>
-            <p>Партнерів</p>
-        </div>
-        <div>
-            <p>208</p>
-            <p>Щасливих клієнтів</p>
+            <p>77</p>
+            <p>Клієнтів</p>
         </div>
         <img src="assets/img/heppyCounterBg.png" alt="">
     </div>
 </div>
 
+<!-- ------------------------------------------------------- -->
 
 <div *ngIf="!lagService.lang"  class="poslugiContainer">
     <div class="title1">Services</div>
@@ -68,22 +74,20 @@
         <div class="comercial">
             <p>Сommercial photography</p>
             <ul>
-                <li>First</li>
-                <li>Second</li>
-                <li>Thirst</li>
-                <li>First second words all is good today, bla bla And bla bla</li>
-                <li>First second words all is good today, bla bla And bla bla</li>
+                <li>Selection of models according to the brief</li>
+                <li>Search for a location</li>
+                <li>Services of makeup artist, stylist and hairdresser</li>
+                <li>Postproduction</li>
             </ul>
             <img src="assets/img/comerceBg.png" alt="">
         </div>
         <div class="portrait">
             <p>Portrait photography</p>
             <ul>
-                <li>First</li>
-                <li>Second</li>
-                <li>Thirst</li>
-                <li>First second words all is good today, bla bla And bla bla</li>
-                <li>First second words all is good today, bla bla And bla bla</li>
+                <li>Package “Basic”</li>
+                <li>Package “All inclusive”</li>
+                <li>Package “Shooting on location”</li>
+                <li>Shooting outside of Lviv</li>
             </ul>
             <img src="assets/img/portraitBg.png" alt="">
         </div>
@@ -92,15 +96,25 @@
 
     <div class="team">
         <div class="title2">Our team of professionals:</div>
-        <div class="teamPerosn">
-            <p>Olena Rudyuk</p>
-            <img src="assets/img/team1.png" alt="">
+        <div class="teamPerson">
+            <div class="rightSideBar">
+                <div></div>
+                <a target="_blank" href="https://www.instagram.com/neofotolviv/"><img src="assets/img/ig.svg" alt=""></a>
+                <div></div>
+            </div>
+            <p>Olena Rudiuk</p>
+            <img src="assets/img/team1.jpg" alt="">
         </div>
-        <div class="teamPerosn">
-            <p>Yana Blyha</p>
-            <img src="assets/img/team2.png" alt="">
+        <div class="teamPerson">
+            <div class="rightSideBar">
+                <div></div>
+                <a target="_blank" href="https://www.instagram.com/roksolana_make_up_lviv/"><img src="assets/img/ig.svg" alt=""></a>
+                <div></div>
+            </div>
+            <p>Roksolana Bubela</p>
+            <img src="assets/img/team2.jpg" alt="">
         </div>
-        <div class="teamPerosn">
+        <div class="teamPerson">
             <p></p>
             <img src="" alt="">
         </div>
@@ -108,16 +122,12 @@
 
     <div class="happyCounter">
         <div>
-            <p>5</p>
-            <p>Years of work</p>
+            <p>4</p>
+            <p>Роки роботи</p>
         </div>
         <div>
-            <p>24</p>
-            <p>Partners</p>
-        </div>
-        <div>
-            <p>208</p>
-            <p>Happy customers</p>
+            <p>77</p>
+            <p>Клієнтів</p>
         </div>
         <img src="assets/img/heppyCounterBg.png" alt="">
     </div>

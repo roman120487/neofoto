@@ -1,5 +1,6 @@
 .gallaryContainer {
     width: 100%;
+    padding-top: 73px;
 }
 
 .titleMain {
@@ -30,7 +31,7 @@ a {
 
 .galary>div {
     width: 400px;
-    /* border: 10px solid white; */
+    border: 10px solid white;
     font-size: 35px;
     text-align: center;
     font-weight: bold;
@@ -62,13 +63,6 @@ a {
 .darkHoverGalary :nth-child(1) {
     color: white;
 }
-
-/* .darkHoverGalary :nth-child(2) {
-    border: 3px solid white;
-    color: white;
-    padding: 0px 15px;
-    border-radius: 5px;
-} */
 
 .darkHoverGalary:hover {
     opacity: 0.7;
@@ -118,6 +112,7 @@ a {
 .arrowGalary span {
     border-color: white;
 }
+
 .arrowSocial {
     width: 50px;
     height: 50px;
@@ -154,3 +149,55 @@ a {
     width: 14px;
     transform: rotate(-45deg);
 }
+
+@media screen and (max-width: 1670px) and (min-width: 1025px) {
+    .galary>div{
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 1024px) and (min-width: 770px) {
+    .galary>div {
+        width: 250px;
+    }
+    .galary {
+        grid-template-rows: repeat(5, 100px);
+        grid-gap: 40px;
+    }
+}
+
+@media screen and (max-width: 769px) and (min-width: 646px) {
+    .galary {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(9, 100px);
+        grid-gap: 30px;
+    }
+    .galary>div {
+        width: 300px;
+    }
+    .galary :nth-child(1) {
+        grid-row: 1/3;
+    }
+    
+    .galary :nth-child(2) {
+        grid-row: 1/4;
+    }
+    
+    .galary :nth-child(3) {
+        grid-row: 3/6;
+    }
+    
+    .galary :nth-child(4) {
+        grid-row: 4/7;
+    }
+    
+    .galary :nth-child(5) {
+        grid-row: 6/10;
+    }
+    
+    .galary :nth-child(6) {
+        grid-row: 7/10;
+    }
+}
+
+@media screen and (max-width: 645px) and (min-width: 200px) {}

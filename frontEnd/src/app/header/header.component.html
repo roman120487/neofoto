@@ -36,9 +36,6 @@
   <div class="menuBtn" (click)="menuMinActive()" [ngClass]="{menuMinActive:menuActive}">
     <span></span> 
   </div>
-  <div class="menuMinTitle">
-    <span>Меню</span>
-  </div>
   <ul class="nav nav1" [ngClass]="{menuMinHide:menuActive}" >
     <li class="nav-item">
       <a *ngIf="langService.lang"  class="nav-link" routerLink="main" routerLinkActive='active'>Домашня</a>

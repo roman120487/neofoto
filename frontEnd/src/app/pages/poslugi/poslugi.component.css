@@ -64,16 +64,22 @@ ul>li {
     justify-content: space-between;
 }
 
-.teamPerosn {
+.teamPerson {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    background-color: #ffeee8;
+    /* background-color: #ffeee8; */
     width: 552px;
     height: 690px;
     margin-top: 15px;
     position: relative;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+.teamPerson>img{
+    position: absolute;
+    z-index: -3;
 }
 
-.teamPerosn>p {
+.teamPerson>p {
     color: #ffffff;
     font-size: 32px;
     font-weight: 700;
@@ -81,11 +87,35 @@ ul>li {
     bottom: 10px;
     left: 25px;
 }
+.rightSideBar {
+    width: 100px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.rightSideBar>div {
+    width: 1px;
+    height: 35%;
+    border: 1px solid white;
+    background-color: white;
+}
+
+.rightSideBar img {
+    width: 27px;
+    height: 27px;
+}
 
 .happyCounter {
     width: 100%;
     height: 366px;
-    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 30px;
+    /* background-color: rgba(0, 0, 0, 0.2); */
     position: relative;
     margin: 120px 0;
     display: flex;
@@ -111,3 +141,10 @@ ul>li {
     text-align: center;
     font-weight: 400;
 }
+@media screen and (max-width: 1670px) and (min-width: 1025px) {}
+
+@media screen and (max-width: 1024px) and (min-width: 770px) {}
+
+@media screen and (max-width: 769px) and (min-width: 646px) {}
+
+@media screen and (max-width: 645px) and (min-width: 200px) {}

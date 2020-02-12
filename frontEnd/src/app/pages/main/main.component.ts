@@ -14,13 +14,45 @@ import { GallaryService } from 'src/app/shared/services/gallary.service';
 export class MainComponent implements OnInit {
   scrollBtn: boolean = false;
   reviews: any;
-  x: number = 2;
+  photografImg: Array<any>;
+  // x: number = 2;
 
   photoArray: any;
   numStart: number;
   numFinish: number;
 
-  modalImg: any = [];
+  // modalImg: any = [];
+  slideConfigPhoto = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 1000,
+    infinite: true,
+    lazyLoad: "ondemand",
+    // responsive: [
+    //   {
+    //     breakpoint: 770,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //       autoplaySpeed: 3000,
+    //       speed: 1000,
+    //     }
+    //   },
+    //   {
+    //     breakpoint: 575,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //       autoplaySpeed: 3000,
+    //       speed: 1000,
+    //     }
+    //   }
+    // ]
+  };
+
+
   slideConfig = {
     slidesToShow: 2,
     slidesToScroll: 1,
@@ -57,15 +89,24 @@ export class MainComponent implements OnInit {
 
   ngOnInit() {
 
+
     this.refreshResponse();
     this.refreshProject();
-    
-    
+    this.photografImg = [
+      { src: "assets/img/team1.jpg" },
+      { src: "assets/img/photographer.jpg" },
+      { src: "assets/img/photographer.jpg" },
+      { src: "assets/img/photographer.jpg" },
+      { src: "assets/img/team1.jpg" },
+      { src: "assets/img/photographer2.jpg" },
+      { src: "assets/img/photographer2.jpg" },
+    ];
 
+    console.log(this.photografImg);
   }
-  addModalImg(e) {
-    this.modalImg = e;
-  }
+  // addModalImg(e) {
+  //   this.modalImg = e;
+  // }
 
   refreshProject() {
     this.bgService.getPortrait().subscribe((res) => {
