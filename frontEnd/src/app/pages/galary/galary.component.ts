@@ -20,12 +20,11 @@ export class GalaryComponent implements OnInit {
 
 
   refreshProject() {
+    const lastslide = { 'arrayImg': [{ lastSlide: "More projects soon!" }] };
     this.api.getPortrait().subscribe((res) => {
       this.photoArray = res;
-      this.photoArray.push({lastSlide: "More projects soon!"})
+      this.photoArray.push(lastslide);
       this.dropPhoto();
-      console.log(this.photoArray);
-      
     });
   }
 

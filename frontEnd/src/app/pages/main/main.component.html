@@ -19,9 +19,7 @@
     <div class="mainBloks aboutUs ">
         <div class="photoAU">
 
-            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigPhoto"
-                (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
-                (beforeChange)="beforeChange($event)">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigPhoto">
                 <div ngxSlickItem class="slide fotoPhotograf" *ngFor="let item of photografImg">
                     <img src="{{item.src}}" alt="">
                 </div>
@@ -119,9 +117,7 @@
             <span></span>
         </div> -->
         <div class="rewSliderMain">
-            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig"
-                (init)="slickInit($event)" (breakpoint)="breakpoint($event)" (afterChange)="afterChange($event)"
-                (beforeChange)="beforeChange($event)">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
                 <div ngxSlickItem class="slideRew slide" *ngFor="let item of reviews">
                     <div class="fotoRew"><img src="{{item.idImgUrl + item.idImg}}" alt=""></div>
                     <div class="nameRew">
