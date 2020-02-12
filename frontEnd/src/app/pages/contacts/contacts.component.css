@@ -82,3 +82,10 @@ h5 {
 .formSend button:hover{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+@media screen and (max-width: 1670px) and (min-width: 1025px) {}
+
+@media screen and (max-width: 1024px) and (min-width: 770px) {}
+
+@media screen and (max-width: 769px) and (min-width: 646px) {}
+
+@media screen and (max-width: 645px) and (min-width: 200px) {}
