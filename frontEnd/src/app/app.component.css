@@ -1,9 +1,8 @@
 .containerAllSite{
     width: 1704px;
-    /* width: 90%; */
     margin: 0px auto;
-    /* border: 1px solid black */
 }
+
 @media screen and (max-width: 1670px) and (min-width: 1025px){
     .containerAllSite{
         width: 1137px;
