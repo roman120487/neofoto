@@ -7,7 +7,6 @@ import { GallaryService } from '../shared/services/gallary.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  lang: string = 'ukr';
   menuActive: boolean;
   constructor(private langService: GallaryService) { }
 
@@ -15,12 +14,16 @@ export class HeaderComponent implements OnInit {
     // console.log(this.langService.lang);
   }
   selectLang() {
-    if (this.lang == 'ukr') {
+    console.log(this.langService);
+    
+
+    if (this.langService.lang === false) {
       this.langService.lang = true;
-    } else {
-      this.langService.lang = false;
-    }
+    } else { this.langService.lang = false; }
+    console.log(this.langService);
   }
+
+  
   public menuMinActive(): void {
     if (this.menuActive) {
       this.menuActive = false;

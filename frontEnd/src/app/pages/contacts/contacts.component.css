@@ -58,12 +58,15 @@ h5 {
     color: #1a1a1a;
 }
 
-.formSend input, .formSend textarea {
+.formSend input, .formSend textarea, .formSend select {
     border: none;
     border-bottom: 1px solid lightgrey;
     background-color: #fafafa;
     margin-bottom: 35px;
     outline: none;
+}
+.formSend select{
+    width: 150px;
 }
 
 .formSend button {

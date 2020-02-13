@@ -1,13 +1,13 @@
 .containerHeader {
     height: 74px;
-    /* position: relative; */
     position: fixed;
-    right: 0;
-    left: 0;
+    width: 1704px;
+    margin: 0 auto;
+    /* right: 50px;
+    left: 50px; */
     z-index: 5;
     overflow: hidden;
     background-color:#FAFAFA ;
-    /* opacity: 0.9; */
 }
 .menu-min{
     display: none;
@@ -24,6 +24,9 @@
     margin-right: 112px;
     font-size: 18px;
 }
+.nav-link span{
+    cursor: pointer;
+}
 
 #lang {
     width: 65px;
@@ -34,16 +37,35 @@
     border: none;
     background-color: #FAFAFA;
 }
+option{
+    border: none;
+    background-color: #FAFAFA;
+
+}
+.logoMax{
+    height: 75px;
+    position: absolute;
+    left: 0;
+}
+.logoMax>img{
+    height: 100%;
+}
 
 @media screen and (max-width: 1670px) and (min-width: 1025px) {
     .nav-link {
         margin-right: 72px;
+    }
+    .containerHeader {
+        width: 1137px;
     }
 }
 
 @media screen and (max-width: 1024px) and (min-width: 770px) {
     .nav-link {
         margin-right: 35px;
+    }
+    .containerHeader {
+        width: 864px;
     }
 }
 
@@ -53,6 +75,12 @@
     }
     .nav-item {
         width: 130px;
+    }
+    .containerHeader {
+        width: 768px;
+    }
+    .logoMax{
+       display: none;
     }
 }
 
@@ -149,5 +177,17 @@
     }
     .active{
         color: #F3C6B8 !important;
+    }
+    .logo{
+        height: 50px;
+        float: left;
+    }
+    .logo>img{
+        height: 100%;
+    }
+    .langChange{
+        position: absolute;
+        right: 0px;
+        /* float: left; */
     }
 }

@@ -13,6 +13,8 @@ export class ContactsComponent implements OnInit {
 
   ngOnInit() {
     this.resetForm();
+    console.log(this.formData);
+    
   }
   public resetForm(form?: NgForm) {
     if (form != null) {
@@ -23,7 +25,8 @@ export class ContactsComponent implements OnInit {
       namePerson: '',
       namePersonPhone: '',
       namePersonEmail: '',
-      namePersonMessage: ''
+      namePersonMessage: '',
+      typeOfPhoto: ''
     }
   }
   public onSubmit(form: NgForm) {
