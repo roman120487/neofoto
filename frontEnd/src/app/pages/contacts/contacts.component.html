@@ -34,6 +34,11 @@
             <input #namePerson="ngModel" name="namePerson" [(ngModel)]="formData.namePerson" type="text" placeholder="Ваше ім'я">
             <p>НОМЕР ТЕЛЕФОНУ</p>
             <input #namePersonPhone="ngModel" name="namePersonPhone" [(ngModel)]="formData.namePersonPhone" type="text" placeholder="Ваш номер телефону">
+            <p>ТИП ФОТОГРАФІЇ</p>
+            <select #typeOfPhoto="ngModel" name="typeOfPhoto" [(ngModel)]="formData.typeOfPhoto" type="text" placeholder='виберіть'>
+                <option value="portrait">Портрет</option>
+                <option value="comerce">Комерція</option>
+            </select>
             <p>EMAIL</p>
             <input #namePersonEmail="ngModel" name="namePersonEmail" [(ngModel)]="formData.namePersonEmail" type="text" placeholder="Ваша електронна пошта">
             <p>ПОВІДОМЛЕННЯ</p>
