@@ -6,15 +6,36 @@
 
     <div class="mainBox">
         <div class="galary" *ngFor="let item of photoArrayPies">
-            <div *ngFor="let project of item; let i = index" routerLink="/viewPhoto" (click)="photoDetails(project)">
+            <div *ngFor="let project of item; let i = index" data-toggle="modal" data-target="#photoViewModal"
+                (click)="photoDetails(project)">
                 <div class="darkHoverGalary">
                     <span class="title">{{project.nameProject}}</span>
                     <div class="arrowSocial arrowGalary">
                         <span></span>
                     </div>
                 </div>
-                <div><p>{{project.arrayImg[0].lastSlide}}</p></div>
+                <div>
+                    <p>{{project.arrayImg[0].lastSlide}}</p>
+                </div>
                 <img src="{{project.arrayImg[0].path + project.arrayImg[0].filename}}" alt="">
             </div>
         </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="photoViewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigPhoto">
+                    <div ngxSlickItem class="slide " *ngFor="let item of modalPhotos">
+                        <img src="{{item.path+item.filename}}" alt="">
+                    </div>
+                </ngx-slick-carousel>
+            </div>
+        </div>
+    </div>
+</div>

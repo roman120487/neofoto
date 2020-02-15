@@ -70,8 +70,7 @@
         <p *ngIf="galary.lang" class="title">Портфоліо</p>
         <p *ngIf="!galary.lang" class="title">Portfolio</p>
         <div class="galary">
-            <div *ngFor="let project of photoArray | slice: numStart:numFinish" routerLink="/viewPhoto"
-                (click)="photoDetails(project)">
+            <div *ngFor="let project of photoArray | slice: numStart:numFinish" data-toggle="modal" data-target="#photoViewModal" (click)="photoDetails(project)">
                 <div class="darkHoverGalary">
                     <span class="titleGalary">{{project.nameProject}}</span>
                     <div class="arrowSocial arrowGalary">
@@ -139,4 +138,21 @@
     <div *ngIf="scrollBtn" class="goUpBtn" (click)="scrollUp()">
         <span></span>
     </div>
+</div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="photoViewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+  </button>
+  <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigPhotoModal">
+              <div ngxSlickItem class="slide " *ngFor="let item of modalPhotos">
+                  <img src="{{item.path+item.filename}}" alt="">
+              </div>
+          </ngx-slick-carousel>
+      </div>
+  </div>
 </div>

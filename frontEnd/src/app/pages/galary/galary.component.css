@@ -31,7 +31,7 @@ a {
 
 .galary>div {
     width: 400px;
-    border: 10px solid white;
+    /* border: 10px solid white; */
     font-size: 35px;
     text-align: center;
     font-weight: bold;
@@ -150,8 +150,40 @@ a {
     transform: rotate(-45deg);
 }
 
+.close {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+
+.modal-dialog {
+    /* width: 90% !important; */
+    max-width: 90%;
+}
+
+.modal-content {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    /* flex-direction: row !important; */
+}
+
+.slide {
+    outline: none;
+    margin: 0 auto;
+}
+
+.slide img {
+    margin: 0px auto;
+    max-height: 93vh;
+    outline: none;
+}
+
 @media screen and (max-width: 1670px) and (min-width: 1025px) {
-    .galary>div{
+    .galary>div {
         width: 350px;
     }
 }
@@ -178,23 +210,18 @@ a {
     .galary :nth-child(1) {
         grid-row: 1/3;
     }
-    
     .galary :nth-child(2) {
         grid-row: 1/4;
     }
-    
     .galary :nth-child(3) {
         grid-row: 3/6;
     }
-    
     .galary :nth-child(4) {
         grid-row: 4/7;
     }
-    
     .galary :nth-child(5) {
         grid-row: 6/10;
     }
-    
     .galary :nth-child(6) {
         grid-row: 7/10;
     }
@@ -215,19 +242,15 @@ a {
     .galary :nth-child(1) {
         grid-row: 1/4;
     }
-    
     .galary :nth-child(2) {
         grid-row: 4/7;
     }
-    
     .galary :nth-child(3) {
         grid-row: 7/10;
     }
-    
     .galary :nth-child(4) {
         grid-row: 10/13;
     }
-    
     .galary :nth-child(5) {
         grid-row: 13/16;
     }

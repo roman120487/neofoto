@@ -10,11 +10,26 @@ import { GallaryService } from 'src/app/shared/services/gallary.service';
 export class GalaryComponent implements OnInit {
   photoArray: any;
   photoArrayPies: any = [];
+  modalPhotos: Array<any> = [];
+
+  slideConfigPhoto = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 1000,
+    infinite: true,
+    lazyLoad: 'ondemand',
+    dots: true,
+    // fade: true,
+    pauseOnHover: false
+  };
 
   constructor(public api: BgService, public galary: GallaryService) { }
 
   ngOnInit() {
     this.refreshProject();
+
   }
 
 
@@ -35,7 +50,7 @@ export class GalaryComponent implements OnInit {
   }
 
   photoDetails(e) {
-    this.galary.arrayPhoto = e;
+    this.modalPhotos = e.arrayImg;
   }
 
 }
