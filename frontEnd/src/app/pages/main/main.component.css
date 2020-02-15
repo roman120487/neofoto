@@ -306,6 +306,25 @@
   .galary div img {
       height: 100%;
   }
+  .galary>div>img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover;
+}
+  .moreGallryBtn{
+      width: 150px;
+      height: 60px;
+      margin: 35px auto;
+      border: qpx solid black;
+      border-radius: 5px;
+      background-color: #F3C6B8;
+      text-align: center;
+      font-size: 24px;
+      color: white;
+      padding-top: 10px;
+      cursor: pointer;
+      outline: none;
+  }
 
   /* ---------what We ----------------- */
 
