@@ -17,11 +17,11 @@ export class GalaryComponent implements OnInit {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 3000,
-    speed: 500,
+    speed: 1000,
     infinite: true,
     lazyLoad: 'ondemand',
     dots: true,
-    fade: true,
+    // fade: true,
     pauseOnHover: false
   };
 
