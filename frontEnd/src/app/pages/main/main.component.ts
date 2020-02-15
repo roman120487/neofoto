@@ -31,6 +31,18 @@ export class MainComponent implements OnInit {
     infinite: true,
     lazyLoad: 'ondemand',
   };
+  slideConfigPhotoModal = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    speed: 500,
+    infinite: true,
+    lazyLoad: 'ondemand',
+    dots: true,
+    fade: true,
+    pauseOnHover: false
+  };
 
 
   slideConfig = {
@@ -93,7 +105,7 @@ export class MainComponent implements OnInit {
   }
 
   photoDetails(e) {
-    this.modalPhotos = e;
+    this.modalPhotos = e.arrayImg;
   }
 
 
