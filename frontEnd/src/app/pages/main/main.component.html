@@ -70,8 +70,7 @@
         <p *ngIf="galary.lang" class="title">Портфоліо</p>
         <p *ngIf="!galary.lang" class="title">Portfolio</p>
         <div class="galary">
-            <div *ngFor="let project of photoArray | slice: numStart:numFinish" routerLink="/viewPhoto"
-                (click)="photoDetails(project)">
+            <div *ngFor="let project of photoArray | slice: numStart:numFinish" (click)="photoDetails(project)">
                 <div class="darkHoverGalary">
                     <span class="titleGalary">{{project.nameProject}}</span>
                     <div class="arrowSocial arrowGalary">

@@ -15,6 +15,7 @@ export class MainComponent implements OnInit {
   scrollBtn: boolean = false;
   reviews: any;
   photografImg: Array<any>;
+  modalPhotos: Array<any> = [];
   // x: number = 2;
 
   photoArray: any;
@@ -28,7 +29,7 @@ export class MainComponent implements OnInit {
     autoplaySpeed: 3000,
     speed: 1000,
     infinite: true,
-    lazyLoad: "ondemand",
+    lazyLoad: 'ondemand',
   };
 
 
@@ -92,7 +93,7 @@ export class MainComponent implements OnInit {
   }
 
   photoDetails(e) {
-    this.galary.arrayPhoto = e;
+    this.modalPhotos = e;
   }
 
 

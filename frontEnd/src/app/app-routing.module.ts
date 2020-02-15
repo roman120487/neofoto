@@ -9,7 +9,6 @@ import { PoslugiComponent } from './pages/poslugi/poslugi.component';
 import { AdminPortraitComponent } from './admin/admin-portrait/admin-portrait.component';
 import { AdminResponseComponent } from './admin/admin-response/admin-response.component';
 import { AdminListProjectComponent } from './admin/admin-list-project/admin-list-project.component';
-import { ViewPhotoComponent } from './pages/galary/view-photo/view-photo.component';
 import { AuthComponent } from './auth/auth.component';
 
 import { AdminTeamComponent } from './admin/admin-team/admin-team.component';
@@ -21,7 +20,6 @@ const routes: Routes = [
   {path: 'main', component: MainComponent},
   {path: 'paslugi', component: PoslugiComponent},
   {path: 'galary', component: GalaryComponent},
-  {path: 'viewPhoto', component: ViewPhotoComponent},
   {path: 'contacts', component: ContactsComponent},
   {path: 'admin', component: AdminComponent, canActivate:[IsLoggedIn] , children:[
     { path: '', redirectTo: 'portrait', pathMatch: 'full' },

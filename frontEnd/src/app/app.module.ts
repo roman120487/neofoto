@@ -17,7 +17,6 @@ import { AdminPortraitComponent } from './admin/admin-portrait/admin-portrait.co
 import { AdminResponseComponent } from './admin/admin-response/admin-response.component';
 import { AdminListProjectComponent } from './admin/admin-list-project/admin-list-project.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { ViewPhotoComponent } from './pages/galary/view-photo/view-photo.component';
 import { AuthComponent } from './auth/auth.component';
 import { IsLoggedIn } from './auth/isLogged.guard';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
@@ -37,7 +36,6 @@ import { AdminTeamComponent } from './admin/admin-team/admin-team.component';
     AdminPortraitComponent,
     AdminResponseComponent,
     AdminListProjectComponent,
-    ViewPhotoComponent,
     AuthComponent,
     AdminTeamComponent,
   ],
@@ -47,7 +45,6 @@ import { AdminTeamComponent } from './admin/admin-team/admin-team.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    HttpModule,
     SlickCarouselModule
   ],
   providers: [IsLoggedIn],
