@@ -45,7 +45,8 @@ import { AdminTeamComponent } from './admin/admin-team/admin-team.component';
     FormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    HttpModule,
   ],
   providers: [IsLoggedIn],
   bootstrap: [AppComponent]
