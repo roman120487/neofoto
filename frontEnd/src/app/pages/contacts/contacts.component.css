@@ -4,7 +4,10 @@
     /* flex-direction: row; */
     flex-wrap: wrap;
 }
-
+iframe{
+    width:700px;
+    height: 650px;
+}
 .title {
     width: 100%;
 }
@@ -50,6 +53,12 @@ h3 {
     margin-top: 100px;
     margin: 120px 150px;
 }
+.form{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
 
 h5 {
     font-size: 24px;
