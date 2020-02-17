@@ -14,9 +14,9 @@
         <p>Email:<br>
             olenarudyuk@gmail.com</p>
         <p>Соціальні мережі:<br>
-            Instagram<br>
-            Facebook<br>
-            Behance</p>
+            <a href="https://www.instagram.com/neofotolviv/"> Instagram</a><br>
+            <a href=""> Facebook</a><br>
+            <a href=""> Behance</a></p>
         <p>м.Львів вул.Володимира Великого 18<br>
             офіс 825</p>
     </div>
@@ -30,14 +30,18 @@
     </div>
     <div class="formSend">
         <h5>Привіт! Напишіть нам:</h5>
-        <form class="form" #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+        <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
             <div class="formPies">
                 <p>ІМ'Я</p>
                 <input #namePerson="ngModel" name="namePerson" [(ngModel)]="formData.namePerson" type="text"
                     placeholder="Ваше ім'я">
-                <p>НОМЕР ТЕЛЕФОНУ</p>
-                <input #namePersonPhone="ngModel" name="namePersonPhone" [(ngModel)]="formData.namePersonPhone"
-                    type="text" placeholder="Ваш номер телефону">
+                    <p>EMAIL</p>
+                <input #namePersonEmail="ngModel" name="namePersonEmail" [(ngModel)]="formData.namePersonEmail"
+                    type="text" placeholder="Ваша електронна пошта">
+                <p>ПОВІДОМЛЕННЯ</p>
+                <textarea #namePersonMessage="ngModel" name="namePersonMessage" [(ngModel)]="formData.namePersonMessage"
+                    id="" cols="30" rows="3" placeholder="Напишіть повідомлення тут"></textarea><br>
+                
             </div>
             <div class="formPies">
                 <p>ТИП ФОТОГРАФІЇ</p>
@@ -46,12 +50,11 @@
                     <option value="portrait">Портрет</option>
                     <option value="comerce">Комерція</option>
                 </select>
-                <p>EMAIL</p>
-                <input #namePersonEmail="ngModel" name="namePersonEmail" [(ngModel)]="formData.namePersonEmail"
-                    type="text" placeholder="Ваша електронна пошта">
-                <p>ПОВІДОМЛЕННЯ</p>
-                <textarea #namePersonMessage="ngModel" name="namePersonMessage" [(ngModel)]="formData.namePersonMessage"
-                    id="" cols="30" rows="3" placeholder="Напишіть повідомлення тут"></textarea><br>
+                
+                <p>НОМЕР ТЕЛЕФОНУ</p>
+                <input #namePersonPhone="ngModel" name="namePersonPhone" [(ngModel)]="formData.namePersonPhone"
+                    type="text" placeholder="Ваш номер телефону">
+                
             </div>
             <button type="submit">Надіслати повідомлення</button>
         </form>
@@ -75,9 +78,9 @@
         <p>Email:<br>
             olenarudyuk@gmail.com</p>
         <p>Social:<br>
-            Instagram<br>
-            Facebook<br>
-            Behance</p>
+            <a href="https://www.instagram.com/neofotolviv/"> Instagram</a><br>
+            <a href=""> Facebook</a><br>
+            <a href=""> Behance</a></p>
         <p>Ukraine, Lviv,<br>
             V. Velikogo 18</p>
     </div>
@@ -91,18 +94,31 @@
     <div class="formSend">
         <h5>Hello. Let`s get in touch.</h5>
         <form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
-            <p>NAME</p>
-            <input #namePerson="ngModel" name="namePerson" [(ngModel)]="formData.namePerson" type="text"
-                placeholder="your name">
-            <p>PHONE NUMBER</p>
-            <input #namePersonPhone="ngModel" name="namePersonPhone" [(ngModel)]="formData.namePersonPhone" type="text"
-                placeholder="Your phone number">
-            <p>EMAIL</p>
-            <input #namePersonEmail="ngModel" name="namePersonEmail" [(ngModel)]="formData.namePersonEmail" type="text"
-                placeholder="Your email">
-            <p>MESSAGE</p>
-            <textarea #namePersonMessage="ngModel" name="namePersonMessage" [(ngModel)]="formData.namePersonMessage"
-                id="" cols="30" rows="3" placeholder="Start typing here"></textarea><br>
+            <div class="formPies">
+                <p>FULL NAME</p>
+                <input #namePerson="ngModel" name="namePerson" [(ngModel)]="formData.namePerson" type="text"
+                    placeholder="Your name">
+                    <p>EMAIL</p>
+                <input #namePersonEmail="ngModel" name="namePersonEmail" [(ngModel)]="formData.namePersonEmail"
+                    type="text" placeholder="Your email">
+                <p>YOUR MESSAGE (WISHES)</p>
+                <textarea #namePersonMessage="ngModel" name="namePersonMessage" [(ngModel)]="formData.namePersonMessage"
+                    id="" cols="30" rows="3" placeholder="Start typing here"></textarea><br>
+                
+            </div>
+            <div class="formPies">
+                <p>TYPE OG PHOTOGRAPHY</p>
+                <select #typeOfPhoto="ngModel" name="typeOfPhoto" [(ngModel)]="formData.typeOfPhoto" type="text"
+                    placeholder='Select type'>
+                    <option value="portrait">Портрет</option>
+                    <option value="comerce">Комерція</option>
+                </select>
+                
+                <p>PHONE NUMBER</p>
+                <input #namePersonPhone="ngModel" name="namePersonPhone" [(ngModel)]="formData.namePersonPhone"
+                    type="text" placeholder="Phine number">
+                
+            </div>
             <button type="submit">Send message</button>
         </form>
     </div>
