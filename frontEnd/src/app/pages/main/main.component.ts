@@ -118,37 +118,6 @@ export class MainComponent implements OnInit {
     })
   }
 
-  @HostListener('window:scroll', ['$event']) onscroll(event): void {
-    const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
-    if (top > 0) {
-      this.scrollBtn = true;
-    } else {
-      this.scrollBtn = false;
-    }
-  }
-
-  scrollUp(): void {
-    const scroll = setInterval(scrollStep, 20);
-
-    function scrollStep() {
-      const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
-      if (top > 0) {
-        window.scrollBy(0, -100);
-      } else {
-        clearInterval(scroll);
-      }
-    }
-  }
-
-
-
-
-
-
-
-
-
-
 
 }
 

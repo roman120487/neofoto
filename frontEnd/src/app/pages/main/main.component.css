@@ -432,61 +432,6 @@
       text-align: justify;
   }
 
-  /* ---------scroll button to top --------------------*/
-
-  .goUpBtn {
-      width: 60px;
-      height: 60px;
-      /* border: 1px solid white; */
-      /* border-radius: 50%; */
-      position: fixed;
-      right: 50px;
-      bottom: 250px;
-      overflow: hidden;
-      /* display: flex;
-      align-items: center;
-      justify-content: center;
-      background-color: lightgray; */
-  }
-  .goUpBtn>img{
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  }
-
-  .goUpBtn span::before, .goUpBtn span::after, .goUpBtn span {
-      width: 25px;
-      height: 3px;
-      border: 2px solid white;
-      border-radius: 20%;
-      position: absolute;
-      /* transition: 0.3s; */
-  }
-
-  .goUpBtn span::before, .goUpBtn span::after {
-      content: '';
-      display: block;
-  }
-
-  .goUpBtn span {
-      border: none;
-  }
-
-  .goUpBtn span::after {
-      left: 7px;
-      transform: rotate(55deg);
-  }
-
-  .goUpBtn span::before {
-      left: -7px;
-      transform: rotate(-55deg);
-  }
-
-  .goUpBtn:hover {
-      cursor: pointer;
-  }
-
-  /* ------------------------------ */
 
   @media screen and (max-width: 1670px) and (min-width: 1025px) {
       .bgHeader {
@@ -845,9 +790,5 @@
           margin: 30px 15px;
           font-size: 18px;
       }
-      .goUpBtn {
-          bottom: 100px;
-          right: 25px;
-          opacity: 0.8;
-      }
+      
   }
