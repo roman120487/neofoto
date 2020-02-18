@@ -21,7 +21,6 @@ export class GalaryComponent implements OnInit {
     infinite: true,
     lazyLoad: 'ondemand',
     dots: true,
-    // fade: true,
     pauseOnHover: false,
     fade: true,
   };
@@ -36,10 +35,10 @@ export class GalaryComponent implements OnInit {
 
 
   refreshProject() {
-    const lastslide = { 'arrayImg': [{ lastSlide: "More projects soon!" }] };
+    // const lastslide = { 'arrayImg': [{ lastSlide: "More projects soon!" }] };
     this.api.getPortrait().subscribe((res) => {
       this.photoArray = res;
-      this.photoArray.push(lastslide);
+      // this.photoArray.push(lastslide);
       this.dropPhoto();
     });
   }
