@@ -23,6 +23,7 @@
 .nav-link {
     margin-right: 112px;
     font-size: 18px;
+    font-weight: bold;
 }
 .nav-link span{
     cursor: pointer;
@@ -41,14 +42,6 @@ option{
     border: none;
     background-color: #FAFAFA;
 
-}
-.logoMax{
-    height: 75px;
-    position: absolute;
-    left: 0;
-}
-.logoMax>img{
-    height: 100%;
 }
 
 @media screen and (max-width: 1670px) and (min-width: 1025px) {
@@ -79,9 +72,7 @@ option{
     .containerHeader {
         width: 768px;
     }
-    .logoMax{
-       display: none;
-    }
+
 }
 
 @media screen and (max-width: 645px) and (min-width: 200px) {

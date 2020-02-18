@@ -12,6 +12,25 @@
       box-shadow: 0 30px 40px rgba(0, 0, 0, 0.16);
   }
 
+  .bgHeader>img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+  }
+  .logo{
+      position: absolute;
+      top: 250px;
+      right: 200px;
+      width: 380px;
+      height: 350px;
+  }
+  .logo>img{
+      width: 100%;
+      height: 100%;
+  }
+
   #neofotoTitle {
       color: #ffffff;
       font-size: 120px;
@@ -29,14 +48,6 @@
       color: #ffffff;
       font-size: 24px;
       font-weight: 600;
-  }
-
-  .bgHeader>img {
-      position: absolute;
-      left: -30px;
-      top: -10px;
-      z-index: -1;
-      margin-top: -150px;
   }
 
   .rightSideBar {
@@ -236,31 +247,35 @@
       padding-top: 20px;
   }
 
-  .close{
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    width: 50px;
-    height: 50px;
-    color: white;
-}
-.modal-dialog{
-    /* width: 90% !important; */
-    max-width: 90%;
-}
-.modal-content{
-    background-color: transparent;
-    border: none;
-    outline: none;
-}
-.slide{
-    outline: none;
-}
-.slide img{
-    margin: 0px auto;
-    max-height: 93vh;
-    outline: none;
-}
+  .close {
+      position: fixed;
+      top: 25px;
+      right: 25px;
+      width: 50px;
+      height: 50px;
+      color: white;
+  }
+
+  .modal-dialog {
+      /* width: 90% !important; */
+      max-width: 90%;
+  }
+
+  .modal-content {
+      background-color: transparent;
+      border: none;
+      outline: none;
+  }
+
+  .slide {
+      outline: none;
+  }
+
+  .slide img {
+      margin: 0px auto;
+      max-height: 93vh;
+      outline: none;
+  }
 
   .arrowGalary span {
       border-color: white;
@@ -301,12 +316,14 @@
   .galary div img {
       height: 100%;
   }
+
   .galary>div>img {
-    width: 100%; 
-    height: 100%; 
-    object-fit: cover;
-}
-  .moreGallryBtn{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+
+  .moreGallryBtn {
       width: 150px;
       height: 60px;
       margin: 35px auto;
@@ -353,7 +370,6 @@
       height: 100%;
       object-fit: cover;
       z-index: -1;
-
   }
 
   /* --------------------------------- */
@@ -413,7 +429,6 @@
       text-align: justify;
   }
 
-
   @media screen and (max-width: 1670px) and (min-width: 1025px) {
       .bgHeader {
           height: 580px;
@@ -421,7 +436,6 @@
       #neofotoTitle {
           margin-top: 180px;
           font-size: 100px;
-          /* font-weight: 700; */
       }
       #scrollDown {
           bottom: 10px;
@@ -429,10 +443,6 @@
       .rightSideBar img {
           width: 30px;
           height: 30px;
-      }
-      .bgHeader>img {
-          margin-top: -150px;
-          width: 1237px;
       }
       .aboutUs {
           padding: 20px;
@@ -489,10 +499,6 @@
           width: 30px;
           height: 30px;
       }
-      .bgHeader>img {
-          width: 900px;
-          margin-top: -100px;
-      }
       .aboutUs {
           padding: 20px;
           height: 630px;
@@ -518,9 +524,6 @@
           font-size: 24px;
           margin-top: 85px;
       }
-      .rewSliderMain {
-        /* height: 570px; */
-    }
       .whatWe>div {
           width: 260px;
           height: 570px;
@@ -569,17 +572,16 @@
           width: 645px;
           height: 580px;
       }
+      .bgHeader>img {
+          height: 100%;
+          object-fit: none;
+      }
       #neofotoTitle {
           margin-top: 180px;
           font-size: 80px;
-          /* font-weight: 700; */
       }
       #scrollDown {
           bottom: 10px;
-      }
-      .bgHeader>img {
-          height: 620px;
-          left: -100px;
       }
       .aboutUs {
           padding: 20px;
@@ -606,7 +608,7 @@
           font-size: 24px;
           margin-top: -100px;
       }
-          .whatWe {
+      .whatWe {
           flex-wrap: wrap;
       }
       .whatWe>div {
@@ -643,9 +645,9 @@
   }
 
   @media screen and (max-width: 645px) and (min-width: 200px) {
-    .containerMain {
-        padding-top: 0px;
-    }
+      .containerMain {
+          padding-top: 0px;
+      }
       .rightSideBar {
           width: 100%;
           height: 100px;
@@ -762,5 +764,4 @@
           margin: 30px 15px;
           font-size: 18px;
       }
-      
   }
