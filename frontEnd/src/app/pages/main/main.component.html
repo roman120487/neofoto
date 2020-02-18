@@ -12,7 +12,7 @@
             <a target="_blank" href=""><img src="assets/img/fb.svg" alt=""></a>
             <div></div>
         </div>
-    </div> 
+    </div>
 
 
 
@@ -27,18 +27,30 @@
             </ngx-slick-carousel>
         </div>
         <div class="textAU">
-            <p *ngIf="galary.lang">Мене звуть Олена Рудюк і я фотограф. Фотографія завжди була моїм захопленням, але
-                справжньою любов'ю та професіоналізмом стали три роки тому. Я відвідувала фотошколу
-                відомого у Львові фотографа Ярослава Мончака "Маяк" на курсах "Базовий", "Універсальний" та
-                «Лікування та ретушування», де вона не лише набула теоретичних та практичних навичок, але
-                також неймовірне натхнення для творчості.</p>
-            <p *ngIf="!galary.lang">My name is Olena Rudyuk and I'm a photographer. Photography has always been a hobby
-                of mine, but
-                true love and professionalism became three years ago. I attended a photo school of the famous Lviv
-                photographer Yaroslav Monchak "Lighthouse" in the courses "Basic", "Universal" and
-                "Treatment and retouching", where she has not only acquired theoretical and practical skills, but
-                also
-                incredible inspiration for creativity.</p>
+            <p *ngIf="galary.lang">Мене звати Олена Рудюк і я фотограф. Фотографія завжди була моїм захопленням, але справжньою любов’ю та професійною діяльністю стала три роки тому. Я навчалась у фото школі  відомого львівського фотографа Ярослава Мончака «Lighthouse» на курсах  «Базовий», «Універсал» та «Обробка та ретуш», де отримала не лише теоретичні та практичні навики, а також  неймовірне натхнення для творчості. 
+                У 2019 році народився бренд NeoFoto. Для чого створювати бренд, а не користуватись просто своїм ім’ям? Тому що моєю мрією є створення великою команди, яка буде складатись з професіоналів своєї справи: візажистів, стилістів, перукарів, а також залучення інших талановитих фотографів до різних проектів. Чому NeoFoto? Neo – означає «нове». Таким новим етапом і стала для мене фотографія і також це абревіатура мого імені та імені донечки Ніколь, чиє народження і спонукало мене до нової діяльності!
+                Я вирішила спеціалізуватись на портретній фотографіі та рекламній зйомці. Портрет дозволяє відкривати людину з незвичного для неї боку, бачити і показати ій те, чого часто вона сама не помічає…Це дуже цікаво та надихає!
+                А рекламна зйомка дозволяє увімкнути фантазію, створити в уяві картину і намалювати її , як це роблять художники. Тільки в мене замість пензлів та фарб фотоапарат, світло та командна робота спеціалістів!
+                Фотографія повинна надихати та дарувати емоції! Це наше основне завдання!
+                </p>
+            <p *ngIf="!galary.lang">Hi, I’m Elena Rudyuk and I'm a photographer. Photography has always been my hobby,
+                but 3 years ago it became a true love and professional practice. I studied at the photo school of famous
+                Lviv photographer Yaroslav Monchak "Lighthouse" and finished such cources as "Basic", "Universal" and
+                "Treatment and retouch", where I got not only theoretical and practical skills, but also incredible
+                inspiration for creativity. <br><br>
+                In 2019, brand “NeoFoto” was appeared. Why do you need to create a brand and not just use your own name?
+                Because, my dream is to create a great team that will consists of professionals: makeup artists,
+                stylists, hairdressers, as well as attracting other talented photographers to various projects.
+                Why “NeoFoto”? “Neo” - means "new". Photography has become a new stage for me, and it’s also an
+                abbreviation of my name and the name of my daughter Nicole, whose birth also encouraged me to a new
+                activity!<br><br>
+                I decided to specialize in portrait photography and promotional photography. Portrait allows you to open
+                a person from unusual side for her/him, to see and show the person what hasn’t being noticed before ...
+                It is very interesting and inspiring!<br><br>
+                And advertising shoots helps to switch on fantasy, create a picture and imagine it as artists do. In my
+                case, instead of brushes and paints there are the camera, light and teamwork of specialists!
+                Photography should inspire and give emotions! This is our main task!
+            </p>
             <br>
             <a target="_blank" href="https://www.instagram.com/neofotolviv/">
                 <p>Instagram</p>
@@ -71,7 +83,8 @@
         <p *ngIf="galary.lang" class="title">Портфоліо</p>
         <p *ngIf="!galary.lang" class="title">Portfolio</p>
         <div class="galary">
-            <div *ngFor="let project of photoArray | slice: numStart:numFinish" data-toggle="modal" data-target="#photoViewModal" (click)="photoDetails(project)">
+            <div *ngFor="let project of photoArray | slice: numStart:numFinish" data-toggle="modal"
+                data-target="#photoViewModal" (click)="photoDetails(project)">
                 <div class="darkHoverGalary">
                     <span class="titleGalary">{{project.nameProject}}</span>
                     <div class="arrowSocial arrowGalary">
@@ -137,19 +150,19 @@
 
 </div>
 
-  <!-- Modal -->
-  <div class="modal fade" id="photoViewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-      <span aria-hidden="true">&times;</span>
-  </button>
-  <div class="modal-dialog" role="document">
-      <div class="modal-content">
-          <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigPhotoModal">
-              <div ngxSlickItem class="slide " *ngFor="let item of modalPhotos">
-                  <img src="{{item.path+item.filename}}" alt="">
-              </div>
-          </ngx-slick-carousel>
-      </div>
-  </div>
+<!-- Modal -->
+<div class="modal fade" id="photoViewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfigPhotoModal">
+                <div ngxSlickItem class="slide " *ngFor="let item of modalPhotos">
+                    <img src="{{item.path+item.filename}}" alt="">
+                </div>
+            </ngx-slick-carousel>
+        </div>
+    </div>
 </div>
