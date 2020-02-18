@@ -22,7 +22,8 @@ export class GalaryComponent implements OnInit {
     lazyLoad: 'ondemand',
     dots: true,
     // fade: true,
-    pauseOnHover: false
+    pauseOnHover: false,
+    fade: true,
   };
 
   constructor(public api: BgService, public galary: GallaryService) { }

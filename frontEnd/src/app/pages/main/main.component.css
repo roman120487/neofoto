@@ -96,7 +96,7 @@
       box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
       padding: 25px;
       display: flex;
-      height: 895px;
+      min-height: 895px;
       width: 100%;
       background-color: #ffffff;
   }
@@ -121,7 +121,6 @@
       width: 50%;
       color: #383838;
       font-size: 22px;
-      font-weight: 300;
       font-weight: 400;
       text-align: justify;
       margin-left: 15px;
@@ -190,8 +189,9 @@
 
   #podpisAU {
       border-left: 2px solid #f3c6b8;
-      position: absolute;
-      bottom: 25px;
+      margin-top: 30px;
+      /* position: absolute; */
+      /* bottom: 25px; */
       padding-left: 25px;
       font-size: 32px;
       font-weight: 400;
@@ -446,7 +446,7 @@
       }
       .aboutUs {
           padding: 20px;
-          height: 560px;
+          min-height: 560px;
           ;
       }
       .photoAU img {
@@ -461,7 +461,7 @@
       }
       #podpisAU {
           font-size: 24px;
-          margin-top: 65px;
+          margin-top: 85px;
       }
       .whatWe>div {
           width: 355px;
@@ -501,7 +501,7 @@
       }
       .aboutUs {
           padding: 20px;
-          height: 630px;
+          min-height: 630px;
       }
       .photoAU {
           width: 50%;
@@ -522,7 +522,7 @@
       }
       #podpisAU {
           font-size: 24px;
-          margin-top: 85px;
+          margin-top: 125px;
       }
       .whatWe>div {
           width: 260px;
@@ -585,7 +585,7 @@
       }
       .aboutUs {
           padding: 20px;
-          height: 656px;
+          min-height: 656px;
       }
       .photoAU {
           width: 40%;
@@ -683,7 +683,7 @@
       }
       .aboutUs {
           padding: 20px;
-          height: 1100px;
+          min-height: 1100px;
           display: flex;
           flex-direction: column;
           width: 100%;
