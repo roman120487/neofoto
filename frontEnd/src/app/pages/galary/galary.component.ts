@@ -11,6 +11,7 @@ export class GalaryComponent implements OnInit {
   photoArray: any;
   photoArrayPies: any = [];
   modalPhotos: Array<any> = [];
+  viewModal: boolean = false;
 
   slideConfigPhoto = {
     slidesToShow: 1,
@@ -50,7 +51,11 @@ export class GalaryComponent implements OnInit {
   }
 
   photoDetails(e) {
+    this.viewModal = true;
     this.modalPhotos = e.arrayImg;
+  }
+  closeModal(){
+    this.viewModal = false;
   }
 
 }

@@ -16,6 +16,7 @@ export class MainComponent implements OnInit {
   reviews: any;
   photografImg: Array<any>;
   modalPhotos: Array<any> = [];
+  viewModal: boolean = false;
   // x: number = 2;
 
   photoArray: any;
@@ -89,12 +90,8 @@ export class MainComponent implements OnInit {
       { src: "assets/img/photographer.jpg" },
       { src: "assets/img/photographer2.jpg" },
     ];
-
-    // console.log(this.photografImg);
   }
-  // addModalImg(e) {
-  //   this.modalImg = e;
-  // }
+
 
   refreshProject() {
     this.bgService.getPortrait().subscribe((res) => {
@@ -105,6 +102,7 @@ export class MainComponent implements OnInit {
   }
 
   photoDetails(e) {
+    this.viewModal = true;
     this.modalPhotos = e.arrayImg;
   }
 
@@ -113,9 +111,11 @@ export class MainComponent implements OnInit {
   refreshResponse() {
     this.bgService.getResponse().subscribe((res) => {
       this.reviews = res;
-      // console.log(this.reviews);
-
     })
+  }
+
+  closeModal(){
+    this.viewModal = false;
   }
 
 

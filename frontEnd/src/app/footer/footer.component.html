@@ -1,13 +1,13 @@
 <footer>
     <div class="orderPhoto">
         <a routerLink="contacts">
-            <p *ngIf="langService.lang">Замовити фотосесію</p>
-            <p *ngIf="!langService.lang">Let`s talk about you</p>
+            <p *ngIf="langService.lang" routerLink='contacts' (click)="scrollUp()">Замовити фотосесію</p>
+            <p *ngIf="!langService.lang" routerLink='contacts' (click)="scrollUp()">Let`s talk about you</p>
             <div class="arrowOrder">
                 <span></span>
             </div>
         </a>
-            <img src="assets/img/orderbg.png" alt="">
+        <img src="assets/img/orderbg.png" alt="">
     </div>
 
 
@@ -18,10 +18,10 @@
         </div>
         <div class="fNAv">
             <h4>Навігація</h4>
-            <a routerLink="main">Домашня</a><br>
-            <a routerLink="galary">Галерея</a><br>
-            <a routerLink="paslugi">Послуги</a><br>
-            <a routerLink="contacts">Контакти</a>
+            <a routerLink="main" (click)="scrollUp()">Домашня</a><br>
+            <a routerLink="galary" (click)="scrollUp()">Галерея</a><br>
+            <a routerLink="paslugi" (click)="scrollUp()">Послуги</a><br>
+            <a routerLink="contacts" (click)="scrollUp()">Контакти</a>
         </div>
         <div class="fSocial">
             <h4>Соціальні мережі</h4>
@@ -45,10 +45,10 @@
         </div>
         <div class="fNAv">
             <h4>Navigation</h4>
-            <a routerLink="main">Home</a><br>
-            <a routerLink="galary">Gallary</a><br>
-            <a routerLink="paslugi">Services</a><br>
-            <a routerLink="contacts">About</a>
+            <a routerLink="main" (click)="scrollUp()">Home</a><br>
+            <a routerLink="galary" (click)="scrollUp()">Gallary</a><br>
+            <a routerLink="paslugi" (click)="scrollUp()">Services</a><br>
+            <a routerLink="contacts" (click)="scrollUp()">About</a>
         </div>
         <div class="fSocial">
             <h4>Social Media</h4>

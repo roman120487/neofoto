@@ -24,8 +24,7 @@ export class FooterComponent implements OnInit {
       }
     }
   }
-
-
+  
 
   @HostListener('window:scroll', ['$event']) onscroll(event): void {
     const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);

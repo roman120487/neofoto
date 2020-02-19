@@ -246,26 +246,34 @@
       margin-left: 0;
       padding-top: 20px;
   }
-
   .close {
-      position: fixed;
-      top: 25px;
-      right: 25px;
-      width: 50px;
-      height: 50px;
-      color: white;
-  }
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 50px;
+    height: 50px;
+    color: white;
+}
+.myModal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 99;
+}
+.modal-dialog {
+    /* width: 90% !important; */
+    max-width: 90%;
+}
 
-  .modal-dialog {
-      /* width: 90% !important; */
-      max-width: 90%;
-  }
-
-  .modal-content {
-      background-color: transparent;
-      border: none;
-      outline: none;
-  }
+.modal-content {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    /* flex-direction: row !important; */
+}
 
   .slide {
       outline: none;
