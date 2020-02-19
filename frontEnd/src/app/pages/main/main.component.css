@@ -19,14 +19,16 @@
       object-fit: cover;
       z-index: -1;
   }
-  .logo{
+
+  .logo {
       position: absolute;
       top: 250px;
       right: 200px;
       width: 380px;
       height: 350px;
   }
-  .logo>img{
+
+  .logo>img {
       width: 100%;
       height: 100%;
   }
@@ -235,6 +237,7 @@
       align-items: flex-end;
       justify-content: space-between;
       padding: 50px 30px;
+      cursor: pointer;
   }
 
   .darkHoverGalary :nth-child(1) {
@@ -246,43 +249,49 @@
       margin-left: 0;
       padding-top: 20px;
   }
-  .close {
-    position: fixed;
-    top: 25px;
-    right: 25px;
-    width: 50px;
-    height: 50px;
-    color: white;
-}
-.myModal {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 99;
-}
-.modal-dialog {
-    /* width: 90% !important; */
-    max-width: 90%;
-}
 
-.modal-content {
-    background-color: transparent;
-    border: none;
-    outline: none;
-    /* flex-direction: row !important; */
-}
+  .close {
+      position: fixed;
+      top: 25px;
+      right: 25px;
+      width: 50px;
+      height: 50px;
+      color: white;
+      cursor: pointer;
+  }
+
+  .myModal {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 15px 15px;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 99;
+  }
+
+  .modal-dialog {
+      /* width: 90% !important; */
+      max-width: 90%;
+  }
+
+  .modal-content {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      /* flex-direction: row !important; */
+  }
 
   .slide {
       outline: none;
   }
 
   .slide img {
-      margin: 0px auto;
+      margin: auto auto;
       max-height: 93vh;
       outline: none;
+      max-width: 90%;
   }
 
   .arrowGalary span {
@@ -495,12 +504,12 @@
       .bgHeader {
           height: 580px;
       }
-      .logo{
-        top: 150px;
-        right: 100px;
-        width: 280px;
-        height: 250px;
-    }
+      .logo {
+          top: 150px;
+          right: 100px;
+          width: 280px;
+          height: 250px;
+      }
       #neofotoTitle {
           margin-top: 180px;
           font-size: 100px;
@@ -575,9 +584,9 @@
           margin-top: 350px;
           padding: 0px 200px;
       }
-      .logo{
-        display: none;
-    }
+      .logo {
+          display: none;
+      }
       .rightSideBar>div {
           display: none;
       }
@@ -659,15 +668,18 @@
       .slideRew {
           margin: 30px 15px;
       }
+      .close {
+        right: 0px;
+    }
   }
 
   @media screen and (max-width: 645px) and (min-width: 200px) {
       .containerMain {
           padding-top: 0px;
       }
-      .logo{
-        display: none;
-    }
+      .logo {
+          display: none;
+      }
       .rightSideBar {
           width: 100%;
           height: 100px;
@@ -697,9 +709,9 @@
           bottom: 10px;
       }
       .bgHeader>img {
-        height: 100%;
-        object-fit: none;
-    }
+          height: 100%;
+          object-fit: none;
+      }
       .aboutUs {
           padding: 20px;
           min-height: 1100px;
@@ -728,6 +740,9 @@
       }
       #podpisAU {
           font-size: 24px;
+      }
+      .close {
+          right: 0px;
       }
       .galary {
           grid-template-columns: 1fr;
