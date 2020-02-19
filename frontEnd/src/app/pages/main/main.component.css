@@ -395,13 +395,13 @@
 
   .rewSliderMain {
       width: 100%;
-      min-height: 490px;
+      /* min-height: 400px; */
       cursor: w-resize;
   }
 
   .slideRew {
       width: 500px;
-      min-height: 450px;
+      /* min-height: 200px; */
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -411,18 +411,21 @@
       outline: none;
       padding: 15px 25px;
       font-size: 20px;
-      text-align: justify;
+      /* text-align: justify; */
   }
 
   .fotoRew {
-      width: 120px;
-      height: 120px;
+      width: 100px;
+      height: 100px;
       border: 1px solid white;
       border-radius: 50%;
       overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+  }
+  .fotoRew>img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
   }
 
   .nameRew p {
@@ -433,7 +436,7 @@
   }
 
   .textRew {
-      text-align: inherit;
+      text-align: center;
   }
 
   .slideRew :nth-child(1) img {
@@ -442,7 +445,7 @@
 
   .slideRew :nth-child(2) {
       width: 100%;
-      padding: 25px;
+      padding: 10px;
       text-align: justify;
   }
 
