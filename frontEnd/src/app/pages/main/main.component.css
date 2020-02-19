@@ -446,6 +446,12 @@
   }
 
   @media screen and (max-width: 1670px) and (min-width: 1025px) {
+    .logo {
+        top: 150px;
+        right: 150px;
+        width: 280px;
+        height: 250px;
+    }
       .bgHeader {
           height: 580px;
       }
