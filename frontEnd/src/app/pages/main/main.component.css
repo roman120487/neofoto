@@ -708,8 +708,9 @@
           bottom: 10px;
       }
       .bgHeader>img {
+          widows: 100%;
           height: 100%;
-          object-fit: none;
+          object-fit: cover;
       }
       .aboutUs {
           padding: 20px;
@@ -786,9 +787,6 @@
       }
       .whatWe div img {
           width: 330px;
-      }
-      .lamp {
-          display: none;
       }
       .rewSliderMain {
           width: 100%;

@@ -193,6 +193,11 @@ ul>li {
     }
     .portrait, .comercial {
         width: 95%;
+        height: 480px;
+    }
+    ul>li {
+        text-align: left;
+        line-height: 1.5;
     }
     .portrait {
         margin-top: 25px;
