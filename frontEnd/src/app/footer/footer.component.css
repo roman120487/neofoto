@@ -10,7 +10,7 @@ footer {
 
 .orderPhoto {
     height: 260px;
-    padding: 59px 109px;
+    padding: 90px 109px;
     position: absolute;
     left: 0;
     right: 0;
@@ -84,7 +84,7 @@ footer {
     margin-top: 320px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .logo {
@@ -140,6 +140,7 @@ footer a:hover {
 
 @media screen and (max-width: 1670px) and (min-width: 1025px) {
     .orderPhoto {
+        padding: 60px 109px;
         height: 200px;
     }
     .orderPhoto p {
@@ -149,6 +150,7 @@ footer a:hover {
 
 @media screen and (max-width: 1024px) and (min-width: 770px) {
     .orderPhoto {
+        padding: 50px 109px;
         height: 170px;
     }
     .orderPhoto p {
@@ -168,6 +170,7 @@ footer a:hover {
         margin-top: 8px;
     }
     .orderPhoto {
+        padding: 40px 109px;
         height: 150px;
     }
     .orderPhoto p {

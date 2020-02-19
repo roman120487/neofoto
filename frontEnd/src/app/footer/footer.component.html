@@ -1,8 +1,8 @@
 <footer>
     <div class="orderPhoto">
-        <a routerLink="contacts">
-            <p *ngIf="langService.lang" routerLink='contacts' (click)="scrollUp()">Замовити фотосесію</p>
-            <p *ngIf="!langService.lang" routerLink='contacts' (click)="scrollUp()">Let`s talk about you</p>
+        <a routerLink="contacts" (click)="scrollUp()">
+            <p *ngIf="langService.lang">Замовити фотосесію</p>
+            <p *ngIf="!langService.lang">Let`s talk about you</p>
             <div class="arrowOrder">
                 <span></span>
             </div>
