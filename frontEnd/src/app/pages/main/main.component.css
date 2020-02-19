@@ -395,13 +395,11 @@
 
   .rewSliderMain {
       width: 100%;
-      /* min-height: 400px; */
       cursor: w-resize;
   }
 
   .slideRew {
       width: 500px;
-      /* min-height: 200px; */
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -411,14 +409,11 @@
       outline: none;
       padding: 35px 25px;
       font-size: 20px;
-      /* text-align: justify; */
   }
 
   .fotoRew {
       width: 100px;
       height: 100px;
-      /* border: 1px solid white; */
-      /* border-radius: 100%; */
       overflow: hidden;
   }
   .fotoRew>img{
