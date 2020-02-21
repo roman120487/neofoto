@@ -21,12 +21,6 @@
         <a *ngIf="!langService.lang" class="nav-link" routerLink="contacts" routerLinkActive='active'>Contacts</a>
       </li>
       <li class="nav-item">
-        <!-- <a class="nav-link">
-          <select id="lang"  [(ngModel)]="lang" name="lang" (change) = "selectLang()">
-            <option value="ukr">Укр</option>
-            <option value="en">Eng</option>
-          </select>
-        </a> -->
         <a class="nav-link">
           <div *ngIf="langService.lang" (click)="selectLang()"><span id="lang">Укр</span>/ <span>Eng</span></div>
           <div *ngIf="!langService.lang" (click)="selectLang()"><span>Укр</span>/ <span id="lang">Eng</span></div>
@@ -43,10 +37,10 @@
     <span></span>
   </div>
 
-  <div class="logo"><img src="assets/img/logo-min.jpg" alt=""></div>
+  <div class="logo"><img src="assets/img/Logo_dark.svg" alt=""></div>
   <div class="langChange">
-    <div class="nav-link" *ngIf="langService.lang" (click)="selectLang()"><span id="lang">Укр</span>/ <span>Eng</span></div>
-    <div class="nav-link" *ngIf="!langService.lang" (click)="selectLang()"><span>Укр</span>/ <span id="lang">Eng</span></div>
+    <div class="nav-link" *ngIf="langService.lang" (click)="selectLang()"><img src="assets/img/uk_lang.png" alt=""></div>
+    <div class="nav-link" *ngIf="!langService.lang" (click)="selectLang()"><img src="assets/img/us_lang.png" alt=""></div>
   </div>
 
   <ul class="nav nav1" [ngClass]="{menuMinHide:menuActive}">
