@@ -6,7 +6,9 @@
   .bgHeader {
       width: 100%;
       height: 956px;
-      background-color: rgba(0, 0, 0, 0.1);
+      /* background-color: rgba(0, 0, 0, 0.1); */
+      background-image: url(/assets/img/bg-header.png);
+      background-position: center;
       position: relative;
       overflow: hidden;
       box-shadow: 0 30px 40px rgba(0, 0, 0, 0.16);
@@ -416,7 +418,8 @@
       height: 100px;
       overflow: hidden;
   }
-  .fotoRew>img{
+
+  .fotoRew>img {
       border: 1px solid white;
       border-radius: 50%;
       width: 100%;
@@ -446,12 +449,12 @@
   }
 
   @media screen and (max-width: 1670px) and (min-width: 1025px) {
-    .logo {
-        top: 150px;
-        right: 150px;
-        width: 280px;
-        height: 250px;
-    }
+      .logo {
+          top: 150px;
+          right: 150px;
+          width: 280px;
+          height: 250px;
+      }
       .bgHeader {
           height: 580px;
       }
@@ -602,6 +605,8 @@
       .bgHeader {
           width: 645px;
           height: 580px;
+          background-image: url(/assets/img/bg-header-mini.png);
+          background-position: center;
       }
       .bgHeader>img {
           height: 100%;
@@ -674,8 +679,8 @@
           margin: 30px 15px;
       }
       .close {
-        right: 0px;
-    }
+          right: 0px;
+      }
   }
 
   @media screen and (max-width: 645px) and (min-width: 200px) {
@@ -705,6 +710,9 @@
       .bgHeader {
           width: 100%;
           height: 540px;
+          background-image: url(/assets/img/bg-header-micro.png);
+          background-origin: inherit;
+          background-position: center;
       }
       #neofotoTitle {
           margin-top: 180px;
