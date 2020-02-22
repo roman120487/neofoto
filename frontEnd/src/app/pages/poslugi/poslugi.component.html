@@ -1,4 +1,4 @@
-<div *ngIf="lagService.lang"  class="poslugiContainer">
+<div *ngIf="lagService.lang" class="poslugiContainer">
     <div class="title1">Послуги</div>
     <div class="typePhoto">
         <div class="title2">Тип фотографії:</div>
@@ -15,13 +15,38 @@
             <img src="assets/img/comerceBg.jpg" alt="">
         </div>
         <div class="portrait">
-            <div class="i"><img src="assets/img/info.png" alt=""></div>
-            <p>Портретня фотографія</p>
-            <ul>
+            <div class="i" (click)="information()"><img src="assets/img/info.png" alt=""></div>
+            <p [ngClass]="{hiden:hiden}">Портретня фотографія</p>
+            <ul [ngClass]="{hiden:hiden}">
                 <li>Пакет "Базовий"</li>
                 <li>Пакет "Все включено"</li>
                 <li>Пакет "Зйомка на локації"</li>
                 <li>Зйомка за межами Львова</li>
+            </ul>
+            <ul [ngClass]="{hiden:!hiden}">
+                <li>Пакет "Базовий"</li>
+                <ul class="miniUl">
+                    <li>Зйомка в студії тривалістю 1 година. Вартість студії
+                        оплачується додатково.
+                    </li>
+                    <li>30-40 фото в повній ретуші та роздрук 10 фото на вибір клієнта.</li>
+                </ul>
+                <li>Пакет "Все включено"</li>
+                <ul class="miniUl">
+                    <li>Зйомка в студії тривалістю 1-2 години. Послуги візажиста та підбір образу. Оренда студії включена у вартість.
+                    </li>
+                    <li>50 фотографій в повній ретуші та роздрук 20 фотографій на вибір клієнта.</li>
+                </ul>
+                <li>Пакет "Зйомка на локації"</li>
+                <ul class="miniUl">
+                    <li>Зйомка на місцевиї локаціях на Ваш вибір тривалістю орієнтовно 2 години. Візажист та підбір образу входить у вартість.
+                    </li>
+                </ul>
+                <li>Зйомка за межами Львова</li>
+                <ul class="miniUl">
+                    <li>Зйомка за межами Львова ( інші міста України та Європи ) Варість за домовленістю.
+                    </li>
+                </ul>
             </ul>
             <img src="assets/img/portraitBg.jpg" alt="">
         </div>
@@ -33,7 +58,8 @@
         <div class="teamPerson">
             <div class="rightSideBar">
                 <div></div>
-                <a target="_blank" href="https://www.instagram.com/neofotolviv/"><img src="assets/img/ig.svg" alt=""></a>
+                <a target="_blank" href="https://www.instagram.com/neofotolviv/"><img src="assets/img/ig.svg"
+                        alt=""></a>
                 <div></div>
             </div>
             <p>Олена Рудюк</p>
@@ -42,14 +68,15 @@
         <div class="teamPerson">
             <div class="rightSideBar">
                 <div></div>
-                <a target="_blank" href="https://www.instagram.com/roksolana_make_up_lviv/"><img src="assets/img/ig.svg" alt=""></a>
+                <a target="_blank" href="https://www.instagram.com/roksolana_make_up_lviv/"><img src="assets/img/ig.svg"
+                        alt=""></a>
                 <div></div>
             </div>
             <p>Роксолана Бубела</p>
             <img src="assets/img/team2.jpg" alt="">
         </div>
         <div class="teamPerson lastTeamPerson">
-            <p >We are open 
+            <p>We are open
                 to cooperation :)</p>
             <img src="" alt="">
         </div>
@@ -70,7 +97,7 @@
 
 <!-- ------------------------------------------------------- -->
 
-<div *ngIf="!lagService.lang"  class="poslugiContainer">
+<div *ngIf="!lagService.lang" class="poslugiContainer">
     <div class="title1">Services</div>
     <div class="typePhoto">
         <div class="title2">Type of photography:</div>
@@ -89,7 +116,7 @@
         <div class="portrait">
             <div class="i"><img src="assets/img/info.png" alt=""></div>
             <p>Portrait photography</p>
-            <ul> 
+            <ul>
                 <li>Package “Basic”</li>
                 <li>Package “All inclusive”</li>
                 <li>Package “Shooting on location”</li>
@@ -105,7 +132,8 @@
         <div class="teamPerson">
             <div class="rightSideBar">
                 <div></div>
-                <a target="_blank" href="https://www.instagram.com/neofotolviv/"><img src="assets/img/ig.svg" alt=""></a>
+                <a target="_blank" href="https://www.instagram.com/neofotolviv/"><img src="assets/img/ig.svg"
+                        alt=""></a>
                 <div></div>
             </div>
             <p>Olena Rudiuk</p>
@@ -114,7 +142,8 @@
         <div class="teamPerson">
             <div class="rightSideBar">
                 <div></div>
-                <a target="_blank" href="https://www.instagram.com/roksolana_make_up_lviv/"><img src="assets/img/ig.svg" alt=""></a>
+                <a target="_blank" href="https://www.instagram.com/roksolana_make_up_lviv/"><img src="assets/img/ig.svg"
+                        alt=""></a>
                 <div></div>
             </div>
             <p>Roksolana Bubela</p>

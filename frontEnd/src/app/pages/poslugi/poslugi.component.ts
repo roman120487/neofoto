@@ -9,15 +9,16 @@ import Team from 'src/app/shared/classes/team';
   styleUrls: ['./poslugi.component.css']
 })
 export class PoslugiComponent implements OnInit {
-  // arrayTeam = [];
-  constructor( private lagService: GallaryService, private api: BgService) { }
-
+  constructor(private lagService: GallaryService, private api: BgService) { }
+  hiden: boolean = false;
   ngOnInit() {
-    // this.refreshDate()
+
   }
-  // refreshDate() {
-  //   this.api.getTeam().subscribe((res) => {
-  //     this.api.getTeamsArray = res as Team[];
-  //   })
-  // }
+  information() {
+    if (this.hiden) {
+      this.hiden = false;
+    } else{
+      this.hiden = true;
+    }
+  }
 }
