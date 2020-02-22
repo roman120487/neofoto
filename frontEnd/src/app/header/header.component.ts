@@ -15,15 +15,26 @@ export class HeaderComponent implements OnInit {
   }
   selectLang() {
     console.log(this.langService);
-    
+
 
     if (this.langService.lang === false) {
       this.langService.lang = true;
     } else { this.langService.lang = false; }
     console.log(this.langService);
   }
+  scrollUp(): void {
+    const scroll = setInterval(scrollStep, 20);
 
-  
+    function scrollStep() {
+      const top = Math.max(document.body.scrollTop, document.documentElement.scrollTop);
+      if (top > 0) {
+        window.scrollBy(0, -100);
+      } else {
+        clearInterval(scroll);
+      }
+    }
+  }
+
   public menuMinActive(): void {
     if (this.menuActive) {
       this.menuActive = false;

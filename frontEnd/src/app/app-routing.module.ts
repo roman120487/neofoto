@@ -18,7 +18,7 @@ const routes: Routes = [
   {path: 'auth', component: AuthComponent},
   {path: '', redirectTo: '/main', pathMatch: 'full'},
   {path: 'main', component: MainComponent},
-  {path: 'paslugi', component: PoslugiComponent},
+  {path: 'poslugi', component: PoslugiComponent},
   {path: 'galary', component: GalaryComponent},
   {path: 'contacts', component: ContactsComponent},
   {path: 'admin', component: AdminComponent, canActivate:[IsLoggedIn] , children:[

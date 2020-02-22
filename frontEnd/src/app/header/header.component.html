@@ -5,20 +5,20 @@
     <!-- <div class="logoMax"><img src="assets/img/logo-min.jpg" alt=""></div> -->
     <ul class="navbar-nav">
       <li class="nav-item">
-        <a *ngIf="langService.lang" class="nav-link" routerLink="main" routerLinkActive='active'>Домашня</a>
-        <a *ngIf="!langService.lang" class="nav-link" routerLink="main" routerLinkActive='active'>Home</a>
+        <a *ngIf="langService.lang" class="nav-link" routerLink="main" routerLinkActive='active' (click)="scrollUp()">Домашня</a>
+        <a *ngIf="!langService.lang" class="nav-link" routerLink="main" routerLinkActive='active' (click)="scrollUp()">Home</a>
       </li>
       <li class="nav-item">
         <a *ngIf="langService.lang" class="nav-link" routerLink="galary" routerLinkActive='active'>Галерея</a>
         <a *ngIf="!langService.lang" class="nav-link" routerLink="galary" routerLinkActive='active'>Gallery</a>
       </li>
       <li class="nav-item">
-        <a *ngIf="langService.lang" class="nav-link" routerLink="paslugi" routerLinkActive='active'>Послуги</a>
-        <a *ngIf="!langService.lang" class="nav-link" routerLink="paslugi" routerLinkActive='active'>Services</a>
+        <a *ngIf="langService.lang" class="nav-link" routerLink="poslugi" routerLinkActive='active' (click)="scrollUp()">Послуги</a>
+        <a *ngIf="!langService.lang" class="nav-link" routerLink="poslugi" routerLinkActive='active' (click)="scrollUp()">Services</a>
       </li>
       <li class="nav-item">
-        <a *ngIf="langService.lang" class="nav-link" routerLink="contacts" routerLinkActive='active'>Контакти</a>
-        <a *ngIf="!langService.lang" class="nav-link" routerLink="contacts" routerLinkActive='active'>Contacts</a>
+        <a *ngIf="langService.lang" class="nav-link" routerLink="contacts" routerLinkActive='active' (click)="scrollUp()">Контакти</a>
+        <a *ngIf="!langService.lang" class="nav-link" routerLink="contacts" routerLinkActive='active' (click)="scrollUp()">Contacts</a>
       </li>
       <li class="nav-item">
         <a class="nav-link">
