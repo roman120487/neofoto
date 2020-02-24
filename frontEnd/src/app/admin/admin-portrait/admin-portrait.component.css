@@ -1,0 +1,36 @@
+.contaiterPortrait {
+    width: 100%;
+    height: 100%;
+    background-color: #243443 !important;
+    color: whitesmoke;
+    font-size: 20px;
+}
+
+input[type='text'] {
+    width: 30%;
+    margin-left: 25px;
+}
+
+select {
+    width: 30%;
+    margin-left: 25px;
+}
+
+label {
+    margin: 25px;
+}
+
+input[type='file'] {
+    width: 30%;
+}
+
+button[type='submit'] {
+    margin-left: 25px;
+    width: 30%;
+    background-color: #5CB85C;
+    /* border: 1px solid green; */
+    border-radius: 5px;
+    margin-top: 25px;
+    /* font-weight: bold; */
+    color: whitesmoke;
+}

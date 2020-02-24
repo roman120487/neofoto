@@ -1,0 +1,18 @@
+.teamContainer{
+    background-color: #243443 !important;
+    padding-top: 25px;
+}
+form{
+    color: whitesmoke;
+    font-size: 22px;
+    width: 30%;
+    padding-left: 25px;
+}
+button[type='submit']{
+    margin-top: 25px;
+    width: 100%;
+    font-size: 22px;
+}
+.table{
+    margin-top: 25px;
+}

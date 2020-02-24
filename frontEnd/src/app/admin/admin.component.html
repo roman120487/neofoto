@@ -1,32 +1,30 @@
 <div class="containerAdmin">
-    <p>Адмін панель</p>
-    <a (click)="logoutIsAdmin()">
-        <p>Вийти із адмін панелі</p>
-    </a>
+  <!-- <p>Панель адміністратора</p> -->
+  
 
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-            <a class="nav-link" routerLink="portrait" routerLinkActive="active">Добавити проект</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="list-project" routerLinkActive="active">Список проектів</a>
-      </li>
-        <li class="nav-item">
-            <a class="nav-link" routerLink="response" routerLinkActive="active">Відгуки</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" routerLink="team" routerLinkActive="active">Команда</a>
-      </li>
-    </ul>
-
-    
-    <router-outlet></router-outlet>
-
-
-
+  <ul class="nav nav-tabs">
+    <li>
+      <span> Панель адміністратора</span>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="portrait" routerLinkActive="active">Добавити проект</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="list-project" routerLinkActive="active">Список проектів</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="response" routerLinkActive="active">Відгуки</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="team" routerLinkActive="active">Команда</a>
+    </li>
+    <li>
+      <div class="exit" (click)="logoutIsAdmin()">Вихід</div>
+    </li>
+  </ul>
 
 
-
+  <router-outlet></router-outlet>
 
 
 
@@ -42,7 +40,13 @@
 
 
 
-    <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+
+
+
+
+
+
+  <!-- <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
         <li class="nav-item">
           <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Project</a>
         </li>

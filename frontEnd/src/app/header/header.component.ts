@@ -11,16 +11,13 @@ export class HeaderComponent implements OnInit {
   constructor(private langService: GallaryService) { }
 
   ngOnInit() {
-    // console.log(this.langService.lang);
   }
   selectLang() {
-    console.log(this.langService);
 
 
     if (this.langService.lang === false) {
       this.langService.lang = true;
     } else { this.langService.lang = false; }
-    console.log(this.langService);
   }
   scrollUp(): void {
     const scroll = setInterval(scrollStep, 20);

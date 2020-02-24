@@ -12,22 +12,24 @@ import { AdminListProjectComponent } from './admin/admin-list-project/admin-list
 import { AuthComponent } from './auth/auth.component';
 
 import { AdminTeamComponent } from './admin/admin-team/admin-team.component';
-import { IsLoggedIn } from './auth/isLogged.guard'
+import { IsLoggedIn } from './auth/isLogged.guard';
 
 const routes: Routes = [
-  {path: 'auth', component: AuthComponent},
-  {path: '', redirectTo: '/main', pathMatch: 'full'},
-  {path: 'main', component: MainComponent},
-  {path: 'poslugi', component: PoslugiComponent},
-  {path: 'galary', component: GalaryComponent},
-  {path: 'contacts', component: ContactsComponent},
-  {path: 'admin', component: AdminComponent, canActivate:[IsLoggedIn] , children:[
-    { path: '', redirectTo: 'portrait', pathMatch: 'full' },
-    { path: 'portrait', component: AdminPortraitComponent, canActivate:[IsLoggedIn] },
-    { path: 'list-project', component: AdminListProjectComponent, canActivate:[IsLoggedIn] },
-    { path: 'response', component: AdminResponseComponent, canActivate:[IsLoggedIn] },
-    { path: 'team', component: AdminTeamComponent, canActivate:[IsLoggedIn] },
-  ]},
+  { path: 'auth', component: AuthComponent },
+  { path: '', redirectTo: '/main', pathMatch: 'full' },
+  { path: 'main', component: MainComponent },
+  { path: 'poslugi', component: PoslugiComponent },
+  { path: 'galary', component: GalaryComponent },
+  { path: 'contacts', component: ContactsComponent },
+  {
+    path: 'admin', component: AdminComponent, canActivate:[IsLoggedIn] , children: [
+      { path: '', redirectTo: 'portrait', pathMatch: 'full' },
+      { path: 'portrait', component: AdminPortraitComponent, canActivate: [IsLoggedIn] },
+      { path: 'list-project', component: AdminListProjectComponent, canActivate: [IsLoggedIn] },
+      { path: 'response', component: AdminResponseComponent, canActivate: [IsLoggedIn] },
+      { path: 'team', component: AdminTeamComponent, canActivate: [IsLoggedIn] },
+    ]
+  },
 
 ];
 

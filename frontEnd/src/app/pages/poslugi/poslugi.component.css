@@ -26,7 +26,7 @@
 .portrait, .comercial {
     width: 830px;
     height: 720px;
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
 }
@@ -53,6 +53,9 @@
 }
 .hiden{
     display: none;
+}
+.bgDark{
+    background-color: rgba(0, 0, 0, 0.7);
 }
 .miniUl>li{
     font-size: 20px;
@@ -205,6 +208,7 @@ ul>li {
         width: 100%;
     }
     .portrait {
+        height: 850px;
         margin-top: 25px;
     }
 }
@@ -223,15 +227,32 @@ ul>li {
         width: 95%;
         height: 480px;
     }
-    .info {
-        display: none;
+    .i {
+        right: 10px;
+        top: 15px;
+        width: 25px;
+        height: 25px; 
+    }
+    .i:hover{
+        right: 10px;
+        top: 15px;
+        width: 25px;
+        height: 25px; 
+    }
+    .bgDark{
+        height: 1050px;
     }
     ul>li {
         text-align: left;
         line-height: 1.5;
     }
     .portrait {
+        
         margin-top: 25px;
+    }
+    .portrait>p{
+        text-align: left;
+        padding-left: 10px;
     }
     .happyCounter>div>:nth-child(1) {
         font-size: 70px;
