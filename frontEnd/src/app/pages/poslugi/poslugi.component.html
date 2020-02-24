@@ -14,7 +14,7 @@
             </ul>
             <img src="assets/img/comerceBg.jpg" alt="">
         </div>
-        <div class="portrait">
+        <div class="portrait" [ngClass]="{bgDark:hiden}">
             <div class="i" (click)="information()"><img src="assets/img/info.png" alt=""></div>
             <p [ngClass]="{hiden:hiden}">Портретня фотографія</p>
             <ul [ngClass]="{hiden:hiden}">
@@ -26,26 +26,21 @@
             <ul [ngClass]="{hiden:!hiden}">
                 <li>Пакет "Базовий"</li>
                 <ul class="miniUl">
-                    <li>Зйомка в студії тривалістю 1 година. Вартість студії
-                        оплачується додатково.
-                    </li>
+                    <li>Зйомка в студії тривалістю 1 година. Вартість студії оплачується додатково.</li>
                     <li>30-40 фото в повній ретуші та роздрук 10 фото на вибір клієнта.</li>
                 </ul>
                 <li>Пакет "Все включено"</li>
                 <ul class="miniUl">
-                    <li>Зйомка в студії тривалістю 1-2 години. Послуги візажиста та підбір образу. Оренда студії включена у вартість.
-                    </li>
+                    <li>Зйомка в студії тривалістю 1-2 години. Послуги візажиста та підбір образу. Оренда студії включена у вартість.</li>
                     <li>50 фотографій в повній ретуші та роздрук 20 фотографій на вибір клієнта.</li>
                 </ul>
                 <li>Пакет "Зйомка на локації"</li>
                 <ul class="miniUl">
-                    <li>Зйомка на місцевиї локаціях на Ваш вибір тривалістю орієнтовно 2 години. Візажист та підбір образу входить у вартість.
-                    </li>
+                    <li>Зйомка на місцевиї локаціях на Ваш вибір тривалістю орієнтовно 2 години. Візажист та підбір образу входить у вартість.</li>
                 </ul>
                 <li>Зйомка за межами Львова</li>
                 <ul class="miniUl">
-                    <li>Зйомка за межами Львова ( інші міста України та Європи ) Варість за домовленістю.
-                    </li>
+                    <li>Зйомка за межами Львова ( інші міста України та Європи ) Варість за домовленістю.</li>
                 </ul>
             </ul>
             <img src="assets/img/portraitBg.jpg" alt="">
@@ -113,14 +108,35 @@
             </ul>
             <img src="assets/img/comerceBg.jpg" alt="">
         </div>
-        <div class="portrait">
-            <div class="i"><img src="assets/img/info.png" alt=""></div>
-            <p>Portrait photography</p>
-            <ul>
+        <div class="portrait" [ngClass]="{bgDark:hiden}">
+            <div class="i" (click)="information()"><img src="assets/img/info.png" alt=""></div>
+            <p [ngClass]="{hiden:hiden}">Portrait photography</p>
+            <ul [ngClass]="{hiden:hiden}">
                 <li>Package “Basic”</li>
                 <li>Package “All inclusive”</li>
                 <li>Package “Shooting on location”</li>
                 <li>Shooting outside of Lviv</li>
+            </ul>
+            <ul [ngClass]="{hiden:!hiden}">
+                <li>Package “Basic”</li>
+                <ul class="miniUl">
+                    <li>Shooting in the studio for 1 hour. Cost of the studio paid extra.
+                    </li>
+                    <li>30-40 photos in full retouch and print 10 photos at client's choice.</li>
+                </ul>
+                <li>Package “All inclusive”</li>
+                <ul class="miniUl">
+                    <li>Shooting in the studio lasts 1-2 hours. Makeup artist services and image selection. Studio rentals are included in the price.</li>
+                    <li>50 full retouch photos and print 20 client selections.</li>
+                </ul>
+                <li>Package “Shooting on location”</li>
+                <ul class="miniUl">
+                    <li>Shoot at local locations of your choice for approximately 2 hours. Makeup artist and image selection are included in the price.</li>
+                </ul>
+                <li>Shooting outside of Lviv</li>
+                <ul class="miniUl">
+                    <li>Shooting outside of Lviv (other cities of Ukraine and Europe) Cost is negotiable.</li>
+                </ul>
             </ul>
             <img src="assets/img/portraitBg.jpg" alt="">
         </div>
