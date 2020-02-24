@@ -1,8 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
-@font-face{
+/* @font-face{
     font-family: 'Baskerville';
     src: url(/assets/fonts/baskerville/baskervi.ttf);
-}
+} */
 * {
     margin: 0;
     padding: 0;
@@ -15,5 +15,5 @@ body {
 
 html, body {
     /* height: 100%; */
-    font-family: 'Baskerville';
+    font-family: 'Baskervville', ;
 }
