@@ -14,8 +14,9 @@ export class AdminTeamComponent implements OnInit {
   constructor(private api: BgService) { }
 
   ngOnInit() {
-    this.refreshDate()
+    this.refreshDate();
     this.resetForm();
+    
   }
   public resetForm(form?: NgForm) {
     if (form != null) {
@@ -47,7 +48,7 @@ export class AdminTeamComponent implements OnInit {
   refreshDate() {
     this.api.getTeam().subscribe((res) => {
       this.api.getTeamsArray = res as Team[];
-    })
+    });
   }
   onDelete(item) {
     if (confirm('Are you sure to delete this record')) {
@@ -59,4 +60,5 @@ export class AdminTeamComponent implements OnInit {
         });
     }
   }
+  
 }

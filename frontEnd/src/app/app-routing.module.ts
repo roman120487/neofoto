@@ -22,12 +22,12 @@ const routes: Routes = [
   { path: 'galary', component: GalaryComponent },
   { path: 'contacts', component: ContactsComponent },
   {
-    path: 'admin', component: AdminComponent, /*canActivate:[IsLoggedIn] ,*/ children: [
+    path: 'admin', component: AdminComponent, canActivate:[IsLoggedIn] , children: [
       { path: '', redirectTo: 'portrait', pathMatch: 'full' },
-      { path: 'portrait', component: AdminPortraitComponent/*, canActivate: [IsLoggedIn]*/ },
-      { path: 'list-project', component: AdminListProjectComponent/*, canActivate: [IsLoggedIn]*/ },
-      { path: 'response', component: AdminResponseComponent/*, canActivate: [IsLoggedIn]*/ },
-      { path: 'team', component: AdminTeamComponent/*, canActivate: [IsLoggedIn]*/ },
+      { path: 'portrait', component: AdminPortraitComponent, canActivate: [IsLoggedIn] },
+      { path: 'list-project', component: AdminListProjectComponent, canActivate: [IsLoggedIn] },
+      { path: 'response', component: AdminResponseComponent, canActivate: [IsLoggedIn] },
+      { path: 'team', component: AdminTeamComponent, canActivate: [IsLoggedIn] },
     ]
   },
 
