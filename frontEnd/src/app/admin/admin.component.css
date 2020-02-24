@@ -7,16 +7,37 @@
     left: 0px;
     right: 0px;
     z-index: 999;
-    background-color: white;
+    background-color: #202932;
 }
 .containerAdmin p{
     text-align: center;
     padding-top: 20px;
     font-size: 25px;
+    color: whitesmoke;
+}
+.nav-item{
+    margin-right: 5px;
+}
+.nav-tabs{
+    border-bottom: none;
+}
+span{
+    color: whitesmoke;
+    font-size: 22px;
+    margin-right: 100px;
+    padding: 0px 25px;
+}
+.containerAdmin a{
+    color: whitesmoke;
+    font-size: 22px;
+    background-color: #243443;
+}
+.active{
+    color: black !important;
+    background-color: #FFFFFF !important;
 }
 .exit{
-    position: fixed;
-    top: 25px;
+    position: absolute;
     right: 25px;
     width: auto;
     border: 1px solid lightgrey;
@@ -24,7 +45,7 @@
     border-radius: 10px;
     cursor: pointer;
     font-size: 24px;
-    margin: 10px auto;
+    margin-top: 5px;
     background-color: rgb(241, 59, 59);
     color: whitesmoke;
 }
