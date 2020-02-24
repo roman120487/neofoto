@@ -1,0 +1,26 @@
+.respContainer{
+    background-color: #243443 !important;
+    padding: 25px;
+}
+form{
+    color: whitesmoke;
+    font-size: 22px;
+}
+input{
+    width: 20%;
+}
+textarea{
+    width: 50%;
+}
+p{
+    margin-top: 25px;
+}
+.respContainer>button{
+    margin-top: 25px;
+    width: 50%;
+}
+.table{
+    margin-top: 25px;
+    color: whitesmoke;
+    font-size: 20px;
+}
