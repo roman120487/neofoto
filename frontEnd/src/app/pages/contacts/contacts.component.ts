@@ -13,8 +13,6 @@ export class ContactsComponent implements OnInit {
 
   ngOnInit() {
     this.resetForm();
-    console.log(this.formData);
-    
   }
   public resetForm(form?: NgForm) {
     if (form != null) {
@@ -33,7 +31,6 @@ export class ContactsComponent implements OnInit {
     const data = Object.assign({}, form.value);
     this.api.feedback(data).subscribe((res: any) => {}, (err: any) => {console.log(err);});
     delete data.id;
-    console.log('send');
     
   }
 }
