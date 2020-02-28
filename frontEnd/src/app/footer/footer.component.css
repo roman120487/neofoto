@@ -5,6 +5,10 @@ footer {
     display: flex;
     flex-wrap: wrap;
 }
+a{
+    /* text-decoration: none; */
+    color: black;
+}
 
 /* -------------orderPhoto ------------------------ */
 
